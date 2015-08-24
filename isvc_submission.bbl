@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{leeuw}
+{van Leeuwen}, J., ed.:
+\newblock Computer Science Today. Recent Trends and Developments. Volume 1000
+  of Lecture Notes in Computer Science.
+\newblock Springer-Verlag, Berlin Heidelberg New York (1995)
+
+\bibitem{bru:car:pier}
+Bruce, K., Cardelli, L., Pierce, B.:
+\newblock Comparing object encodings.
+\newblock In Abadi, M., Ito, T., eds.: Theoretical Aspects of Computer
+  Software. Volume 1281 of Lecture Notes in Computer Science., Berlin
+  Heidelberg New York, Springer-Verlag (1997)  415--438
+
+\bibitem{mich}
+Michalewicz, Z.:
+\newblock Genetic Algorithms + Data Structures = Evolution Programs. 3rd edn.
+\newblock Springer-Verlag, Berlin Heidelberg New York (1996)
+
+\bibitem{bal:cha:gra:pae}
+Baldonado, M., Chang, C.C., Gravano, L., Paepcke, A.:
+\newblock The stanford digital library metadata architecture.
+\newblock Int. J. Digit. Libr. \textbf{1} (1997)  108--121
+
+\end{thebibliography}
