@@ -37,6 +37,25 @@ Portmann, J., Lynen, S., Chli, M., Siegwart, R.:
 \newblock In: Robotics and Automation (ICRA), 2014 IEEE International
   Conference on, IEEE (2014)  1794--1800
 
+\bibitem{doi:10.1117/12.7977034}
+Toet, A., van Ruyven, L.J., Valeton, J.M.:
+\newblock Merging thermal and visual images by a contrast pyramid.
+\newblock Optical Engineering \textbf{28} (1989)  287789--287789--
+
+\bibitem{1384918}
+Heo, J., Kong, S., Abidi, B., Abidi, M.:
+\newblock Fusion of visual and thermal signatures with eyeglass removal for
+  robust face recognition.
+\newblock In: Computer Vision and Pattern Recognition Workshop, 2004. CVPRW
+  '04. Conference on. (2004)  122--122
+
+\bibitem{4381164}
+Istenic, R., Heric, D., Ribaric, S., Zazula, D.:
+\newblock Thermal and visual image registration in hough parameter space.
+\newblock In: Systems, Signals and Image Processing, 2007 and 6th EURASIP
+  Conference focused on Speech and Image Processing, Multimedia Communications
+  and Services. 14th International Workshop on. (2007)  106--109
+
 \bibitem{cvblob}
 n\'an, C.C.L.:
 \newblock {cvBlob}.

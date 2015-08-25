@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  25 AUG 2015 12:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  25 AUG 2015 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -546,19 +546,15 @@ Overfull \hbox (28.45274pt too wide) in paragraph at lines 193--194
 []|[]| 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6]
-[7 <./img/fusion/Roth/Infrared_Image_screenshot.png (PNG copy)> <./img/fusion/R
-oth/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Roth/Warped_Infrar
-ed_Image_screenshot.png> <./img/fusion/Roth/Warped_Grayscale_Image_screenshot.p
-ng> <./img/fusion/Sea/3/Infrared_Image_screenshot.png (PNG copy)> <./img/fusion
-/Sea/3/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Sea/3/Warped_In
-frared_Image_screenshot.png> <./img/fusion/Sea/3/Warped_Grayscale_Image_screens
-hot.png> <./img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.pn
-g> <./img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png>]
-<img/victim_gps/victim_gps_on_map.jpg, id=60, 785.93625pt x 899.36pt>
+[6] [7 <./img/fusion/Roth/Infrared_Image_screenshot.png (PNG copy)> <./img/fusi
+on/Roth/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Roth/Warped_In
+frared_Image_screenshot.png> <./img/fusion/Roth/Warped_Grayscale_Image_screensh
+ot.png> <./img/fusion/Sea/3/Infrared_Image_screenshot.png (PNG copy)> <./img/fu
+sion/Sea/3/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Sea/3/Warpe
+d_Infrared_Image_screenshot.png> <./img/fusion/Sea/3/Warped_Grayscale_Image_scr
+eenshot.png> <./img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screensho
+t.png> <./img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png
+>] <img/victim_gps/victim_gps_on_map.jpg, id=60, 785.93625pt x 899.36pt>
 File: img/victim_gps/victim_gps_on_map.jpg Graphic file (type jpg)
 
 <use img/victim_gps/victim_gps_on_map.jpg>
@@ -585,13 +581,11 @@ e 225.
 
 LaTeX Warning: Citation `bal:cha:gra:pae' undefined on input line 245.
 
-(./isvc_submission.bbl
-Underfull \vbox (badness 1142) has occurred while \output is active []
-
- [8 <./img/fusion/Roth/PR-roth-all-detections.jpg> <./img/fusion/Roth/PR-roth-t
-op-detections.jpg>] [9 <./img/victim_gps/victim_gps_on_map.jpg> <./img/victim_g
-ps/victim_gps_on_map_3.jpg> <./img/victim_gps/victim_utm_errors.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 52--55
+(./isvc_submission.bbl [8 <./img/fusion/Roth/PR-roth-all-detections.jpg> <./img
+/fusion/Roth/PR-roth-top-detections.jpg>] [9 <./img/victim_gps/victim_gps_on_ma
+p.jpg> <./img/victim_gps/victim_gps_on_map_3.jpg> <./img/victim_gps/victim_utm_
+errors.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
 []\OT1/cmr/m/n/9 Doll^^Sar, P.:  Pi-otr's Com-puter Vi-sion Mat-lab Tool-box (P
 MT).
  []
@@ -605,10 +599,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3465 strings out of 494985
- 55874 string characters out of 6180357
- 124168 words of memory out of 5000000
- 6638 multiletter control sequences out of 15000+600000
+ 3468 strings out of 494985
+ 55916 string characters out of 6180357
+ 126168 words of memory out of 5000000
+ 6641 multiletter control sequences out of 15000+600000
  7634 words of font info for 27 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  44i,14n,42p,1553b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -622,7 +616,7 @@ type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti9.pfb>
-Output written on isvc_submission.pdf (10 pages, 5632281 bytes).
+Output written on isvc_submission.pdf (10 pages, 5633323 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
