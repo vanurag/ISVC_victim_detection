@@ -24,9 +24,9 @@
 
 \mainmatter
 
-\title{Victim Detection from a low-altitude fixed-wing UAV}
+\title{Victim Detection from a low-altitude fixed-wing UAV: Experimental Results}
 
-\author{-----}
+\author{Anurag Sai Vempati, Gabriel Agamennoni, Thomas Stastny, Roland Siegwart}
 
 \titlerunning{Lecture Notes in Computer Science}
 
@@ -45,7 +45,7 @@ Visual spectrum cameras have been used since a long time on UAVs but analyzing t
 Various works like... leverage on hotspot techniques to quickly narrow down the potential areas to further process. [A two-stage template approach to person detection in thermal imagery] uses fast-screening technique by modelling the background as an average of previous frames. For the foreground regions template called Contour Saliency Maps (CSM) are generated that preserves the edges that are both strong and significantly different from the background. The potential regions are found by correlating this template across the image. Such averaging techniques perform poorly in case of fast moving cameras like on UAVs. Many techniques rely on some kind of classifier to detect presence of a human in each of these potential areas. [A two-stage template approach to person detection in thermal imagery], [ACtive People Recognition using thermal and gray images on a Mobile security robot], [Human Body Detection and Geolocalization for UAV Search and Rescue Missions Using Color and Thermal Imagery], [IMPROVED HUMAN DETECTION AND CLASSIFICATION IN THERMAL IMAGES] use some kind of variant of cascade of boosted classifiers introduced by [Viola and Jones] - which basically involves a series of weak classifiers each better than the previous one. [People Detection and Tracking from Aerial Thermal Views] show performance of various feature based classifiers trained on thermal data collected across wide variation in temperature, altitude and camera movement. HOG feature based classifier in conjunction with a particle filter tracker was found to perform the best.
 
 \section{Victim Detection Pipeline}
-Detecting humans from an altitude of 60-80 meters with a camera of limited resolution poses a very challenging problem. Basic blocks of our pipeline are mentioned below:-
+Detecting humans from an altitude of 50-100 meters with a camera of limited resolution poses a very challenging problem. Basic blocks of our pipeline are mentioned below:-
 
 \subsection{Datasets}
 
@@ -140,10 +140,10 @@ HOG features are extracted on the image patches at multiple scales and the descr
 Objects in Infrared image rarely have discerning features since the temperature tends to be uniform across the objects. So, a classifier would be not so reliable in classifying such patches since it only has the shape information of the object in a very small patch. Since in all our flights using the sensorpod we collected both Infrared and Grayscale images, a fusion technique is proposed to get a one to one relationship between pixel locations of Infrared and Grayscale images. This will help us in extracting both Infrared and Grayscale image patches corresponding to the ROIs obtained from Background Subtraction which can help the classifier in producing more reliable results.
 
 <Technique>
-We use Kalibr[??] to calibrate the Infrared and Grayscale camera intrinsics and extrinsics for the sensorpod mounting. We use radial-tangential model to estimate camera distortion parameters. An april tag pattern is used to estimate Grayscale camera intrinsics. A thick matte paper with checkerboard pattern under illumination of a bright light is used to calibrate Infrared camera intrinsics. We then undistort the images and choose a new camera matrix for both the cameras with common focal parameters. An optimal camera matrix is evaluated that ensures all the original pixels are present in the final image after undistorting the images. Rotation and Transaltion matrices between the cameras is obtained using camera-camera extrinsics evaluated with Kalibr. Now the Infrared and Grayscale camera setup can be treated as a Stereo pair and standard image rectification techniques can be used to evaluate the necessary projection matrices. At this point, all the epipolar lines are parallel to image edge (horizontal if horizontal rectification was employed, vertical otherwise). For our particular setup, vertical stereo was chosen since the camera centers were aligned vertically on the sensorpod. Now that the disparitites of the image are in one axis, it's fast and easy to find pixel correspondences. After a manual displacement that is set for all the columns, individual column displacements are evaluated using correspondences between fast features calculated for both the images.
+We use Kalibr[??] to calibrate the Infrared and Grayscale camera intrinsics and extrinsics for the sensorpod mounting. We use radial-tangential model to estimate camera distortion parameters. An april tag pattern is used to estimate Grayscale camera intrinsics. A thick matte paper with checkerboard pattern under illumination of a bright light is used to calibrate Infrared camera intrinsics. We then undistort the images and choose a new camera matrix for both the cameras with common focal parameters. An optimal camera matrix is evaluated that ensures all the original pixels are present in the final image after undistorting the images. Rotation and Transaltion matrices between the cameras is obtained using camera-camera extrinsics evaluated with Kalibr. Now the Infrared and Grayscale camera setup can be treated as a Stereo pair and standard image rectification techniques can be used to evaluate the necessary projection matrices. At this point, all the epipolar lines are parallel to image edge (horizontal if horizontal rectification was employed, vertical otherwise). For our particular setup, vertical stereo was chosen since the camera centers were aligned vertically on the sensorpod. Now that the disparities of the image are in one axis, it's fast and easy to find pixel correspondences. After a manual displacement that is set for all the columns, individual column displacements are evaluated using correspondences between fast features calculated for both the images.
 
 
-Fig.~\ref{fig:fusion} shows results from the fusion technique. In Rothethurm-1 sequence IR and Grayscale cameras were both facing in the direction of flight and are $25^{\circ}$ nadir configuration with a translation of 3.5cm between the camera centers. In Sea-1 sequence, IR camera was in $25^{\circ}$ nadir configuration while Grayscale camera was in $50^{\circ}$ nadir configuration with a translation of 3.5cm between the camera centers.
+Fig.~\ref{fig:fusion} shows results from the fusion technique. In Rothethurm-1 sequence IR and Grayscale cameras were both facing in the direction of flight and are $25^{\circ}$ nadir configuration with a translation of 3.5cm between the camera centers. In Sea-1 sequence, IR camera was in $25^{\circ}$ nadir configuration while Grayscale camera was in $50^{\circ}$ nadir configuration with a translation of 3.5cm between the camera centers. The results show reasonable overlap accuracy. Since, we only require a bounding box containing the same object in both Infrared and Grayscale image, this level of accuracy suffices.
 
 \begin{figure}
   \centering
@@ -198,22 +198,38 @@ Fig.?? shows improvement to the PR curves after Fusion on Roth-1 data.
 \end{figure}
 
 
-\subsection{Tracker}
-
-
 \section{Experimental Results}
 
 \subsection{Structural Inspection Planner}
 
 \subsection{Estimating victim GPS}
 
-Fig.~\ref{fig:victim_gps_small} shows the detected victim GPS positions, actual groundtruth victim location and the path follwed by the UAV.
+Fig.~\ref{fig:victim_gps_small}(a) shows a schematic of all the involved sensors, the corresponding axes and the intrinsics/extrinsics involved. For estimating the GPS positions of detections, we assume the ground as a plane. Using the calibration data obtained earlier, it can be easily shown the latitude/longitude are:
+
+Fig.~\ref{fig:victim_gps_small}(b) shows the detected victim GPS positions, actual groundtruth victim location and the path followed by the UAV. The rest of the detections include unregistered humans in the explored area and some False Positives. By enforcing a criterion - similar to [??] - that requires a particular GPS position to be detected consistently within the duration of the time that particluar spot is observed, most of the Flase Positives are eliminated and the set of true detections are registered to known groundtruths. False Positives are further eliminated by boosting the confidence of detections that are closer to the GPS location of the point where principal axis of camera hits the ground plane. Fig.~\ref{fig:victim_gps_small}(c) is a plot of GPS position estimate errors for all the 3 registered victims. The GPS estimates are converted to UTM coordinates to represent the error in meters.
+
 
 \begin{figure}
-\centerline{\includegraphics[scale=0.3]{img/victim_gps/victim_gps_on_map.jpg}}
-\caption{Detected Victim GPS positions from a 25 second segment at an altitude of 50 meters above the ground.}
-\label{fig:victim_gps_small}
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=6cm]{img/victim_gps/victim_gps_on_map.jpg} &
+    \includegraphics[width=6cm]{img/victim_gps/victim_gps_on_map_3.jpg} \\
+    \small (a) Victim GPS for a small segment & 
+    \small (b) Victim GPS
+  \end{tabular}
+
+  \vspace{\floatsep}
+  
+  \begin{tabular}{c}
+    \includegraphics[width=11cm]{img/victim_gps/victim_utm_errors.jpg} \\
+    \small (c) Victim UTM position errors
+  \end{tabular}
+
+  \caption{asdasdsadsada.}\label{fig:victim_gps}
 \end{figure}
+
+
+
 
 
 
