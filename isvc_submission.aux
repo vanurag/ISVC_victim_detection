@@ -3,19 +3,22 @@
 \@writefile{toc}{\contentsline {author}{Anurag Sai Vempati, Gabriel Agamennoni, Thomas Stastny, Roland Siegwart}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Victim Detection Pipeline}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Datasets}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Background Subtractor}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Datasets}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Background Subtractor}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A sample image recorded from the FLIR thermal camera at an approximate altitude of 70 meters. Two humans are pointed out.\relax }}{3}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:thermal_sample}{{1}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Sequence 1 is captured in the night time at an altitude of 20 meters above the ground with some crowd. Sequence 2 was captured from AS[??] on a cold winter morning at an altitude of 50 meters above the ground. (a) shows the Infrared image, (b) is the 8-bit image of pixel-wise threshold $t_{high}(i, j)$ (grid of blocks is overlaid and a sample block is marked in white on the top-left) and (c) is the resulting segmentation map depicting foreground pixels.\relax }}{4}}
 \newlabel{fig:bg_sub}{{2}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Human Classifier}{5}}
-\newlabel{table:headings}{{\caption@xref {table:headings}{ on input line 98}}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Human Classifier}{4}}
+\newlabel{table:headings}{{\caption@xref {table:headings}{ on input line 100}}{5}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Distribution of training image patches among different datasets\relax }}{5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Performance of SVM classifier with different configurations of optimization problem and kernel type. It's found to be optimal to choose (a) RBF kernel type for C\_SVC problem, (b) C\_SVC problem for Linear kernel type and (c) C\_SVC problem for RBF kernel type.\relax }}{5}}
 \newlabel{fig:k-fold}{{3}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Infrared-Grayscale Image Fusion}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Infrared-Grayscale Image Fusion}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Experimental Results}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Structural Inspection Planner}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Estimating victim GPS}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The top 2 rows show 2 sequences (Rothenthurm-1, Sea-1) of original images obtained from IR and Grayscale cameras and the resulting images post rectification. Last row shows fusion of 2 images to visualize the quality of overlap. Red boxes in seq-1 highlights 2 humans and a boat in seq-2. As can be seen, the correspondence between IR and Grayscale images is reasonably good.\relax }}{7}}
 \newlabel{fig:fusion}{{4}{7}}
 \citation{bal:cha:gra:pae}
@@ -24,11 +27,8 @@
 \bibcite{leeuw}{1}
 \bibcite{bru:car:pier}{2}
 \bibcite{mich}{3}
+\bibcite{bal:cha:gra:pae}{4}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The top 2 rows show 2 sequences (Rothenthurm-1, Sea-1) of original images obtained from IR and Grayscale cameras and the resulting images post rectification. Last row shows fusion of 2 images to visualize the quality of overlap. Red boxes in seq-1 highlights 2 humans and a boat in seq-2. As can be seen, the correspondence between IR and Grayscale images is reasonably good.\relax }}{8}}
 \newlabel{fig:fusion}{{5}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Experimental Results}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Structural Inspection Planner}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Estimating victim GPS}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces asdasdsadsada.\relax }}{9}}
 \newlabel{fig:victim_gps}{{6}{9}}
-\bibcite{bal:cha:gra:pae}{4}
