@@ -68,12 +68,6 @@ n\'an, C.C.L.:
 \newblock {cvBlob}.
 \newblock (http://cvblob.googlecode.com)
 
-\bibitem{barnich2011vibe}
-Barnich, O., Van~Droogenbroeck, M.:
-\newblock Vibe: A universal background subtraction algorithm for video
-  sequences.
-\newblock Image Processing, IEEE Transactions on \textbf{20} (2011)  1709--1724
-
 \bibitem{PMT}
 Doll\'ar, P.:
 \newblock {P}iotr's {C}omputer {V}ision {M}atlab {T}oolbox ({PMT}).

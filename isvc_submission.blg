@@ -10,45 +10,45 @@ while executing---line 2139 of file splncs.bst
 Warning--there's no year in PMT
 You can't pop an empty literal stack for entry PMT
 while executing---line 2139 of file splncs.bst
-You've used 14 entries,
+You've used 13 entries,
             2043 wiz_defined-function locations,
-            570 strings with 6445 characters,
-and the built_in function-call counts, 5099 in all, are:
-= -- 557
-> -- 134
-< -- 13
-+ -- 50
-- -- 36
-* -- 305
-:= -- 628
-add.period$ -- 19
-call.type$ -- 14
-change.case$ -- 14
+            562 strings with 6261 characters,
+and the built_in function-call counts, 4723 in all, are:
+= -- 514
+> -- 126
+< -- 12
++ -- 47
+- -- 34
+* -- 280
+:= -- 583
+add.period$ -- 18
+call.type$ -- 13
+change.case$ -- 13
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 275
-empty$ -- 503
-format.name$ -- 36
-if$ -- 1301
+cite$ -- 15
+duplicate$ -- 254
+empty$ -- 472
+format.name$ -- 34
+if$ -- 1209
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 12
-newline$ -- 73
-num.names$ -- 14
-pop$ -- 62
+int.to.str$ -- 13
+missing$ -- 11
+newline$ -- 68
+num.names$ -- 13
+pop$ -- 61
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 222
+skip$ -- 204
 stack$ -- 0
-substring$ -- 405
-swap$ -- 155
-text.length$ -- 13
+substring$ -- 365
+swap$ -- 141
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 45
-width$ -- 16
-write$ -- 164
+while$ -- 41
+width$ -- 15
+write$ -- 152
 (There were 2 error messages)
