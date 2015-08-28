@@ -89,6 +89,14 @@ Fusiello, A., Trucco, E., Verri, A.:
 \newblock A compact algorithm for rectification of stereo pairs.
 \newblock Machine Vision and Applications \textbf{12} (2000)  16--22
 
+\bibitem{7140101}
+Bircher, A., Alexis, K., Burri, M., Oettershagen, P., Omari, S., Mantel, T.,
+  Siegwart, R.:
+\newblock Structural inspection path planning via iterative viewpoint
+  resampling with application to aerial robotics.
+\newblock In: Robotics and Automation (ICRA), 2015 IEEE International
+  Conference on. (2015)  6423--6430
+
 \bibitem{WGS}
 Agency, N.G.I.:
 \newblock World geodetic system 1984.

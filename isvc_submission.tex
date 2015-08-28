@@ -184,7 +184,11 @@ Fig.~\ref{fig:fusion} shows improvement to the Precision-Recall (PR) curves afte
 
 \section{Experimental Results}
 
-\subsection{Structural Inspection Planner}
+Inspired by real-world search and rescue initiatives, we designed a representative field trial utilizing our full aerial deployment and victim detection pipeline. The experiment involves the placement of multiple "victims" throughout a field over which our rapidly deployable, hand launched, fixed-wing test platform, equipped with multi-camera carrying sensor pod, must survey in a timely manner and record GPS coordinates of victims seen during the flight. In the following sections, we present the setup, enabling tools, and results.
+
+\subsection{Full coverage aerial inspection}
+
+We employ a fast inspection planning algorithm which guarantees full coverage of a mesh-model world (obtained from GIS data) to ensure all ground is scanned for victims. The algorithm, details in \cite{7140101}, employs an iterative viewpoint re-sampling technique, using randomized sampling, to provide viewpoint configurations that maintain full coverage while simultaneously searching for the best route that visits them all, using the Lin-Kernighan Heuristic [??]. Nonholonomic vehicle constraints and obstacle avoidance are further considered in the path search using a boundary value solver in combination with the RRT* motion planner.
 
 \subsection{Estimating victim GPS}
 
