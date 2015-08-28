@@ -73,10 +73,26 @@ Doll\'ar, P.:
 \newblock {P}iotr's {C}omputer {V}ision {M}atlab {T}oolbox ({PMT}).
 \newblock (\url{http://vision.ucsd.edu/~pdollar/toolbox/doc/index.html})
 
+\bibitem{svm}
+Cortes, C., Vapnik, V.:
+\newblock Support-vector networks.
+\newblock Machine Learning \textbf{20} (1995)  273--297
+
 \bibitem{furgale2013unified}
 Furgale, P., Rehder, J., Siegwart, R.:
 \newblock Unified temporal and spatial calibration for multi-sensor systems.
 \newblock In: Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ
   International Conference on, IEEE (2013)  1280--1286
+
+\bibitem{planar_rect}
+Fusiello, A., Trucco, E., Verri, A.:
+\newblock A compact algorithm for rectification of stereo pairs.
+\newblock Machine Vision and Applications \textbf{12} (2000)  16--22
+
+\bibitem{WGS}
+Agency, N.G.I.:
+\newblock World geodetic system 1984.
+\newblock
+  (\url{http://web.archive.org/web/20120401083859/http://earth-info.nga.mil/GandG/wgs84/index.html})
 
 \end{thebibliography}
