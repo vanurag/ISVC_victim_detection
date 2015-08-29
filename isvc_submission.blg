@@ -13,45 +13,45 @@ while executing---line 2139 of file splncs.bst
 Warning--there's no year in WGS
 You can't pop an empty literal stack for entry WGS
 while executing---line 2139 of file splncs.bst
-You've used 17 entries,
+You've used 19 entries,
             2043 wiz_defined-function locations,
-            589 strings with 7027 characters,
-and the built_in function-call counts, 5967 in all, are:
-= -- 636
-> -- 172
-< -- 15
-+ -- 64
-- -- 47
-* -- 361
-:= -- 746
-add.period$ -- 23
-call.type$ -- 17
-change.case$ -- 17
+            603 strings with 7310 characters,
+and the built_in function-call counts, 6464 in all, are:
+= -- 688
+> -- 188
+< -- 16
++ -- 70
+- -- 51
+* -- 396
+:= -- 814
+add.period$ -- 25
+call.type$ -- 19
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 320
-empty$ -- 586
-format.name$ -- 47
-if$ -- 1516
+cite$ -- 22
+duplicate$ -- 349
+empty$ -- 629
+format.name$ -- 51
+if$ -- 1633
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 14
-newline$ -- 88
-num.names$ -- 17
-pop$ -- 72
+int.to.str$ -- 19
+missing$ -- 16
+newline$ -- 98
+num.names$ -- 19
+pop$ -- 75
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 259
+skip$ -- 276
 stack$ -- 0
-substring$ -- 449
-swap$ -- 178
-text.length$ -- 15
+substring$ -- 481
+swap$ -- 193
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 51
-width$ -- 19
-write$ -- 197
+while$ -- 56
+width$ -- 21
+write$ -- 220
 (There were 3 error messages)

@@ -97,6 +97,16 @@ Bircher, A., Alexis, K., Burri, M., Oettershagen, P., Omari, S., Mantel, T.,
 \newblock In: Robotics and Automation (ICRA), 2015 IEEE International
   Conference on. (2015)  6423--6430
 
+\bibitem{lin1973effective}
+Lin, S., Kernighan, B.W.:
+\newblock An effective heuristic algorithm for the traveling-salesman problem.
+\newblock Operations research \textbf{21} (1973)  498--516
+
+\bibitem{RRTS1a}
+Karaman, S., Frazzoli, E.:
+\newblock Incremental sampling-based algorithms for optimal motion planning.
+\newblock CoRR \textbf{abs/1005.0416} (2010)
+
 \bibitem{WGS}
 Agency, N.G.I.:
 \newblock World geodetic system 1984.
