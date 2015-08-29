@@ -26,8 +26,8 @@
 
 \title{Victim Detection from a Fixed-wing UAV: Experimental Results}
 
-\author{Anurag Sai Vempati\inst{1} \and Gabriel Agamennoni\inst{1} \and
-Thomas Stastny\inst{1} \and Roland Siegwart\inst{1}}
+\author{Anurag Sai Vempati \and Gabriel Agamennoni \and
+Thomas Stastny \and Roland Siegwart}
 
 \institute{Autonomous Systems Lab, ETH Zurich\\
 \texttt{http://www.asl.ethz.ch/}
@@ -194,16 +194,17 @@ To ensure victims are seen by the cameras' fields of view at some point during t
 
 For estimating the GPS positions of detections, we assume the ground as a plane. Using camera intrinsics and detection's pixel location, we find the directional vector in which the object might be lying. The point where this vector hits the ground plane can be found using GPS, IMU and camera-IMU extrinsics data which finally gives victim's GPS location.
 
-Fig.~\ref{fig:victim_gps}(b) shows the detected victim GPS positions, actual groundtruth victim location and the path followed by the UAV. The rest of the detections include unregistered humans in the explored area and some False Positives. By enforcing a criterion - similar to \cite{rudol2008human} - that requires a particular GPS position to be detected consistently within the duration of the time that particluar spot is observed, most of the False Positives are eliminated and the set of true detections are grouped together and registered as victim locations. False Positives are further eliminated by boosting the confidence of detections that are closer to the GPS location of the point where principal axis of camera hits the ground plane. Fig.~\ref{fig:victim_gps}(c) is a plot of GPS position estimate errors for all the three registered victims. The GPS estimates are converted to Universal Transverse Mercator (UTM) coordinates using World Geodetic System (WGS84) standard \cite{WGS} to represent the error in meters. The errors obtained are a cumulative of errors in groundtruth GPS measuring device, calibration imperfections, GPS to/from UTM conversions, images' resolution, planarity assumptions, and sensor imperfections (GPS, IMU), making it quite uncertain how much of the error can be attributed to the imperfections in our algorithm. Nevertheless, the errors we obtained more than suffice to serve our goal. The only assumption made in our approach is of ground planarity and even this can be easily overcome by using geographical elevation data of the scanned region.
+Fig.~\ref{fig:victim_gps}(b) shows the detected victim GPS positions, actual groundtruth victim location and the path followed by the UAV. The rest of the detections include unregistered humans in the explored area and some False Positives. By enforcing a criterion - similar to \cite{rudol2008human} - that requires a particular GPS position to be detected consistently within the duration of the time that particluar spot is observed, most of the False Positives are eliminated and the set of true detections are grouped together and registered as victim locations. False Positives are further eliminated by boosting the confidence of detections that are closer to the GPS location of the point where principal axis of camera hits the ground plane. The registered victims are marked in circles. As can be seen in the figure, we have all three successful detections and another detection whose status is not known. Fig.~\ref{fig:victim_gps}(c) is a plot of GPS position estimate errors for all the three registered victims. The GPS estimates are converted to Universal Transverse Mercator (UTM) coordinates using World Geodetic System (WGS84) standard \cite{WGS} to represent the error in meters. The errors obtained are a cumulative of errors in groundtruth GPS measuring device, calibration imperfections, GPS to/from UTM conversions, images' resolution, planarity assumptions, and sensor imperfections (GPS, IMU), making it quite uncertain how much of the error can be attributed to the imperfections in our algorithm. Nevertheless, the errors we obtained more than suffice to serve our goal. The only assumption made in our approach is of ground planarity and even this can be easily overcome by using geographical elevation data of the scanned region.
 
 
 \begin{figure}
   \centering
   \begin{tabular}{cc}
-    \includegraphics[width=6cm]{img/victim_gps/SIP.png} &
-    \includegraphics[width=6cm]{img/victim_gps/victim_gps_on_map_3.jpg} \\
+    \hspace{-1cm}
+    \includegraphics[width=7cm]{img/victim_gps/SIP.png} &
+    \includegraphics[width=7cm]{img/victim_gps/SIP_detections_map.eps} \\
     \small (a) Inspection path & 
-    \small (b) Victim GPS
+    \small (b) Victim GPS \tiny (Grouped detections in circle after False Positive removal)
   \end{tabular}
 
   \vspace{\floatsep}

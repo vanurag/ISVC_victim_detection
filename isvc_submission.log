@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.30)  29 AUG 2015 04:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  29 AUG 2015 07:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -309,22 +309,69 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 Names of authors too long for running head. Please supply
 a shorter form with \authorrunning prior to \maketitle
+
+LaTeX Warning: Citation `wang2010improved' on page 1 undefined on input line 50
+.
+
 [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<img/sample_thermal.png, id=16, 734.745pt x 542.025pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `davis2005two' on page 2 undefined on input line 52.
+
+
+LaTeX Warning: Citation `davis2005two' on page 2 undefined on input line 52.
+
+
+LaTeX Warning: Citation `1545530' on page 2 undefined on input line 52.
+
+
+LaTeX Warning: Citation `rudol2008human' on page 2 undefined on input line 52.
+
+
+LaTeX Warning: Citation `wang2010improved' on page 2 undefined on input line 52
+.
+
+
+LaTeX Warning: Citation `viola2001rapid' on page 2 undefined on input line 52.
+
+
+LaTeX Warning: Citation `portmann2014people' on page 2 undefined on input line 
+52.
+
+
+LaTeX Warning: Citation `doi:10.1117/12.7977034' on page 2 undefined on input l
+ine 54.
+
+
+LaTeX Warning: Citation `1384918' on page 2 undefined on input line 54.
+
+
+LaTeX Warning: Citation `4381164' on page 2 undefined on input line 54.
+
+
+LaTeX Warning: Citation `3911' on page 2 undefined on input line 54.
+
+
+LaTeX Warning: Citation `rudol2008human' on page 2 undefined on input line 54.
+
+[2] <img/sample_thermal.png, id=15, 734.745pt x 542.025pt>
 File: img/sample_thermal.png Graphic file (type png)
 
 <use img/sample_thermal.png>
 Package pdftex.def Info: img/sample_thermal.png used on input line 65.
 (pdftex.def)             Requested size: 220.42519pt x 162.60875pt.
+
+
+LaTeX Warning: Citation `cvblob' on page 3 undefined on input line 72.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 77.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 77.
 
-<img/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.png, id=18, 481.8pt x 385.
+<img/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.png, id=17, 481.8pt x 385.
 44pt>
 File: img/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.png Graphic file (typ
 e png)
@@ -333,7 +380,7 @@ Package pdftex.def Info: img/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.pn
 g used on input line 78.
 (pdftex.def)             Requested size: 113.81102pt x 91.04892pt.
 
-<img/bg_sub/CLA_Threshold_values(high)_screenshot_03-08-2015.png, id=19, 481.8p
+<img/bg_sub/CLA_Threshold_values(high)_screenshot_03-08-2015.png, id=18, 481.8p
 t x 385.44pt>
 File: img/bg_sub/CLA_Threshold_values(high)_screenshot_03-08-2015.png Graphic f
 ile (type png)
@@ -343,7 +390,7 @@ Package pdftex.def Info: img/bg_sub/CLA_Threshold_values(high)_screenshot_03-08
 -2015.png used on input line 79.
 (pdftex.def)             Requested size: 113.81102pt x 91.04892pt.
 
-<img/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015.png, id=20, 481.8pt x 38
+<img/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015.png, id=19, 481.8pt x 38
 5.44pt>
 File: img/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015.png Graphic file (t
 ype png)
@@ -357,7 +404,7 @@ Overfull \hbox (2.70949pt too wide) in paragraph at lines 77--85
  []
 
 
-<img/bg_sub/Roth_Infrared_Image_screenshot.png, id=21, 361.35pt x 512.91624pt>
+<img/bg_sub/Roth_Infrared_Image_screenshot.png, id=20, 361.35pt x 512.91624pt>
 File: img/bg_sub/Roth_Infrared_Image_screenshot.png Graphic file (type png)
 
 <use img/bg_sub/Roth_Infrared_Image_screenshot.png>
@@ -365,7 +412,7 @@ Package pdftex.def Info: img/bg_sub/Roth_Infrared_Image_screenshot.png used on
 input line 89.
 (pdftex.def)             Requested size: 80.17543pt x 113.81102pt.
 
-<img/bg_sub/Roth_Threshold_values(high)_screenshot.png, id=22, 361.35pt x 512.9
+<img/bg_sub/Roth_Threshold_values(high)_screenshot.png, id=21, 361.35pt x 512.9
 1624pt>
 File: img/bg_sub/Roth_Threshold_values(high)_screenshot.png Graphic file (type 
 png)
@@ -374,20 +421,30 @@ Package pdftex.def Info: img/bg_sub/Roth_Threshold_values(high)_screenshot.png
 used on input line 90.
 (pdftex.def)             Requested size: 80.17543pt x 113.81102pt.
 
-<img/bg_sub/Roth_Segmentation_Map_screenshot.png, id=23, 361.35pt x 512.91624pt
+<img/bg_sub/Roth_Segmentation_Map_screenshot.png, id=22, 361.35pt x 512.91624pt
 >
 File: img/bg_sub/Roth_Segmentation_Map_screenshot.png Graphic file (type png)
  <use img/bg_sub/Roth_Segmentation_Map_screenshot.png>
 Package pdftex.def Info: img/bg_sub/Roth_Segmentation_Map_screenshot.png used o
 n input line 91.
 (pdftex.def)             Requested size: 80.17543pt x 113.81102pt.
- [3 <./img/sample_thermal.png>] [4 <./img/bg_sub/CLA_Infrared_Image_screenshot_
-03-08-2015.png (PNG copy)> <./img/bg_sub/CLA_Threshold_values(high)_screenshot_
-03-08-2015.png (PNG copy)> <./img/bg_sub/CLA_Segmentation_Map_screenshot_03-08-
-2015.png (PNG copy)> <./img/bg_sub/Roth_Infrared_Image_screenshot.png> <./img/b
-g_sub/Roth_Threshold_values(high)_screenshot.png> <./img/bg_sub/Roth_Segmentati
-on_Map_screenshot.png>]
-<img/classifier/SvmKernelTypevalue_vs_score_C_SVC.jpg, id=33, 642.4pt x 481.8pt
+ [3 <./img/sample_thermal.png>]
+
+LaTeX Warning: Citation `portmann2014people' on page 4 undefined on input line 
+103.
+
+
+LaTeX Warning: Citation `PMT' on page 4 undefined on input line 103.
+
+
+LaTeX Warning: Citation `svm' on page 4 undefined on input line 103.
+
+[4 <./img/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.png (PNG copy)> <./im
+g/bg_sub/CLA_Threshold_values(high)_screenshot_03-08-2015.png (PNG copy)> <./im
+g/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015.png (PNG copy)> <./img/bg_s
+ub/Roth_Infrared_Image_screenshot.png> <./img/bg_sub/Roth_Threshold_values(high
+)_screenshot.png> <./img/bg_sub/Roth_Segmentation_Map_screenshot.png>]
+<img/classifier/SvmKernelTypevalue_vs_score_C_SVC.jpg, id=32, 642.4pt x 481.8pt
 >
 File: img/classifier/SvmKernelTypevalue_vs_score_C_SVC.jpg Graphic file (type j
 pg)
@@ -396,7 +453,7 @@ Package pdftex.def Info: img/classifier/SvmKernelTypevalue_vs_score_C_SVC.jpg u
 sed on input line 111.
 (pdftex.def)             Requested size: 142.26378pt x 106.69473pt.
 
-<img/classifier/SvmTypevalue_vs_score_LINEAR.jpg, id=34, 642.4pt x 481.8pt>
+<img/classifier/SvmTypevalue_vs_score_LINEAR.jpg, id=33, 642.4pt x 481.8pt>
 File: img/classifier/SvmTypevalue_vs_score_LINEAR.jpg Graphic file (type jpg)
 
 <use img/classifier/SvmTypevalue_vs_score_LINEAR.jpg>
@@ -404,7 +461,7 @@ Package pdftex.def Info: img/classifier/SvmTypevalue_vs_score_LINEAR.jpg used o
 n input line 113.
 (pdftex.def)             Requested size: 142.26378pt x 106.69473pt.
 
-<img/classifier/SvmTypevalue_vs_score_RBF.jpg, id=35, 642.4pt x 481.8pt>
+<img/classifier/SvmTypevalue_vs_score_RBF.jpg, id=34, 642.4pt x 481.8pt>
 File: img/classifier/SvmTypevalue_vs_score_RBF.jpg Graphic file (type jpg)
 
 <use img/classifier/SvmTypevalue_vs_score_RBF.jpg>
@@ -416,10 +473,17 @@ Overfull \hbox (88.06776pt too wide) in paragraph at lines 109--123
  [][] 
  []
 
+
+LaTeX Warning: Citation `furgale2013unified' on page 5 undefined on input line 
+132.
+
+
+LaTeX Warning: Citation `planar_rect' on page 5 undefined on input line 132.
+
 [5 <./img/classifier/SvmKernelTypevalue_vs_score_C_SVC.jpg> <./img/classifier/S
 vmTypevalue_vs_score_LINEAR.jpg> <./img/classifier/SvmTypevalue_vs_score_RBF.jp
 g>]
-<img/fusion/Roth/Infrared_Image_screenshot.png, id=40, 389.95688pt x 486.31688p
+<img/fusion/Roth/Infrared_Image_screenshot.png, id=39, 389.95688pt x 486.31688p
 t>
 File: img/fusion/Roth/Infrared_Image_screenshot.png Graphic file (type png)
  <use img/fusion/Roth/Infrared_Image_screenshot.png>
@@ -427,7 +491,7 @@ Package pdftex.def Info: img/fusion/Roth/Infrared_Image_screenshot.png used on
 input line 140.
 (pdftex.def)             Requested size: 85.35826pt x 106.44833pt.
 
-<img/fusion/Roth/Grayscale_Image_screenshot.png, id=41, 361.35pt x 566.115pt>
+<img/fusion/Roth/Grayscale_Image_screenshot.png, id=40, 361.35pt x 566.115pt>
 File: img/fusion/Roth/Grayscale_Image_screenshot.png Graphic file (type png)
 
 <use img/fusion/Roth/Grayscale_Image_screenshot.png>
@@ -435,7 +499,7 @@ Package pdftex.def Info: img/fusion/Roth/Grayscale_Image_screenshot.png used on
  input line 141.
 (pdftex.def)             Requested size: 85.35826pt x 133.72809pt.
 
-<img/fusion/Roth/Warped_Infrared_Image_screenshot.png, id=42, 537.00626pt x 666
+<img/fusion/Roth/Warped_Infrared_Image_screenshot.png, id=41, 537.00626pt x 666
 .49pt>
 File: img/fusion/Roth/Warped_Infrared_Image_screenshot.png Graphic file (type p
 ng)
@@ -444,7 +508,7 @@ Package pdftex.def Info: img/fusion/Roth/Warped_Infrared_Image_screenshot.png u
 sed on input line 142.
 (pdftex.def)             Requested size: 85.35826pt x 105.93886pt.
 
-<img/fusion/Roth/Warped_Grayscale_Image_screenshot.png, id=43, 485.815pt x 700.
+<img/fusion/Roth/Warped_Grayscale_Image_screenshot.png, id=42, 485.815pt x 700.
 6175pt>
 File: img/fusion/Roth/Warped_Grayscale_Image_screenshot.png Graphic file (type 
 png)
@@ -458,7 +522,7 @@ Overfull \hbox (24.57564pt too wide) in paragraph at lines 139--149
  []
 
 
-<img/fusion/Sea/3/Infrared_Image_screenshot.png, id=44, 371.13657pt x 465.23813
+<img/fusion/Sea/3/Infrared_Image_screenshot.png, id=43, 371.13657pt x 465.23813
 pt>
 File: img/fusion/Sea/3/Infrared_Image_screenshot.png Graphic file (type png)
  <use img/fusion/Sea/3/Infrared_Image_screenshot.png>
@@ -466,7 +530,7 @@ Package pdftex.def Info: img/fusion/Sea/3/Infrared_Image_screenshot.png used on
  input line 153.
 (pdftex.def)             Requested size: 85.35826pt x 106.9954pt.
 
-<img/fusion/Sea/3/Grayscale_Image_screenshot.png, id=45, 361.35pt x 566.115pt>
+<img/fusion/Sea/3/Grayscale_Image_screenshot.png, id=44, 361.35pt x 566.115pt>
 File: img/fusion/Sea/3/Grayscale_Image_screenshot.png Graphic file (type png)
 
 <use img/fusion/Sea/3/Grayscale_Image_screenshot.png>
@@ -474,7 +538,7 @@ Package pdftex.def Info: img/fusion/Sea/3/Grayscale_Image_screenshot.png used o
 n input line 154.
 (pdftex.def)             Requested size: 85.35826pt x 133.72809pt.
 
-<img/fusion/Sea/3/Warped_Infrared_Image_screenshot.png, id=46, 741.77126pt x 75
+<img/fusion/Sea/3/Warped_Infrared_Image_screenshot.png, id=45, 741.77126pt x 75
 7.83125pt>
 File: img/fusion/Sea/3/Warped_Infrared_Image_screenshot.png Graphic file (type 
 png)
@@ -483,7 +547,7 @@ Package pdftex.def Info: img/fusion/Sea/3/Warped_Infrared_Image_screenshot.png
 used on input line 155.
 (pdftex.def)             Requested size: 85.35826pt x 87.20079pt.
 
-<img/fusion/Sea/3/Warped_Grayscale_Image_screenshot.png, id=47, 553.06625pt x 8
+<img/fusion/Sea/3/Warped_Grayscale_Image_screenshot.png, id=46, 553.06625pt x 8
 95.345pt>
 File: img/fusion/Sea/3/Warped_Grayscale_Image_screenshot.png Graphic file (type
  png)
@@ -497,7 +561,7 @@ Overfull \hbox (24.57564pt too wide) in paragraph at lines 152--162
  []
 
 
-<img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.png, id=48, 5
+<img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.png, id=47, 5
 37.00626pt x 698.61pt>
 File: img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.png Grap
 hic file (type png)
@@ -507,7 +571,7 @@ Package pdftex.def Info: img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_
 screenshot.png used on input line 166.
 (pdftex.def)             Requested size: 170.71652pt x 222.0887pt.
 
-<img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png, id=49, 
+<img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png, id=48, 
 742.775pt x 1087.06125pt>
 File: img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png Gra
 phic file (type png)
@@ -520,71 +584,91 @@ _screenshot.png used on input line 167.
 
 LaTeX Warning: Float too large for page by 123.5022pt on input line 173.
 
-<img/fusion/Roth/PR-roth-all-detections.jpg, id=50, 1033.8625pt x 716.6775pt>
+<img/fusion/Roth/PR-roth-all-detections.jpg, id=49, 1033.8625pt x 716.6775pt>
 File: img/fusion/Roth/PR-roth-all-detections.jpg Graphic file (type jpg)
 
 <use img/fusion/Roth/PR-roth-all-detections.jpg>
 Package pdftex.def Info: img/fusion/Roth/PR-roth-all-detections.jpg used on inp
 ut line 179.
 (pdftex.def)             Requested size: 227.62204pt x 157.77888pt.
- [6] [7 <./img/fusion/Roth/Infrared_Image_screenshot.png (PNG copy)> <./img/fus
-ion/Roth/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Roth/Warped_I
-nfrared_Image_screenshot.png> <./img/fusion/Roth/Warped_Grayscale_Image_screens
-hot.png> <./img/fusion/Sea/3/Infrared_Image_screenshot.png (PNG copy)> <./img/f
-usion/Sea/3/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Sea/3/Warp
-ed_Infrared_Image_screenshot.png> <./img/fusion/Sea/3/Warped_Grayscale_Image_sc
-reenshot.png> <./img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screensh
-ot.png> <./img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.pn
-g>] [8 <./img/fusion/Roth/PR-roth-all-detections.jpg>]
-<img/victim_gps/SIP.png, id=63, 746.79pt x 832.10875pt>
+
+
+LaTeX Warning: Citation `7140101' on page 6 undefined on input line 191.
+
+
+LaTeX Warning: Citation `lin1973effective' on page 6 undefined on input line 19
+1.
+
+
+LaTeX Warning: Citation `RRTS1a' on page 6 undefined on input line 191.
+
+[6] [7 <./img/fusion/Roth/Infrared_Image_screenshot.png (PNG copy)> <./img/fusi
+on/Roth/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Roth/Warped_In
+frared_Image_screenshot.png> <./img/fusion/Roth/Warped_Grayscale_Image_screensh
+ot.png> <./img/fusion/Sea/3/Infrared_Image_screenshot.png (PNG copy)> <./img/fu
+sion/Sea/3/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Sea/3/Warpe
+d_Infrared_Image_screenshot.png> <./img/fusion/Sea/3/Warped_Grayscale_Image_scr
+eenshot.png> <./img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screensho
+t.png> <./img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png
+>]
+
+LaTeX Warning: Citation `rudol2008human' on page 8 undefined on input line 197.
+
+
+
+LaTeX Warning: Citation `WGS' on page 8 undefined on input line 197.
+
+[8 <./img/fusion/Roth/PR-roth-all-detections.jpg>]
+<img/victim_gps/SIP.png, id=62, 746.79pt x 832.10875pt>
 File: img/victim_gps/SIP.png Graphic file (type png)
 
 <use img/victim_gps/SIP.png>
-Package pdftex.def Info: img/victim_gps/SIP.png used on input line 203.
-(pdftex.def)             Requested size: 170.71652pt x 190.21286pt.
+Package pdftex.def Info: img/victim_gps/SIP.png used on input line 204.
+(pdftex.def)             Requested size: 199.16928pt x 221.91713pt.
+Package epstopdf Info: Source file: <img/victim_gps/SIP_detections_map.eps>
+(epstopdf)                    date: 2015-08-29 07:42:48
+(epstopdf)                    size: 1322797 bytes
+(epstopdf)             Output file: <img/victim_gps/SIP_detections_map-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2015-08-29 07:43:18
+(epstopdf)                    size: 319169 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/victim_gps/SIP_detecti
+ons_map-eps-converted-to.pdf img/victim_gps/SIP_detections_map.eps>
+(epstopdf)             \includegraphics on input line 205.
+Package epstopdf Info: Output file is already uptodate.
 
-<img/victim_gps/victim_gps_on_map_3.jpg, id=64, 783.92876pt x 902.37125pt>
-File: img/victim_gps/victim_gps_on_map_3.jpg Graphic file (type jpg)
+<img/victim_gps/SIP_detections_map-eps-converted-to.pdf, id=63, 635.37375pt x 7
+13.66624pt>
+File: img/victim_gps/SIP_detections_map-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use img/victim_gps/SIP_detections_map-eps-converted-to.pdf>
+Package pdftex.def Info: img/victim_gps/SIP_detections_map-eps-converted-to.pdf
+ used on input line 205.
+(pdftex.def)             Requested size: 199.16928pt x 223.70619pt.
 
-<use img/victim_gps/victim_gps_on_map_3.jpg>
-Package pdftex.def Info: img/victim_gps/victim_gps_on_map_3.jpg used on input l
-ine 204.
-(pdftex.def)             Requested size: 170.71652pt x 196.49823pt.
+Overfull \hbox (75.53084pt too wide) in paragraph at lines 202--209
+ [][] 
+ []
 
-<img/victim_gps/victim_utm_errors.jpg, id=65, 1482.53876pt x 820.06375pt>
+<img/victim_gps/victim_utm_errors.jpg, id=64, 1482.53876pt x 820.06375pt>
 File: img/victim_gps/victim_utm_errors.jpg Graphic file (type jpg)
 
 <use img/victim_gps/victim_utm_errors.jpg>
 Package pdftex.def Info: img/victim_gps/victim_utm_errors.jpg used on input lin
-e 212.
+e 213.
 (pdftex.def)             Requested size: 312.9803pt x 173.11942pt.
 
-Overfull \hbox (14.15378pt too wide) in paragraph at lines 230--231
+Overfull \hbox (14.15378pt too wide) in paragraph at lines 231--232
 \OT1/cmr/m/n/10 This work was sup-ported by the Eu-ro-pean Com-mis-sion project
 s ICARUS (#285417)
  []
 
 
-LaTeX Warning: Citation `bal:cha:gra:pae' undefined on input line 232.
+LaTeX Warning: Citation `bal:cha:gra:pae' undefined on input line 233.
 
-(./isvc_submission.bbl [9] [10 <./img/victim_gps/SIP.png (PNG copy)> <./img/vic
-tim_gps/victim_gps_on_map_3.jpg> <./img/victim_gps/victim_utm_errors.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 72--75
-[]\OT1/cmr/m/n/9 Doll^^Sar, P.:  Pi-otr's Com-puter Vi-sion Mat-lab Tool-box (P
-MT).
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--115
-[]\OT1/cmr/m/n/9 Agency, N.G.I.:  World geode-tic sys-tem 1984.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--115
-\OT1/cmr/m/n/9 (http://web.archive.org/web/20120401083859/http://earth-
- []
-
-) [11] (./isvc_submission.aux)
+(./isvc_submission.bbl) [9] [10 <./img/victim_gps/SIP.png (PNG copy)> <./img/vi
+ctim_gps/SIP_detections_map-eps-converted-to.pdf> <./img/victim_gps/victim_utm_
+errors.jpg>] (./isvc_submission.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -594,12 +678,12 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  3465 strings out of 494985
- 55625 string characters out of 6180356
+ 55684 string characters out of 6180357
  123168 words of memory out of 5000000
- 6639 multiletter control sequences out of 15000+600000
+ 6638 multiletter control sequences out of 15000+600000
  7456 words of font info for 27 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 44i,14n,42p,1631b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,14n,42p,1796b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -607,14 +691,13 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.
-pfb>
-Output written on isvc_submission.pdf (11 pages, 7172167 bytes).
+blic/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmtt9.pfb>
+Output written on isvc_submission.pdf (10 pages, 7340993 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
