@@ -98,11 +98,11 @@ Fig.~\ref{fig:bg_sub} shows two sample images collected at different altitudes, 
 \end{figure}
 
 
-\subsection{Human Classifier}
+\subsection{Human Classifiers}
 
-The ROIs obtained from Background Subtraction are exhaustively searched for presence of a human. For this, we use a HOG feature based learning classifier (which was found to be optimal \cite{portmann2014people}) to classify the extracted patch into human or non-human category. The training data is obtained by manually annotating sequences from different datasets using vBBToolbox \cite{PMT}. A Support Vector Machine (SVM) classifier is trained using these image patches. Type of SVM optimization problem, kernel type and other parameters are optimized using K-fold cross validation. Fig.~\ref{fig:k-fold} shows performance of few chosen configurations. C\_SVC \cite{svm} optimization problem with Linear kernel type and Radial Basis Function (RBF) kernel type are found to be two top performing classifier configurations. 
+The ROIs obtained from Background Subtraction are exhaustively searched for presence of a human. For this, we use a HOG feature based learning classifier (which was found to be optimal \cite{portmann2014people}) to classify the extracted patch into human or non-human category. The training data is obtained by manually annotating sequences from different datasets using vBBToolbox \cite{PMT}. HOG features are extracted on the image patches at multiple scales to generate a descriptor. A Support Vector Machine (SVM) classifier is trained using these image patch descriptors. Type of SVM optimization problem, kernel type and other parameters are optimized using K-fold cross validation. Fig.~\ref{fig:k-fold} shows performance of few chosen configurations.
 
-HOG features are extracted on the image patches at multiple scales and the descriptor generated is passed on to the SVM classifier to detect the presence of humans. Fig.~\ref{fig:k-fold} shows Precision-Recall curves for the performance of classifier on a validation dataset.
+Fig.~\ref{fig:k-fold} shows Precision-Recall curves for the performance of classifier on a validation dataset. The above method is then repeated to train a classifier for grayscale image patches. C\_SVC \cite{svm} optimization problem with Linear kernel type and Radial Basis Function (RBF) kernel type are found to be two top performing configurations for infrared classifier. C\_SVC optimization problem with Linear kernel is found to be optimal configuration for grayscale classifier.
 
 \begin{figure}
   \centering
@@ -121,7 +121,7 @@ HOG features are extracted on the image patches at multiple scales and the descr
     \tiny (c) Choosing optimization for RBF kernel
   \end{tabular}
   
-  \caption{Performance of SVM classifier with different configurations of optimization problem and kernel type. It's found to be optimal to choose (a) RBF kernel type for C\_SVC problem, (b) C\_SVC problem for Linear kernel type and (c) C\_SVC problem for RBF kernel type.}\label{fig:k-fold}
+  \caption{Performance of infrared SVM classifier with different configurations of optimization problem and kernel type. It's found to be optimal to choose (a) RBF kernel type for C\_SVC problem, (b) C\_SVC problem for Linear kernel type and (c) C\_SVC problem for RBF kernel type.}\label{fig:k-fold}
 \end{figure}
 
 
@@ -130,6 +130,8 @@ HOG features are extracted on the image patches at multiple scales and the descr
 Objects in Infrared image rarely have discerning features since the temperature tends to be uniform across the objects. So, a classifier would be not so reliable in classifying such patches since it only has the shape information of the object in a very small patch. Since in all our flights using the UAV we collected both Infrared and Grayscale images, a fusion technique is proposed to get a one to one relationship between pixel locations of Infrared and Grayscale images. This will help us in extracting both Infrared and Grayscale image patches corresponding to the ROIs obtained from Background Subtraction which can help the classifier in producing more reliable results.
 
 We use Kalibr \cite{furgale2013unified} to calibrate the Infrared and Grayscale camera intrinsics and extrinsics for the sensorpod mounting. We use radial-tangential model to estimate camera distortion parameters. An april tag pattern is used to estimate Grayscale camera intrinsics. A thick matte paper with chequerboard pattern under illumination of a bright light is used to calibrate Infrared camera intrinsics. We then undistort the images and choose a new camera matrix for both the cameras with common focal parameters. An optimal camera matrix is evaluated that ensures all the original pixels are present in the final image after undistorting the images. Rotation and Translation matrices between the cameras is obtained using camera-camera extrinsics evaluated with Kalibr. Now the Infrared and Grayscale camera setup can be treated as a Stereo pair and standard image rectification techniques \cite{planar_rect} can be used to evaluate the necessary projection matrices. At this point, all the epipolar lines are parallel to image edge (horizontal if horizontal rectification was employed, vertical otherwise). For our particular setup, vertical stereo was chosen since the camera centers were aligned vertically on the UAV. Now that the disparities of the image are in one axis, it's fast and easy to find pixel correspondences. After a manual displacement that is set for all the columns, individual column displacements are evaluated using correspondences between fast features calculated for both the images.
+
+Once a one-to-one correspondence is obtained between grayscale and infrared images, the patches corresponding to ROIs are passed on to individual human classifiers and pair of patches resulting in high cumulative classifier score are retained for probable presence of a human.
 
 
 Fig.~\ref{fig:fusion} shows results from the fusion technique. In Sequence-1 Infrared and Grayscale cameras were both facing in the direction of flight and are in $25^{\circ}$ nadir configuration with a translation of 3.5cm between the camera centers. In Sequence-2, Infrared camera was in $25^{\circ}$ nadir configuration while Grayscale camera was in $50^{\circ}$ nadir configuration with a translation of 3.5cm between the camera centers. The results show reasonable overlap accuracy. Since we only require a bounding box containing the same object in both Infrared and Grayscale image, to get corresponding image patches from both images, this level of accuracy suffices.
@@ -172,13 +174,13 @@ Fig.~\ref{fig:fusion} shows results from the fusion technique. In Sequence-1 Inf
   \caption{The top 2 rows show 2 sequences of original images obtained from Infrared (a) and Grayscale cameras (b) and the resulting images post rectification (c, d). Last row shows fusion of both images (e) to visualize the quality of overlap. Red boxes in Sequence-1 highlights 2 humans and a boat in Sequence-2. As can be seen, the correspondence between Infrared and Grayscale images is reasonably good.}\label{fig:fusion}
 \end{figure}
 
-Fig.~\ref{fig:fusion} shows improvement to the Precision-Recall (PR) curves after Image Fusion on a dataset collected from a UAV cruising at 60 meters above the ground. Close to 140\% improvement (10\% vs. 24\%) in the area under curve can be seen. At a first glance 24\% area under PR curves might look unsatisfying. But, it should be noted that we could still achieve above 60\% Recall. Since, we have various methods to eliminate False-Positives, as mentioned in next section, we operate our classifier on the higher Recall point. Also the fact that very few of the False Positives are of a same object recurring across several frames plays a vital role in suppressing them.
+Fig.~\ref{fig:fusion-pr} shows improvement to the Precision-Recall (PR) curves after Image Fusion on a dataset collected from a UAV cruising at 60 meters above the ground. Close to 140\% improvement (10\% vs. 24\%) in the area under curve can be seen. At a first glance 24\% area under PR curves might look unsatisfying. But, it should be noted that we could still achieve above 60\% Recall. Since, we have various methods to eliminate False-Positives, as mentioned in next section, we operate our classifier on the higher Recall point. Also the fact that very few of the False Positives are of a same object recurring across several frames plays a vital role in suppressing them.
 
 \begin{figure}
   \centering
   	\includegraphics[width=8cm]{img/fusion/Roth/PR-roth-all-detections.jpg} 
 
-  \caption{Precision-Recall curves of the pipeline on a high-altitude (60 meters) data collected from a UAV, before and after image fusion.}\label{fig:fusion}
+  \caption{Precision-Recall curves of the pipeline on a high-altitude (60 meters) data collected from a UAV, before and after image fusion.}\label{fig:fusion-pr}
 \end{figure}
 
 

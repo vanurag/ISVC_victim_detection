@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  28 SEP 2015 16:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  28 SEP 2015 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -266,11 +266,7 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip50
 \backup@length=\skip51
 )
-(./isvc_submission.aux
-
-LaTeX Warning: Label `fig:fusion' multiply defined.
-
-)
+(./isvc_submission.aux)
 \openout1 = `isvc_submission.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -285,7 +281,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count125
 \scratchdimen=\dimen138
@@ -424,7 +421,7 @@ t>
 File: img/fusion/Roth/Infrared_Image_screenshot.png Graphic file (type png)
  <use img/fusion/Roth/Infrared_Image_screenshot.png>
 Package pdftex.def Info: img/fusion/Roth/Infrared_Image_screenshot.png used on 
-input line 140.
+input line 142.
 (pdftex.def)             Requested size: 85.35826pt x 106.44833pt.
 
 <img/fusion/Roth/Grayscale_Image_screenshot.png, id=40, 361.35pt x 566.115pt>
@@ -432,7 +429,7 @@ File: img/fusion/Roth/Grayscale_Image_screenshot.png Graphic file (type png)
 
 <use img/fusion/Roth/Grayscale_Image_screenshot.png>
 Package pdftex.def Info: img/fusion/Roth/Grayscale_Image_screenshot.png used on
- input line 141.
+ input line 143.
 (pdftex.def)             Requested size: 85.35826pt x 133.72809pt.
 
 <img/fusion/Roth/Warped_Infrared_Image_screenshot.png, id=41, 537.00626pt x 666
@@ -441,7 +438,7 @@ File: img/fusion/Roth/Warped_Infrared_Image_screenshot.png Graphic file (type p
 ng)
  <use img/fusion/Roth/Warped_Infrared_Image_screenshot.png>
 Package pdftex.def Info: img/fusion/Roth/Warped_Infrared_Image_screenshot.png u
-sed on input line 142.
+sed on input line 144.
 (pdftex.def)             Requested size: 85.35826pt x 105.93886pt.
 
 <img/fusion/Roth/Warped_Grayscale_Image_screenshot.png, id=42, 485.815pt x 700.
@@ -450,10 +447,10 @@ File: img/fusion/Roth/Warped_Grayscale_Image_screenshot.png Graphic file (type
 png)
  <use img/fusion/Roth/Warped_Grayscale_Image_screenshot.png>
 Package pdftex.def Info: img/fusion/Roth/Warped_Grayscale_Image_screenshot.png 
-used on input line 143.
+used on input line 145.
 (pdftex.def)             Requested size: 85.35826pt x 123.09097pt.
 
-Overfull \hbox (24.57564pt too wide) in paragraph at lines 139--149
+Overfull \hbox (24.57564pt too wide) in paragraph at lines 141--151
  [][] 
  []
 
@@ -463,7 +460,7 @@ pt>
 File: img/fusion/Sea/3/Infrared_Image_screenshot.png Graphic file (type png)
  <use img/fusion/Sea/3/Infrared_Image_screenshot.png>
 Package pdftex.def Info: img/fusion/Sea/3/Infrared_Image_screenshot.png used on
- input line 153.
+ input line 155.
 (pdftex.def)             Requested size: 85.35826pt x 106.9954pt.
 
 <img/fusion/Sea/3/Grayscale_Image_screenshot.png, id=44, 361.35pt x 566.115pt>
@@ -471,7 +468,7 @@ File: img/fusion/Sea/3/Grayscale_Image_screenshot.png Graphic file (type png)
 
 <use img/fusion/Sea/3/Grayscale_Image_screenshot.png>
 Package pdftex.def Info: img/fusion/Sea/3/Grayscale_Image_screenshot.png used o
-n input line 154.
+n input line 156.
 (pdftex.def)             Requested size: 85.35826pt x 133.72809pt.
 
 <img/fusion/Sea/3/Warped_Infrared_Image_screenshot.png, id=45, 741.77126pt x 75
@@ -480,7 +477,7 @@ File: img/fusion/Sea/3/Warped_Infrared_Image_screenshot.png Graphic file (type
 png)
  <use img/fusion/Sea/3/Warped_Infrared_Image_screenshot.png>
 Package pdftex.def Info: img/fusion/Sea/3/Warped_Infrared_Image_screenshot.png 
-used on input line 155.
+used on input line 157.
 (pdftex.def)             Requested size: 85.35826pt x 87.20079pt.
 
 <img/fusion/Sea/3/Warped_Grayscale_Image_screenshot.png, id=46, 553.06625pt x 8
@@ -489,10 +486,10 @@ File: img/fusion/Sea/3/Warped_Grayscale_Image_screenshot.png Graphic file (type
  png)
  <use img/fusion/Sea/3/Warped_Grayscale_Image_screenshot.png>
 Package pdftex.def Info: img/fusion/Sea/3/Warped_Grayscale_Image_screenshot.png
- used on input line 156.
+ used on input line 158.
 (pdftex.def)             Requested size: 85.35826pt x 138.17592pt.
 
-Overfull \hbox (24.57564pt too wide) in paragraph at lines 152--162
+Overfull \hbox (24.57564pt too wide) in paragraph at lines 154--164
  [][] 
  []
 
@@ -504,7 +501,7 @@ hic file (type png)
 
 <use img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.png>
 Package pdftex.def Info: img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_
-screenshot.png used on input line 166.
+screenshot.png used on input line 168.
 (pdftex.def)             Requested size: 170.71652pt x 222.0887pt.
 
 <img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png, id=48, 
@@ -514,39 +511,43 @@ phic file (type png)
 
 <use img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png>
 Package pdftex.def Info: img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image
-_screenshot.png used on input line 167.
+_screenshot.png used on input line 169.
 (pdftex.def)             Requested size: 170.71652pt x 249.83636pt.
 
 
-LaTeX Warning: Float too large for page by 123.5022pt on input line 173.
+LaTeX Warning: Float too large for page by 123.5022pt on input line 175.
 
 <img/fusion/Roth/PR-roth-all-detections.jpg, id=49, 1033.8625pt x 716.6775pt>
 File: img/fusion/Roth/PR-roth-all-detections.jpg Graphic file (type jpg)
 
 <use img/fusion/Roth/PR-roth-all-detections.jpg>
 Package pdftex.def Info: img/fusion/Roth/PR-roth-all-detections.jpg used on inp
-ut line 179.
+ut line 181.
 (pdftex.def)             Requested size: 227.62204pt x 157.77888pt.
 
-Overfull \hbox (0.54375pt too wide) in paragraph at lines 191--192
+Overfull \hbox (0.54375pt too wide) in paragraph at lines 193--194
 \OT1/cmr/m/n/10 All the ex-per-i-ments are per-formed on a light-weight low-alt
 itude hand-launchable
  []
 
-[6] [7 <./img/fusion/Roth/Infrared_Image_screenshot.png (PNG copy)> <./img/fusi
-on/Roth/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Roth/Warped_In
-frared_Image_screenshot.png> <./img/fusion/Roth/Warped_Grayscale_Image_screensh
-ot.png> <./img/fusion/Sea/3/Infrared_Image_screenshot.png (PNG copy)> <./img/fu
-sion/Sea/3/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Sea/3/Warpe
-d_Infrared_Image_screenshot.png> <./img/fusion/Sea/3/Warped_Grayscale_Image_scr
-eenshot.png> <./img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screensho
-t.png> <./img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png
->] [8 <./img/fusion/Roth/PR-roth-all-detections.jpg>]
+
+Underfull \vbox (badness 2726) has occurred while \output is active []
+
+ [6]
+[7 <./img/fusion/Roth/Infrared_Image_screenshot.png (PNG copy)> <./img/fusion/R
+oth/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Roth/Warped_Infrar
+ed_Image_screenshot.png> <./img/fusion/Roth/Warped_Grayscale_Image_screenshot.p
+ng> <./img/fusion/Sea/3/Infrared_Image_screenshot.png (PNG copy)> <./img/fusion
+/Sea/3/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Sea/3/Warped_In
+frared_Image_screenshot.png> <./img/fusion/Sea/3/Warped_Grayscale_Image_screens
+hot.png> <./img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.pn
+g> <./img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png>]
+[8 <./img/fusion/Roth/PR-roth-all-detections.jpg>]
 <img/victim_gps/SIP.png, id=62, 746.79pt x 832.10875pt>
 File: img/victim_gps/SIP.png Graphic file (type png)
 
 <use img/victim_gps/SIP.png>
-Package pdftex.def Info: img/victim_gps/SIP.png used on input line 208.
+Package pdftex.def Info: img/victim_gps/SIP.png used on input line 210.
 (pdftex.def)             Requested size: 199.16928pt x 221.91713pt.
 Package epstopdf Info: Source file: <img/victim_gps/SIP_detections_map.eps>
 (epstopdf)                    date: 2015-08-29 07:42:48
@@ -557,7 +558,7 @@ erted-to.pdf>
 (epstopdf)                    size: 319169 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/victim_gps/SIP_detecti
 ons_map-eps-converted-to.pdf img/victim_gps/SIP_detections_map.eps>
-(epstopdf)             \includegraphics on input line 209.
+(epstopdf)             \includegraphics on input line 211.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/victim_gps/SIP_detections_map-eps-converted-to.pdf, id=63, 635.37375pt x 7
@@ -566,10 +567,10 @@ File: img/victim_gps/SIP_detections_map-eps-converted-to.pdf Graphic file (type
  pdf)
  <use img/victim_gps/SIP_detections_map-eps-converted-to.pdf>
 Package pdftex.def Info: img/victim_gps/SIP_detections_map-eps-converted-to.pdf
- used on input line 209.
+ used on input line 211.
 (pdftex.def)             Requested size: 199.16928pt x 223.70619pt.
 
-Overfull \hbox (75.53084pt too wide) in paragraph at lines 206--213
+Overfull \hbox (75.53084pt too wide) in paragraph at lines 208--215
  [][] 
  []
 
@@ -578,16 +579,16 @@ File: img/victim_gps/victim_utm_errors.jpg Graphic file (type jpg)
 
 <use img/victim_gps/victim_utm_errors.jpg>
 Package pdftex.def Info: img/victim_gps/victim_utm_errors.jpg used on input lin
-e 217.
+e 219.
 (pdftex.def)             Requested size: 312.9803pt x 173.11942pt.
 
-Overfull \hbox (14.15378pt too wide) in paragraph at lines 235--236
+Overfull \hbox (14.15378pt too wide) in paragraph at lines 237--238
 \OT1/cmr/m/n/10 This work was sup-ported by the Eu-ro-pean Com-mis-sion project
 s ICARUS (#285417)
  []
 
 
-LaTeX Warning: Citation `bal:cha:gra:pae' undefined on input line 237.
+LaTeX Warning: Citation `bal:cha:gra:pae' undefined on input line 239.
 
 (./isvc_submission.bbl [9] [10 <./img/victim_gps/SIP.png (PNG copy)> <./img/vic
 tim_gps/SIP_detections_map-eps-converted-to.pdf> <./img/victim_gps/victim_utm_e
@@ -597,7 +598,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--75
 MT).
  []
 
-
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 122--126
 []\OT1/cmr/m/n/9 Agency, N.G.I.:  World geode-tic sys-tem 1984.
  []
@@ -607,19 +608,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--126
 \OT1/cmr/m/n/9 (http://web.archive.org/web/20120401083859/http://earth-
  []
 
-) [11] (./isvc_submission.aux)
+) [12] (./isvc_submission.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 3468 strings out of 494985
- 55716 string characters out of 6180357
- 124168 words of memory out of 5000000
- 6641 multiletter control sequences out of 15000+600000
+ 3469 strings out of 494985
+ 55731 string characters out of 6180357
+ 123168 words of memory out of 5000000
+ 6642 multiletter control sequences out of 15000+600000
  7456 words of font info for 27 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  44i,14n,42p,1796b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -633,10 +631,10 @@ type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmtt9.pfb>
-Output written on isvc_submission.pdf (11 pages, 7348019 bytes).
+Output written on isvc_submission.pdf (12 pages, 7348529 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 113 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
