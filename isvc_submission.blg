@@ -10,48 +10,49 @@ while executing---line 2139 of file splncs.bst
 Warning--there's no year in PMT
 You can't pop an empty literal stack for entry PMT
 while executing---line 2139 of file splncs.bst
+Warning--empty title in Skybotix
 Warning--there's no year in WGS
 You can't pop an empty literal stack for entry WGS
 while executing---line 2139 of file splncs.bst
-You've used 19 entries,
+You've used 21 entries,
             2043 wiz_defined-function locations,
-            603 strings with 7310 characters,
-and the built_in function-call counts, 6464 in all, are:
-= -- 688
-> -- 188
+            610 strings with 7521 characters,
+and the built_in function-call counts, 6808 in all, are:
+= -- 716
+> -- 203
 < -- 16
-+ -- 70
-- -- 51
-* -- 396
-:= -- 814
-add.period$ -- 25
-call.type$ -- 19
-change.case$ -- 19
++ -- 76
+- -- 55
+* -- 415
+:= -- 862
+add.period$ -- 28
+call.type$ -- 21
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 349
-empty$ -- 629
-format.name$ -- 51
-if$ -- 1633
+cite$ -- 25
+duplicate$ -- 368
+empty$ -- 674
+format.name$ -- 55
+if$ -- 1716
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 16
-newline$ -- 98
-num.names$ -- 19
-pop$ -- 75
+int.to.str$ -- 21
+missing$ -- 17
+newline$ -- 107
+num.names$ -- 21
+pop$ -- 89
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 276
+skip$ -- 285
 stack$ -- 0
 substring$ -- 481
-swap$ -- 193
+swap$ -- 197
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 56
-width$ -- 21
-write$ -- 220
+warning$ -- 4
+while$ -- 58
+width$ -- 23
+write$ -- 238
 (There were 3 error messages)

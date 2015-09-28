@@ -89,6 +89,17 @@ Fusiello, A., Trucco, E., Verri, A.:
 \newblock A compact algorithm for rectification of stereo pairs.
 \newblock Machine Vision and Applications \textbf{12} (2000)  16--22
 
+\bibitem{meier2015px4}
+Meier, L., Honegger, D., Pollefeys, M.:
+\newblock {{PX4}}: A node-based multithreaded open source robotics framework
+  for deeply embedded platforms.
+\newblock In: Robotics and Automation (ICRA), 2015 IEEE International
+  Conference on. (2015)
+
+\bibitem{Skybotix}
+{Skybotix AG}:
+\newblock (2015) \url{http://www.skybotix.com/}.
+
 \bibitem{7140101}
 Bircher, A., Alexis, K., Burri, M., Oettershagen, P., Omari, S., Mantel, T.,
   Siegwart, R.:
