@@ -28,14 +28,14 @@
   captionpos=b,                    % sets the caption-position to bottom
   commentstyle=\itshape\color{mygreen},    % comment style
   deletekeywords={...},            % if you want to delete keywords from the given language
-  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  escapeinside={(*@}{@*)},          % if you want to add LaTeX within your code
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   frame=single,	                   % adds a frame around the code
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   keywordstyle=\color{blue},       % keyword style
   language=C,                 % the language of the code
-  otherkeywords={*,...},            % if you want to add more keywords to the set
-  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  otherkeywords={cv,...},            % if you want to add more keywords to the set
+  numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=5pt,                   % how far the line-numbers are from the code
   numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
   rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
@@ -219,9 +219,9 @@ Fig.~\ref{fig:fusion-pr} shows improvement to the Precision-Recall (PR) curves a
   \caption{Precision-Recall curves of the pipeline on a high-altitude (60 meters) data collected from a UAV, before and after image fusion.}\label{fig:fusion-pr}
 \end{figure}
 
-\begin{lstlisting}[caption=Pseudo source code for Image fusion, label=pseudo, frame=single, emph={getOptimalNewCameraMatrix}, emphstyle={\bfseries\ttfamily}]
+\begin{lstlisting}[caption=Pseudo source code for Image fusion, label=pseudo, frame=single]
 
-void main(int num_arguments, char** arguments) {
+void (*@\textbf{\sffamily{main}}@*) (int num_arguments, char** arguments) {
   // Camera Intrinsics.
   struct Intrinsics {
     cv::Mat_<double> infrared;
@@ -256,17 +256,17 @@ void main(int num_arguments, char** arguments) {
     cv::Mat offsets;
   } mappings;
 
-  loadCalibration(intrinsics,extrinsics); // Load camera intrinsics.
+  (*@\textbf{\sffamily{loadCalibration}}@*)(intrinsics,extrinsics); // Load camera intrinsics.
   // Generate new optimal camera intrinsics that will ensure maximum possible number of pixels of both images are retained after un-distortion, in destination image size same as the original image.
-  rectified.new_infrared_intrinsics = cv::getOptimalNewCameraMatrix(
+  rectified.new_infrared_intrinsics = cv::(*@\textbf{\sffamily{getOptimalNewCameraMatrix}}@*)(
     intrinsics.infrared,intrinsics.infrared_distortion,infrared_image_size);
-  rectified.new_grayscale_intrinsics = cv::getOptimalNewCameraMatrix(
+  rectified.new_grayscale_intrinsics = cv::(*@\textbf{\sffamily{getOptimalNewCameraMatrix}}@*)(
     intrinsics.grayscale,intrinsics.grayscale_distortion,grayscale_image_size);
   // Obtain single optimal camera matrix that ensures all the pixels from both the images are retained post un-distortion.
-  rectified.intrinsics = getOptimalNewCameraMatrix(
+  rectified.intrinsics = (*@\textbf{\sffamily{getOptimalNewCameraMatrix}}@*)(
     rectified.new_infrared_intrinsics,rectified.new_grayscale_intrinsics);
 // Compute rectification transforms for each camera in the calibrated stereo pair using OpenCV Stereo Rectification.
-  cv::stereoRectify(
+  cv::(*@\textbf{\sffamily{stereoRectify}}@*)(
     intrinsics.infrared,intrinsics.infrared_distortion,
     intrinsics.grayscale,intrinsics.grayscale_distortion,
     extrinsics.grayscale_to_infrared,rectified.infrared_transform,
@@ -275,34 +275,34 @@ void main(int num_arguments, char** arguments) {
   while (incoming ROS messages) {
     // Read ROS infrared image message.
     if (message_view.getTopic() == infrared_topic) {
-      cv::Mat infrared = getImage(message_view); // Read the image.
+      cv::Mat infrared = (*@\textbf{\sffamily{getImage}}@*)(message_view); // Read the image.
     }
     // Read ROS grayscale image message.
     if (message_view.getTopic() == grayscale_topic) {
-      cv::Mat grayscale = getImage(message_view); // Read the image.
+      cv::Mat grayscale = (*@\textbf{\sffamily{getImage}}@*)(message_view); // Read the image.
       // Evaluate transformation maps using computed destination camera matrix and the stereo rectification transforms.
       if ( !mappings.evaluated ) {
-        cv::initUndistortRectifyMap(
+        cv::(*@\textbf{\sffamily{initUndistortRectifyMap}}@*)(
           intrinsics.infrared,intrinsics.infrared_distortion, 
           rectified.infrared_transform,rectified.infrared_intrinsics, 
           rectified.destination_size,mappings.infrared);
-        cv::initUndistortRectifyMap(
+        cv::(*@\textbf{\sffamily{initUndistortRectifyMap}}@*)(
           intrinsics.grayscale,intrinsics.grayscale_distortion,
           rectified.grayscale_transform,rectified.infrared_intrinsics,
           rectified.destination_size,mappings.grayscale);
         mappings.evaluated = true;
       }
-      // Find offsets to transformation maps using robust feature matching.
-      cv::goodFeaturesToTrack(infrared,infrared_features);
-      cv::goodFeaturesToTrack(grayscale,grayscale_features);
-      findOffsets(infrared_features,grayscale_features,mappings.offsets);
-      applyOffsets(mappings.offsets,mappings.infrared,mappings.grayscale);    
+      // Apply offsets to transformation maps using robust feature matching.
+      cv::(*@\textbf{\sffamily{goodFeaturesToTrack}}@*)(infrared,infrared_features);
+      cv::(*@\textbf{\sffamily{goodFeaturesToTrack}}@*)(grayscale,grayscale_features);
+      (*@\textbf{\sffamily{findOffsets}}@*)(infrared_features,grayscale_features,mappings.offsets);
+      (*@\textbf{\sffamily{applyOffsets}}@*)(mappings.offsets,mappings.infrared,mappings.grayscale);    
       // Rectify the images.
-      cv::remap(infrared,rectified_infrared,mappings.infrared);
-      cv::remap(grayscale,rectified_grayscale,mappings.grayscale);
+      cv::(*@\textbf{\sffamily{remap}}@*)(infrared,rectified_infrared,mappings.infrared);
+      cv::(*@\textbf{\sffamily{remap}}@*)(grayscale,rectified_grayscale,mappings.grayscale);
     }
     // Remap the ROIs into rectified image and extract overlapping patches in both the images corresponding to the new ROIs.
-    new_ROI = remapRect(ROI,mappings.infrared);
+    new_ROI = (*@\textbf{\sffamily{remapRect}}@*)(ROI,mappings.infrared);
     infrared_image_patch = rectified_infrared(new_ROI);
     grayscale_image_patch = rectified_grayscale(new_ROI);
   }

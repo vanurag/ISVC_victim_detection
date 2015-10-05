@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  5 OCT 2015 19:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  5 OCT 2015 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -568,6 +568,8 @@ File: img/fusion/Roth/PR-roth-all-detections.jpg Graphic file (type jpg)
 Package pdftex.def Info: img/fusion/Roth/PR-roth-all-detections.jpg used on inp
 ut line 217.
 (pdftex.def)             Requested size: 227.62204pt x 157.77888pt.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <7> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 224.
  [6] [7 <./img/fusion/Roth/Infrared_Image_screenshot.png (PNG copy)> <./img/fus
 ion/Roth/Grayscale_Image_screenshot.png (PNG copy)> <./img/fusion/Roth/Warped_I
 nfrared_Image_screenshot.png> <./img/fusion/Roth/Warped_Grayscale_Image_screens
@@ -577,9 +579,6 @@ ed_Infrared_Image_screenshot.png> <./img/fusion/Sea/3/Warped_Grayscale_Image_sc
 reenshot.png> <./img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screensh
 ot.png> <./img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.pn
 g>]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <7> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 261.
-
 Underfull \vbox (badness 1210) has occurred while \output is active []
 
  [8 <./img/fusion/Roth/PR-roth-all-detections.jpg>]
@@ -588,7 +587,7 @@ Overfull \hbox (0.54375pt too wide) in paragraph at lines 319--320
 itude hand-launchable
  []
 
-[9] <img/victim_gps/SIP.png, id=67, 746.79pt x 832.10875pt>
+[9] <img/victim_gps/SIP.png, id=68, 746.79pt x 832.10875pt>
 File: img/victim_gps/SIP.png Graphic file (type png)
 
 <use img/victim_gps/SIP.png>
@@ -606,7 +605,7 @@ ons_map-eps-converted-to.pdf img/victim_gps/SIP_detections_map.eps>
 (epstopdf)             \includegraphics on input line 337.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/victim_gps/SIP_detections_map-eps-converted-to.pdf, id=68, 635.37375pt x 7
+<img/victim_gps/SIP_detections_map-eps-converted-to.pdf, id=69, 635.37375pt x 7
 13.66624pt>
 File: img/victim_gps/SIP_detections_map-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -619,7 +618,7 @@ Overfull \hbox (73.51pt too wide) in paragraph at lines 334--341
  [][] 
  []
 
-<img/victim_gps/victim_utm_errors.jpg, id=69, 1482.53876pt x 820.06375pt>
+<img/victim_gps/victim_utm_errors.jpg, id=70, 1482.53876pt x 820.06375pt>
 File: img/victim_gps/victim_utm_errors.jpg Graphic file (type jpg)
 
 <use img/victim_gps/victim_utm_errors.jpg>
@@ -658,13 +657,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5066 strings out of 494985
- 79541 string characters out of 6180357
- 357422 words of memory out of 5000000
- 8212 multiletter control sequences out of 15000+600000
- 7960 words of font info for 30 fonts, out of 8000000 for 9000
+ 4969 strings out of 494985
+ 77963 string characters out of 6180357
+ 354430 words of memory out of 5000000
+ 8114 multiletter control sequences out of 15000+600000
+ 8254 words of font info for 31 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 44i,15n,49p,1796b,1696s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,15n,49p,1796b,1682s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -674,13 +673,13 @@ st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-t8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-
-Output written on isvc_submission.pdf (13 pages, 7380795 bytes).
+/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on isvc_submission.pdf (13 pages, 7389859 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
