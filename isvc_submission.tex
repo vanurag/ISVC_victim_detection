@@ -222,20 +222,16 @@ Fig.~\ref{fig:fusion-pr} shows improvement to the Precision-Recall (PR) curves a
 \begin{lstlisting}[caption=Pseudo source code for Image fusion, label=pseudo, frame=single]
 
 void (*@\textbf{\sffamily{main}}@*) (int num_arguments, char** arguments) {
-  // Camera Intrinsics.
-  struct Intrinsics {
+  struct Intrinsics {  // Camera Intrinsics.
     cv::Mat_<double> infrared;
     cv::Mat_<double> infrared_distortion;
     cv::Mat_<double> grayscale;
     cv::Mat_<double> grayscale_distortion;
   } intrinsics;
-  // Camera Extrinsics.
-  struct Extrinsics {
-    cv::Mat_<double> infrared_to_grayscale;
+  struct Extrinsics {  // Camera Extrinsics.
     cv::Mat_<double> grayscale_to_infrared;
   } extrinsics;
-  // Rectified image data.
-  struct Rectified {
+  struct Rectified {  // Rectified image data.
     // Transformation matrices for rectification.
     cv::Mat_<double> grayscale_transform;
     cv::Mat_<double> infrared_transform;
@@ -244,19 +240,15 @@ void (*@\textbf{\sffamily{main}}@*) (int num_arguments, char** arguments) {
     cv::Mat_<double> new_infrared_intrinsics;
     cv::Mat_<double> intrinsics;
   } rectified;
-  // Transformation mappings.
-  struct Mappings {
-    // Transformation maps for rectified images.
-    // transformed_image(x, y) = image(map(x, y)).
+  struct Mappings {  // Transformation mappings.
+    // Transformation maps for rectified images. transformed_image(x, y) = image(map(x, y)).
     cv::Mat infrared;
     cv::Mat grayscale;
-    // Mappings only need to be evaluated once.
     bool evaluated = false;
-    // Offsets to align rectified images.
-    cv::Mat offsets;
+    cv::Mat offsets;  // Offsets to align rectified images.
   } mappings;
 
-  (*@\textbf{\sffamily{loadCalibration}}@*)(intrinsics,extrinsics); // Load camera intrinsics.
+  (*@\textbf{\sffamily{loadCalibration}}@*)(intrinsics,extrinsics);  // Load camera intrinsics.
   // Generate new optimal camera intrinsics that will ensure maximum possible number of pixels of both images are retained after un-distortion, in destination image size same as the original image.
   rectified.new_infrared_intrinsics = cv::(*@\textbf{\sffamily{getOptimalNewCameraMatrix}}@*)(
     intrinsics.infrared,intrinsics.infrared_distortion,infrared_image_size);
@@ -265,7 +257,7 @@ void (*@\textbf{\sffamily{main}}@*) (int num_arguments, char** arguments) {
   // Obtain single optimal camera matrix that ensures all the pixels from both the images are retained post un-distortion.
   rectified.intrinsics = (*@\textbf{\sffamily{getOptimalNewCameraMatrix}}@*)(
     rectified.new_infrared_intrinsics,rectified.new_grayscale_intrinsics);
-// Compute rectification transforms for each camera in the calibrated stereo pair using OpenCV Stereo Rectification.
+  // Compute rectification transforms for each camera in the calibrated stereo pair using OpenCV Stereo Rectification.
   cv::(*@\textbf{\sffamily{stereoRectify}}@*)(
     intrinsics.infrared,intrinsics.infrared_distortion,
     intrinsics.grayscale,intrinsics.grayscale_distortion,
