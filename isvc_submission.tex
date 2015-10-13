@@ -98,7 +98,7 @@ Detecting humans from an altitude of 50-100 meters with a camera of limited reso
 Fig.~\ref{fig:thermal_sample} shows a human as seen in false-color rendering of the thermal camera image at an altitude of about 70 meters. At this scale, the humans occupy less than 50 pixels ($<$0.02\%) in an image of 640 x 512 resolution. An exhaustive search for such a tiny object of interest is very time consuming. We propose a Background Subtractor that returns regions of interest (ROI) and narrows down the search space considerably, thus enabling real-time detection. The foreground here is defined as a part of the image whose temperature differs quite significantly from it's surroundings. Since, humans are usually hotter (in winter) or colder (in summer) than the surroundings, we propose a technique that adaptively adjusts 2 threshold values ($t_{low}, t_{high}$) based on the surrounding pixel intensities. All the pixels with intensities less than $t_{low}$ or greater than $t_{high}$ are considered as foreground pixels.
 
 \begin{figure}
-\centerline{\includegraphics[scale=0.3]{img/sample_thermal.png}}
+\centerline{\includegraphics[scale=0.3]{img/eps/sample_thermal.eps}}
 \caption{A sample image recorded from the FLIR thermal camera at an approximate altitude of 70 meters. Two humans are pointed out.}
 \label{fig:thermal_sample}
 \end{figure}
@@ -111,9 +111,9 @@ Fig.~\ref{fig:bg_sub} shows two sample images collected at different altitudes, 
 \begin{figure}
   \centering
   \begin{tabular}{ccc}
-    \includegraphics[width=4cm]{img/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.png} &
-    \includegraphics[width=4cm]{img/bg_sub/CLA_Threshold_values(high)_screenshot_03-08-2015.png} &
-    \includegraphics[width=4cm]{img/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015.png} \\
+    \includegraphics[width=4cm]{img/eps/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.eps} &
+    \includegraphics[width=4cm]{img/eps/bg_sub/CLA_Threshold_values_high_screenshot_03-08-2015.eps} &
+    \includegraphics[width=4cm]{img/eps/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015.eps} \\
     \small (1.a) IR image & 
     \small (1.b) 8-bit threshold image &
     \small (1.c) Segmentation map
@@ -122,9 +122,9 @@ Fig.~\ref{fig:bg_sub} shows two sample images collected at different altitudes, 
   \vspace{\floatsep}
 
   \begin{tabular}{ccc}
-    \includegraphics[height=4cm]{img/bg_sub/Roth_Infrared_Image_screenshot.png} &
-    \includegraphics[height=4cm]{img/bg_sub/Roth_Threshold_values(high)_screenshot.png} &
-    \includegraphics[height=4cm]{img/bg_sub/Roth_Segmentation_Map_screenshot.png} \\
+    \includegraphics[height=4cm]{img/eps/bg_sub/Roth_Infrared_Image_screenshot.eps} &
+    \includegraphics[height=4cm]{img/eps/bg_sub/Roth_Threshold_values_high_screenshot.eps} &
+    \includegraphics[height=4cm]{img/eps/bg_sub/Roth_Segmentation_Map_screenshot.eps} \\
     \small (2.a) IR image & 
     \small (2.b) 8-bit threshold image &
     \small (2.c) Segmentation map
@@ -144,11 +144,11 @@ Fig.~\ref{fig:k-fold} shows Precision-Recall curves for the performance of class
   \centering
   \begin{tabular}{m{5cm}m{5cm}m{5cm}}
   \hspace{-1.5cm}
-    \includegraphics[width=5cm]{img/classifier/SvmKernelTypevalue_vs_score_C_SVC.jpg} &
+    \includegraphics[width=5cm]{img/eps/classifier/SvmKernelTypevalue_vs_score_C_SVC.eps} &
     \hspace{-1.5cm}
-    \includegraphics[width=5cm]{img/classifier/SvmTypevalue_vs_score_LINEAR.jpg} &
+    \includegraphics[width=5cm]{img/eps/classifier/SvmTypevalue_vs_score_LINEAR.eps} &
     \hspace{-1.5cm}
-    \includegraphics[width=5cm]{img/classifier/SvmTypevalue_vs_score_RBF.jpg} \\
+    \includegraphics[width=5cm]{img/eps/classifier/SvmTypevalue_vs_score_RBF.eps} \\
     \hspace{-1.5cm}
     \tiny (a) Choosing kernel type for C\_SVC problem & 
     \hspace{-1.5cm}
@@ -175,10 +175,10 @@ Fig.~\ref{fig:fusion} shows results from the fusion technique. In Sequence-1 inf
 \begin{figure}
   \centering
   \begin{tabular}{cccc}
-    \includegraphics[width=3cm]{img/fusion/Roth/Infrared_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Roth/Grayscale_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Roth/Warped_Infrared_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Roth/Warped_Grayscale_Image_screenshot.png} \\
+    \includegraphics[width=3cm]{img/eps/fusion/Roth/Infrared_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Roth/Grayscale_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Roth/Warped_Infrared_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Roth/Warped_Grayscale_Image_screenshot.eps} \\
     \small (1.a) IR image & 
     \small (1.b) Grayscale Image &
     \small (1.c) Rectified IR &
@@ -188,10 +188,10 @@ Fig.~\ref{fig:fusion} shows results from the fusion technique. In Sequence-1 inf
   \vspace{\floatsep}
   
   \begin{tabular}{cccc}
-    \includegraphics[width=3cm]{img/fusion/Sea/3/Infrared_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Sea/3/Grayscale_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Sea/3/Warped_Infrared_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Sea/3/Warped_Grayscale_Image_screenshot.png} \\
+    \includegraphics[width=3cm]{img/eps/fusion/Sea/3/Infrared_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Sea/3/Grayscale_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Sea/3/Warped_Infrared_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Sea/3/Warped_Grayscale_Image_screenshot.eps} \\
     \small (2.a) IR image & 
     \small (2.b) Grayscale Image &
     \small (2.c) Rectified IR &
@@ -201,8 +201,8 @@ Fig.~\ref{fig:fusion} shows results from the fusion technique. In Sequence-1 inf
   \vspace{\floatsep}
   
   \begin{tabular}{cc}
-  	\includegraphics[width=6cm]{img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.png} &
-  	\includegraphics[width=6cm]{img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png} \\
+  	\includegraphics[width=6cm]{img/eps/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.eps} &
+  	\includegraphics[width=6cm]{img/eps/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.eps} \\
   	\small (1.e) Fused IR and Grayscale Images &
   	\small (2.e) Fused IR and Grayscale Images
   \end{tabular}
@@ -214,7 +214,7 @@ Fig.~\ref{fig:fusion-pr} shows improvement to the Precision-Recall (PR) curves a
 
 \begin{figure}
   \centering
-  	\includegraphics[width=8cm]{img/fusion/Roth/PR-roth-all-detections.jpg} 
+  	\includegraphics[width=8cm]{img/eps/fusion/Roth/PR-roth-all-detections.eps} 
 
   \caption{Precision-Recall curves of the pipeline on a high-altitude (60 meters) data collected from a UAV, before and after image fusion.}\label{fig:fusion-pr}
 \end{figure}
@@ -325,8 +325,8 @@ Fig.~\ref{fig:victim_gps}(b) shows the detected victim GPS positions, actual gro
   \centering
   \begin{tabular}{cc}
     \hspace{-1cm}
-    \includegraphics[width=7cm]{img/victim_gps/SIP.png} &
-    \includegraphics[width=7cm]{img/victim_gps/SIP_detections_map.eps} \\
+    \includegraphics[width=7cm]{img/eps/victim_gps/SIP.eps} &
+    \includegraphics[width=7cm]{img/eps/victim_gps/SIP_detections_map.eps} \\
     \small (a) Inspection path & 
     \small (b) Victim GPS \tiny (Grouped detections in circle after false positive removal)
   \end{tabular}
@@ -334,7 +334,7 @@ Fig.~\ref{fig:victim_gps}(b) shows the detected victim GPS positions, actual gro
   \vspace{\floatsep}
   
   \begin{tabular}{c}
-    \includegraphics[width=11cm]{img/victim_gps/victim_utm_errors.jpg} \\
+    \includegraphics[width=11cm]{img/eps/victim_gps/victim_utm_errors.eps} \\
     \small (c) Victim UTM position errors
   \end{tabular}
 
