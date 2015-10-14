@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  14 OCT 2015 17:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  14 OCT 2015 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -886,13 +886,7 @@ nverted-to.pdf used on input line 128.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3 <./img/eps/sample_thermal-eps-converted-to.pdf>] [4 <./img/eps/bg_sub/CLA_I
-nfrared_Image_screenshot_03-08-2015-eps-converted-to.pdf> <./img/eps/bg_sub/CLA
-_Threshold_values_high_screenshot_03-08-2015-eps-converted-to.pdf> <./img/eps/b
-g_sub/CLA_Segmentation_Map_screenshot_03-08-2015-eps-converted-to.pdf> <./img/e
-ps/bg_sub/Roth_Infrared_Image_screenshot-eps-converted-to.pdf> <./img/eps/bg_su
-b/Roth_Threshold_values_high_screenshot-eps-converted-to.pdf> <./img/eps/bg_sub
-/Roth_Segmentation_Map_screenshot-eps-converted-to.pdf>]
+ [3 <./img/eps/sample_thermal-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <img/eps/classifier/SvmKernelTypevalue_vs_s
 core_C_SVC.eps>
 (epstopdf)                    date: 2015-10-13 11:28:14
@@ -908,7 +902,7 @@ evalue_vs_score_C_SVC.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/classifier/SvmKernelTypevalue_vs_score_C_SVC-eps-converted-to.pdf, id=
-51, 642.4pt x 481.8pt>
+30, 642.4pt x 481.8pt>
 File: img/eps/classifier/SvmKernelTypevalue_vs_score_C_SVC-eps-converted-to.pdf
  Graphic file (type pdf)
 
@@ -930,7 +924,7 @@ core_LINEAR.eps>
 (epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/eps/classifier/SvmTypevalue_vs_score_LINEAR-eps-converted-to.pdf, id=52, 6
+<img/eps/classifier/SvmTypevalue_vs_score_LINEAR-eps-converted-to.pdf, id=31, 6
 42.4pt x 481.8pt>
 File: img/eps/classifier/SvmTypevalue_vs_score_LINEAR-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -953,7 +947,7 @@ e_RBF.eps>
 (epstopdf)             \includegraphics on input line 152.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/eps/classifier/SvmTypevalue_vs_score_RBF-eps-converted-to.pdf, id=53, 642.
+<img/eps/classifier/SvmTypevalue_vs_score_RBF-eps-converted-to.pdf, id=32, 642.
 4pt x 481.8pt>
 File: img/eps/classifier/SvmTypevalue_vs_score_RBF-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -967,6 +961,16 @@ Overfull \hbox (88.06776pt too wide) in paragraph at lines 146--160
  [][] 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./img/eps/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015-eps-converted-to
+.pdf> <./img/eps/bg_sub/CLA_Threshold_values_high_screenshot_03-08-2015-eps-con
+verted-to.pdf> <./img/eps/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015-eps
+-converted-to.pdf> <./img/eps/bg_sub/Roth_Infrared_Image_screenshot-eps-convert
+ed-to.pdf> <./img/eps/bg_sub/Roth_Threshold_values_high_screenshot-eps-converte
+d-to.pdf> <./img/eps/bg_sub/Roth_Segmentation_Map_screenshot-eps-converted-to.p
+df>]
 [5 <./img/eps/classifier/SvmKernelTypevalue_vs_score_C_SVC-eps-converted-to.pdf
 > <./img/eps/classifier/SvmTypevalue_vs_score_LINEAR-eps-converted-to.pdf> <./i
 mg/eps/classifier/SvmTypevalue_vs_score_RBF-eps-converted-to.pdf>]
@@ -1255,10 +1259,7 @@ rped_Infrared_Image_screenshot-eps-converted-to.pdf> <./img/eps/fusion/Sea/3/Wa
 rped_Grayscale_Image_screenshot-eps-converted-to.pdf> <./img/eps/fusion/Roth/Gr
 ayscale_and_Infrared_overlaid_Image_screenshot-eps-converted-to.pdf> <./img/eps
 /fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot-eps-converted-to
-.pdf>]
-Underfull \vbox (badness 1210) has occurred while \output is active []
-
- [8 <./img/eps/fusion/Roth/PR-roth-all-detections-eps-converted-to.pdf>]
+.pdf>] [8 <./img/eps/fusion/Roth/PR-roth-all-detections-eps-converted-to.pdf>]
 Overfull \hbox (0.54375pt too wide) in paragraph at lines 312--313
 \OT1/cmr/m/n/10 All the ex-per-i-ments are per-formed on a light-weight low-alt
 itude hand-launchable
@@ -1281,7 +1282,7 @@ File: img/eps/techpod-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: img/eps/techpod-eps-converted-to.pdf used on input lin
 e 315.
 (pdftex.def)             Requested size: 347.12354pt x 125.89668pt.
- [9] [10 <./img/eps/techpod-eps-converted-to.pdf>]
+ [9 <./img/eps/techpod-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <img/eps/victim_gps/SIP.eps>
 (epstopdf)                    date: 2015-10-13 11:31:22
 (epstopdf)                    size: 3753960 bytes
@@ -1294,13 +1295,13 @@ f>
 (epstopdf)             \includegraphics on input line 335.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/eps/victim_gps/SIP-eps-converted-to.pdf, id=136, 746.79pt x 832.10875pt>
+<img/eps/victim_gps/SIP-eps-converted-to.pdf, id=133, 746.79pt x 832.10875pt>
 File: img/eps/victim_gps/SIP-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/eps/victim_gps/SIP-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/victim_gps/SIP-eps-converted-to.pdf used on in
 put line 335.
-(pdftex.def)             Requested size: 199.16928pt x 221.91713pt.
+(pdftex.def)             Requested size: 170.71652pt x 190.21286pt.
 Package epstopdf Info: Source file: <img/eps/victim_gps/SIP_detections_map.eps>
 
 (epstopdf)                    date: 2015-08-29 07:42:48
@@ -1314,7 +1315,7 @@ ections_map-eps-converted-to.pdf img/eps/victim_gps/SIP_detections_map.eps>
 (epstopdf)             \includegraphics on input line 336.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/eps/victim_gps/SIP_detections_map-eps-converted-to.pdf, id=137, 635.37375p
+<img/eps/victim_gps/SIP_detections_map-eps-converted-to.pdf, id=134, 635.37375p
 t x 713.66624pt>
 File: img/eps/victim_gps/SIP_detections_map-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1322,12 +1323,7 @@ type pdf)
 <use img/eps/victim_gps/SIP_detections_map-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/victim_gps/SIP_detections_map-eps-converted-to
 .pdf used on input line 336.
-(pdftex.def)             Requested size: 199.16928pt x 223.70619pt.
-
-Overfull \hbox (73.51pt too wide) in paragraph at lines 333--340
- [][] 
- []
-
+(pdftex.def)             Requested size: 170.71652pt x 191.75594pt.
 Package epstopdf Info: Source file: <img/eps/victim_gps/victim_utm_errors.eps>
 (epstopdf)                    date: 2015-10-13 11:30:44
 (epstopdf)                    size: 7338930 bytes
@@ -1340,7 +1336,7 @@ utm_errors-eps-converted-to.pdf img/eps/victim_gps/victim_utm_errors.eps>
 (epstopdf)             \includegraphics on input line 344.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/eps/victim_gps/victim_utm_errors-eps-converted-to.pdf, id=138, 1482.53876p
+<img/eps/victim_gps/victim_utm_errors-eps-converted-to.pdf, id=135, 1482.53876p
 t x 820.06375pt>
 File: img/eps/victim_gps/victim_utm_errors-eps-converted-to.pdf Graphic file (t
 ype pdf)
@@ -1348,8 +1344,8 @@ ype pdf)
 <use img/eps/victim_gps/victim_utm_errors-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/victim_gps/victim_utm_errors-eps-converted-to.
 pdf used on input line 344.
-(pdftex.def)             Requested size: 312.9803pt x 173.11942pt.
-
+(pdftex.def)             Requested size: 256.0748pt x 141.63632pt.
+ [10]
 Overfull \hbox (14.15378pt too wide) in paragraph at lines 362--363
 \OT1/cmr/m/n/10 This work was sup-ported by the Eu-ro-pean Com-mis-sion project
 s ICARUS (#285417)
@@ -1358,15 +1354,15 @@ s ICARUS (#285417)
 
 LaTeX Warning: Citation `bal:cha:gra:pae' undefined on input line 364.
 
-(./isvc_submission.bbl [11] [12 <./img/eps/victim_gps/SIP-eps-converted-to.pdf>
- <./img/eps/victim_gps/SIP_detections_map-eps-converted-to.pdf> <./img/eps/vict
-im_gps/victim_utm_errors-eps-converted-to.pdf>]
+(./isvc_submission.bbl [11 <./img/eps/victim_gps/SIP-eps-converted-to.pdf> <./i
+mg/eps/victim_gps/SIP_detections_map-eps-converted-to.pdf> <./img/eps/victim_gp
+s/victim_utm_errors-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 72--75
 []\OT1/cmr/m/n/9 Doll^^Sar, P.:  Pi-otr's Com-puter Vi-sion Mat-lab Tool-box (P
 MT).
  []
 
-
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 122--126
 []\OT1/cmr/m/n/9 Agency, N.G.I.:  World geode-tic sys-tem 1984.
  []
@@ -1384,11 +1380,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  12946 strings out of 494985
  270268 string characters out of 6180357
- 509817 words of memory out of 5000000
+ 526817 words of memory out of 5000000
  15980 multiletter control sequences out of 15000+600000
  10101 words of font info for 38 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 44i,15n,49p,10407b,1689s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,15n,49p,10407b,1685s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -1402,7 +1398,7 @@ amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 bx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on isvc_submission.pdf (13 pages, 2884781 bytes).
+Output written on isvc_submission.pdf (13 pages, 2884101 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  123 compressed objects within 2 object streams

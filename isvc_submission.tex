@@ -109,7 +109,7 @@ We employ a very simple sliding window based approach to estimate adaptive thres
 Fig.~\ref{fig:bg_sub} shows two sample images collected at different altitudes, temperature and times of the day and the corresponding segmaps. A blob detection algorithm \cite{cvblob} is used to find blobs of desired size, thus providing ROIs to search for humans. For the UAV scenario, we further narrow down the search space by considering only the blobs whose area lies in certain range that is calculated at every time-step based on the camera specifications, mounting, UAV's IMU pose and GPS position. This approach is computationally much cheaper and is not affected by the fast moving camera. It provides much faster and better results at real-time than many conventional approaches.
 
 
-\begin{figure}
+\begin{figure}[!ht]
   \centering
   \begin{tabular}{ccc}
     \includegraphics[width=3cm]{img/eps/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.eps} &
@@ -208,7 +208,7 @@ Fig.~\ref{fig:fusion} shows results from the fusion technique. In Sequence-1 inf
   	\small (2.e) Fused IR and Grayscale Images
   \end{tabular}
 
-  \caption{The top 2 rows show 2 sequences of original images obtained from infrared (a) and grayscale cameras (b) and the resulting images post rectification (c, d). Last row shows fusion of both images (e) to visualize the quality of overlap. Red boxes in Sequence-1 highlights 2 humans and a boat in Sequence-2. As can be seen, the correspondence between infrared and grayscale images is reasonably good.}\label{fig:fusion}
+  \caption{The top 2 rows show 2 sequences of original images obtained from (a) infrared, (b) grayscale cameras and (c, d) the resulting images post rectification. Last row shows fusion of both images (e) to visualize the quality of overlap. Red boxe highlights 2 humans in Sequence-1 and a boat in Sequence-2. As can be seen, the correspondence between infrared and grayscale images is reasonably good.}\label{fig:fusion}
 \end{figure}
 
 Fig.~\ref{fig:fusion-pr} shows improvement to the Precision-Recall (PR) curves after image Fusion on a dataset collected from a UAV cruising at 60 meters above the ground. Close to 140\% improvement (10\% vs. 24\%) in the area under curve can be seen. Since, we have various methods to eliminate false positives, as mentioned in next section, we operate our classifier on the higher recall point. Also the fact that very few of the false positives are of a same object recurring across several frames plays a vital role in suppressing them.
@@ -328,20 +328,20 @@ For estimating the GPS positions of detections, we assume the ground as a plane.
 Fig.~\ref{fig:victim_gps}(b) shows the detected victim GPS positions, actual groundtruth victim location and the path followed by the UAV. The rest of the detections include unregistered humans in the explored area and some false positives. By enforcing a criterion - similar to \cite{rudol2008human} - that requires a particular GPS position to be detected consistently within the duration of the time that particular spot is observed, most of the false positives are eliminated and the set of true detections are grouped together and registered as victim locations. False positives are further eliminated by boosting the confidence of detections that are closer to the GPS location of the point where principal axis of camera hits the ground plane. The registered victims are marked in circles. As can be seen in the figure, we have all three successful detections and another detection whose status is not known. Fig.~\ref{fig:victim_gps}(c) is a plot of GPS position estimate errors for all the three registered victims. The GPS estimates are converted to Universal Transverse Mercator (UTM) coordinates using World Geodetic System (WGS84) standard \cite{WGS} to represent the error in meters. The errors obtained are a cumulative of errors in groundtruth GPS measuring device, calibration imperfections, GPS to/from UTM conversions, images' resolution, planarity assumptions, and sensor imperfections (GPS, IMU), making it quite uncertain how much of the error can be attributed to the imperfections in our algorithm. Nevertheless, the errors we obtained more than suffice to serve our goal.
 
 
-\begin{figure}
+\begin{figure}[!ht]
   \centering
   \begin{tabular}{cc}
-    \hspace{-1cm}
-    \includegraphics[width=7cm]{img/eps/victim_gps/SIP.eps} &
-    \includegraphics[width=7cm]{img/eps/victim_gps/SIP_detections_map.eps} \\
+    \hspace{-0.5cm}
+    \includegraphics[width=6cm]{img/eps/victim_gps/SIP.eps} &
+    \includegraphics[width=6cm]{img/eps/victim_gps/SIP_detections_map.eps} \\
     \small (a) Inspection path & 
-    \small (b) Victim GPS \tiny (Grouped detections in circle after false positive removal)
+    \small (b) Victim GPS \tiny (Grouped detections in circle)
   \end{tabular}
 
   \vspace{\floatsep}
   
   \begin{tabular}{c}
-    \includegraphics[width=11cm]{img/eps/victim_gps/victim_utm_errors.eps} \\
+    \includegraphics[width=9cm]{img/eps/victim_gps/victim_utm_errors.eps} \\
     \small (c) Victim UTM position errors
   \end{tabular}
 
