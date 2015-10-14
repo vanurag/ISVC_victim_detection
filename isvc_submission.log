@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  13 OCT 2015 11:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.30)  14 OCT 2015 09:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -299,7 +299,365 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3names.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3bootstrap.sty
+Package: l3bootstrap 2014/01/04 v4640 L3 Experimental bootstrap code
+)
+Package: l3names 2014/01/04 v4640 L3 Namespace for primitives
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count133
+)
+Package: expl3 2014/01/07 v4646 L3 Experimental code bundle wrapper
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3basics.sty
+Package: l3basics 2014/01/04 v4642 L3 Basic definitions
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3expan.sty
+Package: l3expan 2014/01/04 v4642 L3 Argument expansion
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3tl.sty
+Package: l3tl 2013/12/27 v4625 L3 Token lists
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3seq.sty
+Package: l3seq 2013/12/14 v4623 L3 Sequences and stacks
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3int.sty
+Package: l3int 2013/08/02 v4583 L3 Integers
+\c_max_int=\count134
+\l_tmpa_int=\count135
+\l_tmpb_int=\count136
+\g_tmpa_int=\count137
+\g_tmpb_int=\count138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3quark.sty
+Package: l3quark 2013/12/14 v4623 L3 Quarks
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3prg.sty
+Package: l3prg 2014/01/04 v4642 L3 Control structures
+\g__prg_map_int=\count139
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3clist.sty
+Package: l3clist 2013/07/28 v4581 L3 Comma separated lists
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3token.sty
+Package: l3token 2013/08/25 v4587 L3 Experimental token manipulation
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3prop.sty
+Package: l3prop 2013/12/14 v4623 L3 Property lists
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3msg.sty
+Package: l3msg 2013/07/28 v4581 L3 Messages
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3file.sty
+Package: l3file 2013/10/13 v4596 L3 File and I/O operations
+\l_iow_line_count_int=\count140
+\l__iow_target_count_int=\count141
+\l__iow_current_line_int=\count142
+\l__iow_current_word_int=\count143
+\l__iow_current_indentation_int=\count144
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3skip.sty
+Package: l3skip 2013/07/28 v4581 L3 Dimensions and skips
+\c_zero_dim=\dimen142
+\c_max_dim=\dimen143
+\l_tmpa_dim=\dimen144
+\l_tmpb_dim=\dimen145
+\g_tmpa_dim=\dimen146
+\g_tmpb_dim=\dimen147
+\c_zero_skip=\skip52
+\c_max_skip=\skip53
+\l_tmpa_skip=\skip54
+\l_tmpb_skip=\skip55
+\g_tmpa_skip=\skip56
+\g_tmpb_skip=\skip57
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3keys.sty
+Package: l3keys 2013/12/08 v4614 L3 Experimental key-value interfaces
+\g__keyval_level_int=\count145
+\l_keys_choice_int=\count146
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3fp.sty
+Package: l3fp 2014/01/04 v4642 L3 Floating points
+\c__fp_leading_shift_int=\count147
+\c__fp_middle_shift_int=\count148
+\c__fp_trailing_shift_int=\count149
+\c__fp_big_leading_shift_int=\count150
+\c__fp_big_middle_shift_int=\count151
+\c__fp_big_trailing_shift_int=\count152
+\c__fp_Bigg_leading_shift_int=\count153
+\c__fp_Bigg_middle_shift_int=\count154
+\c__fp_Bigg_trailing_shift_int=\count155
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3box.sty
+Package: l3box 2013/07/28 v4581 L3 Experimental boxes
+\c_empty_box=\box56
+\l_tmpa_box=\box57
+\l_tmpb_box=\box58
+\g_tmpa_box=\box59
+\g_tmpb_box=\box60
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3coffins.sty
+Package: l3coffins 2013/12/14 v4624 L3 Coffin code layer
+\l__coffin_internal_box=\box61
+\l__coffin_internal_dim=\dimen148
+\l__coffin_offset_x_dim=\dimen149
+\l__coffin_offset_y_dim=\dimen150
+\l__coffin_x_dim=\dimen151
+\l__coffin_y_dim=\dimen152
+\l__coffin_x_prime_dim=\dimen153
+\l__coffin_y_prime_dim=\dimen154
+\c_empty_coffin=\box62
+\l__coffin_aligned_coffin=\box63
+\l__coffin_aligned_internal_coffin=\box64
+\l_tmpa_coffin=\box65
+\l_tmpb_coffin=\box66
+\l__coffin_display_coffin=\box67
+\l__coffin_display_coord_coffin=\box68
+\l__coffin_display_pole_coffin=\box69
+\l__coffin_display_offset_dim=\dimen155
+\l__coffin_display_x_dim=\dimen156
+\l__coffin_display_y_dim=\dimen157
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3color.sty
+Package: l3color 2012/08/29 v4156 L3 Experimental color support
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3luatex.sty
+Package: l3luatex 2013/07/28 v4581 L3 Experimental LuaTeX-specific functions
+\g__cctab_allocate_int=\count156
+\g__cctab_stack_int=\count157
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3candidates.sty
+Package: l3candidates 2014/01/06 v4643 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen158
+\l__box_bottom_dim=\dimen159
+\l__box_left_dim=\dimen160
+\l__box_right_dim=\dimen161
+\l__box_top_new_dim=\dimen162
+\l__box_bottom_new_dim=\dimen163
+\l__box_left_new_dim=\dimen164
+\l__box_right_new_dim=\dimen165
+\l__box_internal_box=\box70
+\l__coffin_bounding_shift_dim=\dimen166
+\l__coffin_left_corner_dim=\dimen167
+\l__coffin_right_corner_dim=\dimen168
+\l__coffin_bottom_corner_dim=\dimen169
+\l__coffin_top_corner_dim=\dimen170
+\l__coffin_scaled_total_height_dim=\dimen171
+\l__coffin_scaled_width_dim=\dimen172
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2013/12/31 v4634 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count158
+\l__xparse_m_args_int=\count159
+\l__xparse_mandatory_args_int=\count160
+\l__xparse_processor_int=\count161
+\l__xparse_v_nesting_int=\count162
+)
+Package: siunitx 2013/07/31 v2.5s A comprehensive (SI) units package
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen173
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2013/12/31 v4634 LaTeX2e option processing using LaTeX3 keys
+)
+Variant \tl_if_blank:VTF already defined; not changing it on line 50
+\l__siunitx_tmp_box=\box71
+\l__siunitx_tmp_dim=\dimen174
+\l__siunitx_tmp_int=\count163
+Variant \prop_get:NVNT already defined; not changing it on line 371
+Variant \prop_get:NVNF already defined; not changing it on line 372
+Variant \prop_get:NVNTF already defined; not changing it on line 373
+\l__siunitx_number_mantissa_length_int=\count164
+\l__siunitx_number_uncert_length_int=\count165
+\l__siunitx_round_int=\count166
+\l__siunitx_process_decimal_int=\count167
+\l__siunitx_process_uncertainty_int=\count168
+\l__siunitx_process_fixed_int=\count169
+\l__siunitx_process_integer_min_int=\count170
+\l__siunitx_process_precision_int=\count171
+\l__siunitx_group_min_int=\count172
+\l__siunitx_angle_marker_box=\box72
+\l__siunitx_angle_unit_box=\box73
+\l__siunitx_angle_marker_dim=\dimen175
+\l__siunitx_angle_unit_dim=\dimen176
+\l__siunitx_unit_int=\count173
+\l__siunitx_unit_denominator_int=\count174
+\l__siunitx_unit_numerator_int=\count175
+\l__siunitx_unit_prefix_int=\count176
+\l__siunitx_unit_prefix_base_int=\count177
+\l__siunitx_unit_prefix_gram_int=\count178
+\l__siunitx_number_product_int=\count179
+\c__siunitx_one_fill_skip=\skip58
+\l__siunitx_table_unit_align_skip=\skip59
+\l__siunitx_table_exponent_dim=\dimen177
+\l__siunitx_table_integer_dim=\dimen178
+\l__siunitx_table_mantissa_dim=\dimen179
+\l__siunitx_table_marker_dim=\dimen180
+\l__siunitx_table_result_dim=\dimen181
+\l__siunitx_table_uncert_dim=\dimen182
+\l__siunitx_table_fill_pre_dim=\dimen183
+\l__siunitx_table_fill_post_dim=\dimen184
+\l__siunitx_table_fill_mid_dim=\dimen185
+\l__siunitx_table_pre_box=\box74
+\l__siunitx_table_post_box=\box75
+\l__siunitx_table_mantissa_box=\box76
+\l__siunitx_table_result_box=\box77
+\l__siunitx_table_number_align_skip=\skip60
+\l__siunitx_table_text_align_skip=\skip61
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareBinaryPrefix with arg. spec. 'mmm' on line
+. 7101.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareSIPostPower with arg. spec. 'mm' on line
+. 7104.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareSIPrefix with arg. spec. 'mmm' on line
+. 7107.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareSIPrePower with arg. spec. 'mm' on line
+. 7110.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareSIQualifier with arg. spec. 'mm' on line
+. 7113.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareSIUnit with arg. spec. 'O{}mm' on line
+. 7116.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareSIUnitWithOptions with arg. spec. 'mmm' on
+. line 7119.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \ang with arg. spec. 'o>{\SplitArgument {2}{;}}m'
+. on line 7134.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \num with arg. spec. 'om' on line 7142.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \numlist with arg. spec. 'o>{\SplitList {;}}m' on
+. line 7150.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \numrange with arg. spec. 'omm' on line 7158.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \SIlist with arg. spec. 'o>{\SplitList {;}}mm' on
+. line 7169.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \SIrange with arg. spec. 'ommm' on line 7180.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \SI with arg. spec. 'omom' on line 7191.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \sisetup with arg. spec. 'm' on line 7194.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \tablenum with arg. spec. 'om' on line 7206.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \si with arg. spec. 'om' on line 7217.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \__siunitx_bookmark_num:w with arg. spec. 'om' on
+. line 7262.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \__siunitx_bookmark_numrange:w with arg. spec.
+. 'omm' on line 7264.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \__siunitx_bookmark_SI:w with arg. spec. 'omom' on
+. line 7266.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \__siunitx_bookmark_SIlist:w with arg. spec. 'omm'
+. on line 7268.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \__siunitx_bookmark_SIrange:w with arg. spec.
+. 'ommm' on line 7270.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \__siunitx_bookmark_si:w with arg. spec. 'om' on
+. line 7271.
+.................................................
+\g__file_internal_ior=\read2
+
+(/usr/share/texmf/tex/latex/beamer/base/translator/translator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(/usr/share/texmf/tex/latex/beamer/base/translator/translator-language-mappings
+.tex))) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
@@ -308,46 +666,56 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 (./isvc_submission.aux)
 \openout1 = `isvc_submission.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count133
-\scratchdimen=\dimen142
-\scratchbox=\box56
-\nofMPsegments=\count134
-\nofMParguments=\count135
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count136
-\MPscratchDim=\dimen143
-\MPnumerator=\count137
-\makeMPintoPDFobject=\count138
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count180
+\scratchdimen=\dimen186
+\scratchbox=\box78
+\nofMPsegments=\count181
+\nofMParguments=\count182
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count183
+\MPscratchDim=\dimen187
+\MPnumerator=\count184
+\makeMPintoPDFobject=\count185
+\everyMPtoPDFconversion=\toks23
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count139
+\c@lstlisting=\count186
+
+(/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-basic-dicti
+onary/translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/config/siunitx-abbreviations.c
+fg
+File: siunitx-abbreviations.cfg 2013/07/31 v2.5s siunitx: Abbreviated units
+)
+\c__siunitx_mathsf_int=\count187
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 52.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 52.
+\c__siunitx_mathtt_int=\count188
  (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 76.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 76.
-
 Names of authors too long for running head. Please supply
 a shorter form with \authorrunning prior to \maketitle
 [1
@@ -355,15 +723,15 @@ a shorter form with \authorrunning prior to \maketitle
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Package epstopdf Info: Source file: <img/eps/sample_thermal.eps>
-(epstopdf)                    date: 2015-10-13 11:05:44
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 10431583 bytes
 (epstopdf)             Output file: <img/eps/sample_thermal-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2015-10-13 11:08:41
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 511522 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/sample_thermal-eps
 -converted-to.pdf img/eps/sample_thermal.eps>
-(epstopdf)             \includegraphics on input line 101.
+(epstopdf)             \includegraphics on input line 102.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/sample_thermal-eps-converted-to.pdf, id=15, 734.745pt x 542.025pt>
@@ -371,24 +739,24 @@ File: img/eps/sample_thermal-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/eps/sample_thermal-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/sample_thermal-eps-converted-to.pdf used on in
-put line 101.
+put line 102.
 (pdftex.def)             Requested size: 220.42519pt x 162.60875pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 113.
+(Font)              <9> on input line 114.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 113.
+(Font)              <6> on input line 114.
 Package epstopdf Info: Source file: <img/eps/bg_sub/CLA_Infrared_Image_screensh
 ot_03-08-2015.eps>
-(epstopdf)                    date: 2015-10-13 11:07:32
+(epstopdf)                    date: 2015-10-14 08:00:13
 (epstopdf)                    size: 670322 bytes
 (epstopdf)             Output file: <img/eps/bg_sub/CLA_Infrared_Image_screensh
 ot_03-08-2015-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:34:59
+(epstopdf)                    date: 2015-10-14 08:00:13
 (epstopdf)                    size: 55116 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/bg_sub/CLA_Infrare
 d_Image_screenshot_03-08-2015-eps-converted-to.pdf img/eps/bg_sub/CLA_Infrared_
 Image_screenshot_03-08-2015.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 115.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015-eps-converted-to.pdf, 
@@ -399,20 +767,20 @@ pdf Graphic file (type pdf)
 <use img/eps/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015-eps-converted-to.p
 df>
 Package pdftex.def Info: img/eps/bg_sub/CLA_Infrared_Image_screenshot_03-08-201
-5-eps-converted-to.pdf used on input line 114.
+5-eps-converted-to.pdf used on input line 115.
 (pdftex.def)             Requested size: 113.81102pt x 91.04892pt.
 Package epstopdf Info: Source file: <img/eps/bg_sub/CLA_Threshold_values_high_s
 creenshot_03-08-2015.eps>
-(epstopdf)                    date: 2015-10-13 11:15:37
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 670322 bytes
 (epstopdf)             Output file: <img/eps/bg_sub/CLA_Threshold_values_high_s
 creenshot_03-08-2015-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:43:20
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 10407 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/bg_sub/CLA_Thresho
 ld_values_high_screenshot_03-08-2015-eps-converted-to.pdf img/eps/bg_sub/CLA_Th
 reshold_values_high_screenshot_03-08-2015.eps>
-(epstopdf)             \includegraphics on input line 115.
+(epstopdf)             \includegraphics on input line 116.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/bg_sub/CLA_Threshold_values_high_screenshot_03-08-2015-eps-converted-t
@@ -423,20 +791,20 @@ ted-to.pdf Graphic file (type pdf)
 <use img/eps/bg_sub/CLA_Threshold_values_high_screenshot_03-08-2015-eps-convert
 ed-to.pdf>
 Package pdftex.def Info: img/eps/bg_sub/CLA_Threshold_values_high_screenshot_03
--08-2015-eps-converted-to.pdf used on input line 115.
+-08-2015-eps-converted-to.pdf used on input line 116.
 (pdftex.def)             Requested size: 113.81102pt x 91.04892pt.
 Package epstopdf Info: Source file: <img/eps/bg_sub/CLA_Segmentation_Map_screen
 shot_03-08-2015.eps>
-(epstopdf)                    date: 2015-10-13 11:15:04
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 88830 bytes
 (epstopdf)             Output file: <img/eps/bg_sub/CLA_Segmentation_Map_screen
 shot_03-08-2015-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:34:59
+(epstopdf)                    date: 2015-10-14 09:04:34
 (epstopdf)                    size: 4953 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/bg_sub/CLA_Segment
 ation_Map_screenshot_03-08-2015-eps-converted-to.pdf img/eps/bg_sub/CLA_Segment
 ation_Map_screenshot_03-08-2015.eps>
-(epstopdf)             \includegraphics on input line 116.
+(epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015-eps-converted-to.pdf
@@ -447,25 +815,25 @@ o.pdf Graphic file (type pdf)
 <use img/eps/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015-eps-converted-to
 .pdf>
 Package pdftex.def Info: img/eps/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2
-015-eps-converted-to.pdf used on input line 116.
+015-eps-converted-to.pdf used on input line 117.
 (pdftex.def)             Requested size: 113.81102pt x 91.04892pt.
 
-Overfull \hbox (2.70949pt too wide) in paragraph at lines 113--121
+Overfull \hbox (2.70949pt too wide) in paragraph at lines 114--122
  [][] 
  []
 
 Package epstopdf Info: Source file: <img/eps/bg_sub/Roth_Infrared_Image_screens
 hot.eps>
-(epstopdf)                    date: 2015-10-13 11:20:02
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 378880 bytes
 (epstopdf)             Output file: <img/eps/bg_sub/Roth_Infrared_Image_screens
 hot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:34:59
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 56786 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/bg_sub/Roth_Infrar
 ed_Image_screenshot-eps-converted-to.pdf img/eps/bg_sub/Roth_Infrared_Image_scr
 eenshot.eps>
-(epstopdf)             \includegraphics on input line 125.
+(epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/bg_sub/Roth_Infrared_Image_screenshot-eps-converted-to.pdf, id=19, 361
@@ -475,20 +843,20 @@ c file (type pdf)
 
 <use img/eps/bg_sub/Roth_Infrared_Image_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/bg_sub/Roth_Infrared_Image_screenshot-eps-conv
-erted-to.pdf used on input line 125.
+erted-to.pdf used on input line 126.
 (pdftex.def)             Requested size: 80.17543pt x 113.81102pt.
 Package epstopdf Info: Source file: <img/eps/bg_sub/Roth_Threshold_values_high_
 screenshot.eps>
-(epstopdf)                    date: 2015-10-13 11:20:35
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 378880 bytes
 (epstopdf)             Output file: <img/eps/bg_sub/Roth_Threshold_values_high_
 screenshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:43:31
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 5243 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/bg_sub/Roth_Thresh
 old_values_high_screenshot-eps-converted-to.pdf img/eps/bg_sub/Roth_Threshold_v
 alues_high_screenshot.eps>
-(epstopdf)             \includegraphics on input line 126.
+(epstopdf)             \includegraphics on input line 127.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/bg_sub/Roth_Threshold_values_high_screenshot-eps-converted-to.pdf, id=
@@ -498,20 +866,20 @@ File: img/eps/bg_sub/Roth_Threshold_values_high_screenshot-eps-converted-to.pdf
 
 <use img/eps/bg_sub/Roth_Threshold_values_high_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/bg_sub/Roth_Threshold_values_high_screenshot-e
-ps-converted-to.pdf used on input line 126.
+ps-converted-to.pdf used on input line 127.
 (pdftex.def)             Requested size: 80.17543pt x 113.81102pt.
 Package epstopdf Info: Source file: <img/eps/bg_sub/Roth_Segmentation_Map_scree
 nshot.eps>
-(epstopdf)                    date: 2015-10-13 11:20:20
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 52430 bytes
 (epstopdf)             Output file: <img/eps/bg_sub/Roth_Segmentation_Map_scree
 nshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:00
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 3763 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/bg_sub/Roth_Segmen
 tation_Map_screenshot-eps-converted-to.pdf img/eps/bg_sub/Roth_Segmentation_Map
 _screenshot.eps>
-(epstopdf)             \includegraphics on input line 127.
+(epstopdf)             \includegraphics on input line 128.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/bg_sub/Roth_Segmentation_Map_screenshot-eps-converted-to.pdf, id=21, 3
@@ -521,7 +889,7 @@ hic file (type pdf)
 
 <use img/eps/bg_sub/Roth_Segmentation_Map_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/bg_sub/Roth_Segmentation_Map_screenshot-eps-co
-nverted-to.pdf used on input line 127.
+nverted-to.pdf used on input line 128.
 (pdftex.def)             Requested size: 80.17543pt x 113.81102pt.
 
 [3 <./img/eps/sample_thermal-eps-converted-to.pdf>] [4 <./img/eps/bg_sub/CLA_In
@@ -533,16 +901,16 @@ s/bg_sub/Roth_Infrared_Image_screenshot-eps-converted-to.pdf> <./img/eps/bg_sub
 Roth_Segmentation_Map_screenshot-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <img/eps/classifier/SvmKernelTypevalue_vs_s
 core_C_SVC.eps>
-(epstopdf)                    date: 2015-10-13 11:28:14
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 1872678 bytes
 (epstopdf)             Output file: <img/eps/classifier/SvmKernelTypevalue_vs_s
 core_C_SVC-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:00
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 42538 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/classifier/SvmKern
 elTypevalue_vs_score_C_SVC-eps-converted-to.pdf img/eps/classifier/SvmKernelTyp
 evalue_vs_score_C_SVC.eps>
-(epstopdf)             \includegraphics on input line 147.
+(epstopdf)             \includegraphics on input line 148.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/classifier/SvmKernelTypevalue_vs_score_C_SVC-eps-converted-to.pdf, id=
@@ -552,20 +920,20 @@ File: img/eps/classifier/SvmKernelTypevalue_vs_score_C_SVC-eps-converted-to.pdf
 
 <use img/eps/classifier/SvmKernelTypevalue_vs_score_C_SVC-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/classifier/SvmKernelTypevalue_vs_score_C_SVC-e
-ps-converted-to.pdf used on input line 147.
+ps-converted-to.pdf used on input line 148.
 (pdftex.def)             Requested size: 142.26378pt x 106.69473pt.
 Package epstopdf Info: Source file: <img/eps/classifier/SvmTypevalue_vs_score_L
 INEAR.eps>
-(epstopdf)                    date: 2015-10-13 11:28:32
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 1872678 bytes
 (epstopdf)             Output file: <img/eps/classifier/SvmTypevalue_vs_score_L
 INEAR-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:01
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 49445 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/classifier/SvmType
 value_vs_score_LINEAR-eps-converted-to.pdf img/eps/classifier/SvmTypevalue_vs_s
 core_LINEAR.eps>
-(epstopdf)             \includegraphics on input line 149.
+(epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/classifier/SvmTypevalue_vs_score_LINEAR-eps-converted-to.pdf, id=52, 6
@@ -575,20 +943,20 @@ hic file (type pdf)
 
 <use img/eps/classifier/SvmTypevalue_vs_score_LINEAR-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/classifier/SvmTypevalue_vs_score_LINEAR-eps-co
-nverted-to.pdf used on input line 149.
+nverted-to.pdf used on input line 150.
 (pdftex.def)             Requested size: 142.26378pt x 106.69473pt.
 Package epstopdf Info: Source file: <img/eps/classifier/SvmTypevalue_vs_score_R
 BF.eps>
-(epstopdf)                    date: 2015-10-13 11:28:56
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 1872678 bytes
 (epstopdf)             Output file: <img/eps/classifier/SvmTypevalue_vs_score_R
 BF-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:02
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 46700 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/classifier/SvmType
 value_vs_score_RBF-eps-converted-to.pdf img/eps/classifier/SvmTypevalue_vs_scor
 e_RBF.eps>
-(epstopdf)             \includegraphics on input line 151.
+(epstopdf)             \includegraphics on input line 152.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/classifier/SvmTypevalue_vs_score_RBF-eps-converted-to.pdf, id=53, 642.
@@ -598,10 +966,10 @@ File: img/eps/classifier/SvmTypevalue_vs_score_RBF-eps-converted-to.pdf Graphic
 
 <use img/eps/classifier/SvmTypevalue_vs_score_RBF-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/classifier/SvmTypevalue_vs_score_RBF-eps-conve
-rted-to.pdf used on input line 151.
+rted-to.pdf used on input line 152.
 (pdftex.def)             Requested size: 142.26378pt x 106.69473pt.
 
-Overfull \hbox (88.06776pt too wide) in paragraph at lines 145--159
+Overfull \hbox (88.06776pt too wide) in paragraph at lines 146--160
  [][] 
  []
 
@@ -610,16 +978,16 @@ Overfull \hbox (88.06776pt too wide) in paragraph at lines 145--159
 mg/eps/classifier/SvmTypevalue_vs_score_RBF-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <img/eps/fusion/Roth/Infrared_Image_screens
 hot.eps>
-(epstopdf)                    date: 2015-10-13 11:25:24
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 684411 bytes
 (epstopdf)             Output file: <img/eps/fusion/Roth/Infrared_Image_screens
 hot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:02
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 127817 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Roth/Infrar
 ed_Image_screenshot-eps-converted-to.pdf img/eps/fusion/Roth/Infrared_Image_scr
 eenshot.eps>
-(epstopdf)             \includegraphics on input line 178.
+(epstopdf)             \includegraphics on input line 179.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Roth/Infrared_Image_screenshot-eps-converted-to.pdf, id=67, 389
@@ -629,20 +997,20 @@ c file (type pdf)
 
 <use img/eps/fusion/Roth/Infrared_Image_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/fusion/Roth/Infrared_Image_screenshot-eps-conv
-erted-to.pdf used on input line 178.
+erted-to.pdf used on input line 179.
 (pdftex.def)             Requested size: 85.35826pt x 106.47191pt.
 Package epstopdf Info: Source file: <img/eps/fusion/Roth/Grayscale_Image_screen
 shot.eps>
-(epstopdf)                    date: 2015-10-13 11:25:41
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 737809 bytes
 (epstopdf)             Output file: <img/eps/fusion/Roth/Grayscale_Image_screen
 shot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:02
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 101497 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Roth/Graysc
 ale_Image_screenshot-eps-converted-to.pdf img/eps/fusion/Roth/Grayscale_Image_s
 creenshot.eps>
-(epstopdf)             \includegraphics on input line 179.
+(epstopdf)             \includegraphics on input line 180.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Roth/Grayscale_Image_screenshot-eps-converted-to.pdf, id=68, 36
@@ -652,20 +1020,20 @@ ic file (type pdf)
 
 <use img/eps/fusion/Roth/Grayscale_Image_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/fusion/Roth/Grayscale_Image_screenshot-eps-con
-verted-to.pdf used on input line 179.
+verted-to.pdf used on input line 180.
 (pdftex.def)             Requested size: 85.35826pt x 133.72809pt.
 Package epstopdf Info: Source file: <img/eps/fusion/Roth/Warped_Infrared_Image_
 screenshot.eps>
-(epstopdf)                    date: 2015-10-13 11:25:58
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 726198 bytes
 (epstopdf)             Output file: <img/eps/fusion/Roth/Warped_Infrared_Image_
 screenshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:02
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 95919 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Roth/Warped
 _Infrared_Image_screenshot-eps-converted-to.pdf img/eps/fusion/Roth/Warped_Infr
 ared_Image_screenshot.eps>
-(epstopdf)             \includegraphics on input line 180.
+(epstopdf)             \includegraphics on input line 181.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Roth/Warped_Infrared_Image_screenshot-eps-converted-to.pdf, id=
@@ -675,20 +1043,20 @@ File: img/eps/fusion/Roth/Warped_Infrared_Image_screenshot-eps-converted-to.pdf
 
 <use img/eps/fusion/Roth/Warped_Infrared_Image_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/fusion/Roth/Warped_Infrared_Image_screenshot-e
-ps-converted-to.pdf used on input line 180.
+ps-converted-to.pdf used on input line 181.
 (pdftex.def)             Requested size: 85.35826pt x 105.93886pt.
 Package epstopdf Info: Source file: <img/eps/fusion/Roth/Warped_Grayscale_Image
 _screenshot.eps>
-(epstopdf)                    date: 2015-10-13 11:26:24
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 690899 bytes
 (epstopdf)             Output file: <img/eps/fusion/Roth/Warped_Grayscale_Image
 _screenshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:03
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 84555 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Roth/Warped
 _Grayscale_Image_screenshot-eps-converted-to.pdf img/eps/fusion/Roth/Warped_Gra
 yscale_Image_screenshot.eps>
-(epstopdf)             \includegraphics on input line 181.
+(epstopdf)             \includegraphics on input line 182.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Roth/Warped_Grayscale_Image_screenshot-eps-converted-to.pdf, id
@@ -699,25 +1067,25 @@ f Graphic file (type pdf)
 <use img/eps/fusion/Roth/Warped_Grayscale_Image_screenshot-eps-converted-to.pdf
 >
 Package pdftex.def Info: img/eps/fusion/Roth/Warped_Grayscale_Image_screenshot-
-eps-converted-to.pdf used on input line 181.
+eps-converted-to.pdf used on input line 182.
 (pdftex.def)             Requested size: 85.35826pt x 123.09097pt.
 
-Overfull \hbox (24.57564pt too wide) in paragraph at lines 177--187
+Overfull \hbox (24.57564pt too wide) in paragraph at lines 178--188
  [][] 
  []
 
 Package epstopdf Info: Source file: <img/eps/fusion/Sea/3/Infrared_Image_screen
 shot.eps>
-(epstopdf)                    date: 2015-10-13 11:23:39
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 1857340 bytes
 (epstopdf)             Output file: <img/eps/fusion/Sea/3/Infrared_Image_screen
 shot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:03
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 53804 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Sea/3/Infra
 red_Image_screenshot-eps-converted-to.pdf img/eps/fusion/Sea/3/Infrared_Image_s
 creenshot.eps>
-(epstopdf)             \includegraphics on input line 191.
+(epstopdf)             \includegraphics on input line 192.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Sea/3/Infrared_Image_screenshot-eps-converted-to.pdf, id=71, 37
@@ -727,20 +1095,20 @@ ic file (type pdf)
 
 <use img/eps/fusion/Sea/3/Infrared_Image_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/fusion/Sea/3/Infrared_Image_screenshot-eps-con
-verted-to.pdf used on input line 191.
+verted-to.pdf used on input line 192.
 (pdftex.def)             Requested size: 85.35826pt x 106.80908pt.
 Package epstopdf Info: Source file: <img/eps/fusion/Sea/3/Grayscale_Image_scree
 nshot.eps>
-(epstopdf)                    date: 2015-10-13 11:23:12
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 737809 bytes
 (epstopdf)             Output file: <img/eps/fusion/Sea/3/Grayscale_Image_scree
 nshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:04
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 112284 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Sea/3/Grays
 cale_Image_screenshot-eps-converted-to.pdf img/eps/fusion/Sea/3/Grayscale_Image
 _screenshot.eps>
-(epstopdf)             \includegraphics on input line 192.
+(epstopdf)             \includegraphics on input line 193.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Sea/3/Grayscale_Image_screenshot-eps-converted-to.pdf, id=72, 3
@@ -750,20 +1118,20 @@ hic file (type pdf)
 
 <use img/eps/fusion/Sea/3/Grayscale_Image_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/fusion/Sea/3/Grayscale_Image_screenshot-eps-co
-nverted-to.pdf used on input line 192.
+nverted-to.pdf used on input line 193.
 (pdftex.def)             Requested size: 85.35826pt x 133.72809pt.
 Package epstopdf Info: Source file: <img/eps/fusion/Sea/3/Warped_Infrared_Image
 _screenshot.eps>
-(epstopdf)                    date: 2015-10-13 11:23:57
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 1137239 bytes
 (epstopdf)             Output file: <img/eps/fusion/Sea/3/Warped_Infrared_Image
 _screenshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:04
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 58949 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Sea/3/Warpe
 d_Infrared_Image_screenshot-eps-converted-to.pdf img/eps/fusion/Sea/3/Warped_In
 frared_Image_screenshot.eps>
-(epstopdf)             \includegraphics on input line 193.
+(epstopdf)             \includegraphics on input line 194.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Sea/3/Warped_Infrared_Image_screenshot-eps-converted-to.pdf, id
@@ -774,20 +1142,20 @@ f Graphic file (type pdf)
 <use img/eps/fusion/Sea/3/Warped_Infrared_Image_screenshot-eps-converted-to.pdf
 >
 Package pdftex.def Info: img/eps/fusion/Sea/3/Warped_Infrared_Image_screenshot-
-eps-converted-to.pdf used on input line 193.
+eps-converted-to.pdf used on input line 194.
 (pdftex.def)             Requested size: 85.35826pt x 87.20079pt.
 Package epstopdf Info: Source file: <img/eps/fusion/Sea/3/Warped_Grayscale_Imag
 e_screenshot.eps>
-(epstopdf)                    date: 2015-10-13 11:24:28
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 1002487 bytes
 (epstopdf)             Output file: <img/eps/fusion/Sea/3/Warped_Grayscale_Imag
 e_screenshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:05
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 133976 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Sea/3/Warpe
 d_Grayscale_Image_screenshot-eps-converted-to.pdf img/eps/fusion/Sea/3/Warped_G
 rayscale_Image_screenshot.eps>
-(epstopdf)             \includegraphics on input line 194.
+(epstopdf)             \includegraphics on input line 195.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Sea/3/Warped_Grayscale_Image_screenshot-eps-converted-to.pdf, i
@@ -798,25 +1166,25 @@ df Graphic file (type pdf)
 <use img/eps/fusion/Sea/3/Warped_Grayscale_Image_screenshot-eps-converted-to.pd
 f>
 Package pdftex.def Info: img/eps/fusion/Sea/3/Warped_Grayscale_Image_screenshot
--eps-converted-to.pdf used on input line 194.
+-eps-converted-to.pdf used on input line 195.
 (pdftex.def)             Requested size: 85.35826pt x 138.17592pt.
 
-Overfull \hbox (24.57564pt too wide) in paragraph at lines 190--200
+Overfull \hbox (24.57564pt too wide) in paragraph at lines 191--201
  [][] 
  []
 
 Package epstopdf Info: Source file: <img/eps/fusion/Roth/Grayscale_and_Infrared
 _overlaid_Image_screenshot.eps>
-(epstopdf)                    date: 2015-10-13 11:26:48
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 2268651 bytes
 (epstopdf)             Output file: <img/eps/fusion/Roth/Grayscale_and_Infrared
 _overlaid_Image_screenshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:05
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 91383 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Roth/Graysc
 ale_and_Infrared_overlaid_Image_screenshot-eps-converted-to.pdf img/eps/fusion/
 Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.eps>
-(epstopdf)             \includegraphics on input line 204.
+(epstopdf)             \includegraphics on input line 205.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot-eps-conve
@@ -827,20 +1195,20 @@ converted-to.pdf Graphic file (type pdf)
 <use img/eps/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot-eps-c
 onverted-to.pdf>
 Package pdftex.def Info: img/eps/fusion/Roth/Grayscale_and_Infrared_overlaid_Im
-age_screenshot-eps-converted-to.pdf used on input line 204.
+age_screenshot-eps-converted-to.pdf used on input line 205.
 (pdftex.def)             Requested size: 170.71652pt x 222.0887pt.
 Package epstopdf Info: Source file: <img/eps/fusion/Sea/3/Grayscale_and_Infrare
 d_overlaid_Image_screenshot.eps>
-(epstopdf)                    date: 2015-10-13 11:24:58
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 4876020 bytes
 (epstopdf)             Output file: <img/eps/fusion/Sea/3/Grayscale_and_Infrare
 d_overlaid_Image_screenshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:07
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 119868 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Sea/3/Grays
 cale_and_Infrared_overlaid_Image_screenshot-eps-converted-to.pdf img/eps/fusion
 /Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.eps>
-(epstopdf)             \includegraphics on input line 205.
+(epstopdf)             \includegraphics on input line 206.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot-eps-conv
@@ -851,24 +1219,24 @@ File: img/eps/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot-eps
 <use img/eps/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot-eps-
 converted-to.pdf>
 Package pdftex.def Info: img/eps/fusion/Sea/3/Grayscale_and_Infrared_overlaid_I
-mage_screenshot-eps-converted-to.pdf used on input line 205.
+mage_screenshot-eps-converted-to.pdf used on input line 206.
 (pdftex.def)             Requested size: 170.71652pt x 249.83636pt.
 
 
-LaTeX Warning: Float too large for page by 123.5022pt on input line 211.
+LaTeX Warning: Float too large for page by 123.5022pt on input line 212.
 
 Package epstopdf Info: Source file: <img/eps/fusion/Roth/PR-roth-all-detections
 .eps>
-(epstopdf)                    date: 2015-10-13 11:27:41
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 4474943 bytes
 (epstopdf)             Output file: <img/eps/fusion/Roth/PR-roth-all-detections
 -eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:08
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 126036 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/fusion/Roth/PR-rot
 h-all-detections-eps-converted-to.pdf img/eps/fusion/Roth/PR-roth-all-detection
 s.eps>
-(epstopdf)             \includegraphics on input line 217.
+(epstopdf)             \includegraphics on input line 218.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/fusion/Roth/PR-roth-all-detections-eps-converted-to.pdf, id=77, 1033.8
@@ -878,10 +1246,10 @@ ile (type pdf)
 
 <use img/eps/fusion/Roth/PR-roth-all-detections-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/fusion/Roth/PR-roth-all-detections-eps-convert
-ed-to.pdf used on input line 217.
+ed-to.pdf used on input line 218.
 (pdftex.def)             Requested size: 227.62204pt x 157.77888pt.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <7> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 224.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 225.
  [6]
 [7 <./img/eps/fusion/Roth/Infrared_Image_screenshot-eps-converted-to.pdf> <./im
 g/eps/fusion/Roth/Grayscale_Image_screenshot-eps-converted-to.pdf> <./img/eps/f
@@ -897,95 +1265,108 @@ ayscale_and_Infrared_overlaid_Image_screenshot-eps-converted-to.pdf> <./img/eps
 Underfull \vbox (badness 1210) has occurred while \output is active []
 
  [8 <./img/eps/fusion/Roth/PR-roth-all-detections-eps-converted-to.pdf>]
-Overfull \hbox (0.54375pt too wide) in paragraph at lines 311--312
+Overfull \hbox (0.54375pt too wide) in paragraph at lines 312--313
 \OT1/cmr/m/n/10 All the ex-per-i-ments are per-formed on a light-weight low-alt
 itude hand-launchable
  []
 
-[9]
+Package epstopdf Info: Source file: <img/eps/techpod.eps>
+(epstopdf)                    date: 2015-10-14 09:05:37
+(epstopdf)                    size: 138437 bytes
+(epstopdf)             Output file: <img/eps/techpod-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-10-14 09:11:54
+(epstopdf)                    size: 32497 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/eps/techpod-eps-conver
+ted-to.pdf img/eps/techpod.eps>
+(epstopdf)             \includegraphics on input line 315.
+Package epstopdf Info: Output file is already uptodate.
+<img/eps/techpod-eps-converted-to.pdf, id=125, 672.5125pt x 243.91125pt>
+File: img/eps/techpod-eps-converted-to.pdf Graphic file (type pdf)
+
+<use img/eps/techpod-eps-converted-to.pdf>
+Package pdftex.def Info: img/eps/techpod-eps-converted-to.pdf used on input lin
+e 315.
+(pdftex.def)             Requested size: 347.12354pt x 125.89668pt.
+ [9]
 Package epstopdf Info: Source file: <img/eps/victim_gps/SIP.eps>
-(epstopdf)                    date: 2015-10-13 11:31:22
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 3753960 bytes
 (epstopdf)             Output file: <img/eps/victim_gps/SIP-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2015-10-13 11:35:09
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 284198 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/victim_gps/SIP-eps
 -converted-to.pdf img/eps/victim_gps/SIP.eps>
-(epstopdf)             \includegraphics on input line 328.
+(epstopdf)             \includegraphics on input line 335.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/eps/victim_gps/SIP-eps-converted-to.pdf, id=128, 746.79pt x 832.10875pt>
+<img/eps/victim_gps/SIP-eps-converted-to.pdf, id=130, 746.79pt x 832.10875pt>
 File: img/eps/victim_gps/SIP-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/eps/victim_gps/SIP-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/victim_gps/SIP-eps-converted-to.pdf used on in
-put line 328.
+put line 335.
 (pdftex.def)             Requested size: 199.16928pt x 221.91713pt.
 Package epstopdf Info: Source file: <img/eps/victim_gps/SIP_detections_map.eps>
 
-(epstopdf)                    date: 2015-08-29 07:42:48
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 1322797 bytes
 (epstopdf)             Output file: <img/eps/victim_gps/SIP_detections_map-eps-
 converted-to.pdf>
-(epstopdf)                    date: 2015-08-29 07:43:18
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 319169 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/victim_gps/SIP_det
 ections_map-eps-converted-to.pdf img/eps/victim_gps/SIP_detections_map.eps>
-(epstopdf)             \includegraphics on input line 329.
+(epstopdf)             \includegraphics on input line 336.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/eps/victim_gps/SIP_detections_map-eps-converted-to.pdf, id=129, 635.37375p
+<img/eps/victim_gps/SIP_detections_map-eps-converted-to.pdf, id=131, 635.37375p
 t x 713.66624pt>
 File: img/eps/victim_gps/SIP_detections_map-eps-converted-to.pdf Graphic file (
 type pdf)
 
 <use img/eps/victim_gps/SIP_detections_map-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/victim_gps/SIP_detections_map-eps-converted-to
-.pdf used on input line 329.
+.pdf used on input line 336.
 (pdftex.def)             Requested size: 199.16928pt x 223.70619pt.
 
-Overfull \hbox (73.51pt too wide) in paragraph at lines 326--333
+Overfull \hbox (73.51pt too wide) in paragraph at lines 333--340
  [][] 
  []
 
 Package epstopdf Info: Source file: <img/eps/victim_gps/victim_utm_errors.eps>
-(epstopdf)                    date: 2015-10-13 11:30:44
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 7338930 bytes
 (epstopdf)             Output file: <img/eps/victim_gps/victim_utm_errors-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:11
+(epstopdf)                    date: 2015-10-14 08:00:14
 (epstopdf)                    size: 220297 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/victim_gps/victim_
 utm_errors-eps-converted-to.pdf img/eps/victim_gps/victim_utm_errors.eps>
-(epstopdf)             \includegraphics on input line 337.
+(epstopdf)             \includegraphics on input line 344.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/eps/victim_gps/victim_utm_errors-eps-converted-to.pdf, id=130, 1482.53876p
+<img/eps/victim_gps/victim_utm_errors-eps-converted-to.pdf, id=132, 1482.53876p
 t x 820.06375pt>
 File: img/eps/victim_gps/victim_utm_errors-eps-converted-to.pdf Graphic file (t
 ype pdf)
 
 <use img/eps/victim_gps/victim_utm_errors-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/victim_gps/victim_utm_errors-eps-converted-to.
-pdf used on input line 337.
+pdf used on input line 344.
 (pdftex.def)             Requested size: 312.9803pt x 173.11942pt.
-
-Overfull \hbox (14.15378pt too wide) in paragraph at lines 355--356
+ [10 <./img/eps/techpod-eps-converted-to.pdf>] [11 <./img/eps/victim_gps/SIP-ep
+s-converted-to.pdf> <./img/eps/victim_gps/SIP_detections_map-eps-converted-to.p
+df> <./img/eps/victim_gps/victim_utm_errors-eps-converted-to.pdf>]
+Overfull \hbox (14.15378pt too wide) in paragraph at lines 362--363
 \OT1/cmr/m/n/10 This work was sup-ported by the Eu-ro-pean Com-mis-sion project
 s ICARUS (#285417)
  []
 
 
-LaTeX Warning: Citation `bal:cha:gra:pae' undefined on input line 357.
+LaTeX Warning: Citation `bal:cha:gra:pae' undefined on input line 364.
 
 (./isvc_submission.bbl
-Underfull \vbox (badness 1953) has occurred while \output is active []
-
- [10]
-[11 <./img/eps/victim_gps/SIP-eps-converted-to.pdf> <./img/eps/victim_gps/SIP_d
-etections_map-eps-converted-to.pdf> <./img/eps/victim_gps/victim_utm_errors-eps
--converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 72--75
 []\OT1/cmr/m/n/9 Doll^^Sar, P.:  Pi-otr's Com-puter Vi-sion Mat-lab Tool-box (P
 MT).
@@ -1007,13 +1388,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4965 strings out of 494985
- 79865 string characters out of 6180357
- 380430 words of memory out of 5000000
- 8112 multiletter control sequences out of 15000+600000
- 8254 words of font info for 31 fonts, out of 8000000 for 9000
+ 12946 strings out of 494985
+ 270268 string characters out of 6180356
+ 516817 words of memory out of 5000000
+ 15980 multiletter control sequences out of 15000+600000
+ 10101 words of font info for 38 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 44i,15n,49p,1635b,1675s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,15n,49p,10407b,1682s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -1022,14 +1403,15 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on isvc_submission.pdf (13 pages, 2861388 bytes).
+amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+bx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on isvc_submission.pdf (13 pages, 2899510 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 118 compressed objects within 2 object streams
+ 204 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
