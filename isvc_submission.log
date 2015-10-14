@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  14 OCT 2015 16:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  14 OCT 2015 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -737,7 +737,7 @@ File: img/eps/sample_thermal-eps-converted-to.pdf Graphic file (type pdf)
 <use img/eps/sample_thermal-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/sample_thermal-eps-converted-to.pdf used on in
 put line 102.
-(pdftex.def)             Requested size: 220.42519pt x 162.60875pt.
+(pdftex.def)             Requested size: 183.68579pt x 135.5059pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 114.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -765,7 +765,7 @@ pdf Graphic file (type pdf)
 df>
 Package pdftex.def Info: img/eps/bg_sub/CLA_Infrared_Image_screenshot_03-08-201
 5-eps-converted-to.pdf used on input line 115.
-(pdftex.def)             Requested size: 113.81102pt x 91.04892pt.
+(pdftex.def)             Requested size: 85.35826pt x 68.28227pt.
 Package epstopdf Info: Source file: <img/eps/bg_sub/CLA_Threshold_values_high_s
 creenshot_03-08-2015.eps>
 (epstopdf)                    date: 2015-10-13 11:15:37
@@ -789,7 +789,7 @@ ted-to.pdf Graphic file (type pdf)
 ed-to.pdf>
 Package pdftex.def Info: img/eps/bg_sub/CLA_Threshold_values_high_screenshot_03
 -08-2015-eps-converted-to.pdf used on input line 116.
-(pdftex.def)             Requested size: 113.81102pt x 91.04892pt.
+(pdftex.def)             Requested size: 85.35826pt x 68.28227pt.
 Package epstopdf Info: Source file: <img/eps/bg_sub/CLA_Segmentation_Map_screen
 shot_03-08-2015.eps>
 (epstopdf)                    date: 2015-10-13 11:15:04
@@ -813,20 +813,15 @@ o.pdf Graphic file (type pdf)
 .pdf>
 Package pdftex.def Info: img/eps/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2
 015-eps-converted-to.pdf used on input line 117.
-(pdftex.def)             Requested size: 113.81102pt x 91.04892pt.
-
-Overfull \hbox (2.70949pt too wide) in paragraph at lines 114--122
- [][] 
- []
-
+(pdftex.def)             Requested size: 85.35826pt x 68.28227pt.
 Package epstopdf Info: Source file: <img/eps/bg_sub/Roth_Infrared_Image_screens
 hot.eps>
-(epstopdf)                    date: 2015-10-13 11:20:02
-(epstopdf)                    size: 378880 bytes
+(epstopdf)                    date: 2015-10-14 16:42:15
+(epstopdf)                    size: 294930 bytes
 (epstopdf)             Output file: <img/eps/bg_sub/Roth_Infrared_Image_screens
 hot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:34:59
-(epstopdf)                    size: 56786 bytes
+(epstopdf)                    date: 2015-10-14 16:42:23
+(epstopdf)                    size: 43360 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/bg_sub/Roth_Infrar
 ed_Image_screenshot-eps-converted-to.pdf img/eps/bg_sub/Roth_Infrared_Image_scr
 eenshot.eps>
@@ -834,22 +829,22 @@ eenshot.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/bg_sub/Roth_Infrared_Image_screenshot-eps-converted-to.pdf, id=20, 361
-.35pt x 512.91624pt>
+.35pt x 397.485pt>
 File: img/eps/bg_sub/Roth_Infrared_Image_screenshot-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use img/eps/bg_sub/Roth_Infrared_Image_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/bg_sub/Roth_Infrared_Image_screenshot-eps-conv
 erted-to.pdf used on input line 126.
-(pdftex.def)             Requested size: 80.17543pt x 113.81102pt.
+(pdftex.def)             Requested size: 77.595pt x 85.35826pt.
 Package epstopdf Info: Source file: <img/eps/bg_sub/Roth_Threshold_values_high_
 screenshot.eps>
-(epstopdf)                    date: 2015-10-13 11:20:35
-(epstopdf)                    size: 378880 bytes
+(epstopdf)                    date: 2015-10-14 16:40:40
+(epstopdf)                    size: 294930 bytes
 (epstopdf)             Output file: <img/eps/bg_sub/Roth_Threshold_values_high_
 screenshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:43:31
-(epstopdf)                    size: 5243 bytes
+(epstopdf)                    date: 2015-10-14 16:40:52
+(epstopdf)                    size: 4772 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/bg_sub/Roth_Thresh
 old_values_high_screenshot-eps-converted-to.pdf img/eps/bg_sub/Roth_Threshold_v
 alues_high_screenshot.eps>
@@ -857,22 +852,22 @@ alues_high_screenshot.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/bg_sub/Roth_Threshold_values_high_screenshot-eps-converted-to.pdf, id=
-21, 361.35pt x 512.91624pt>
+21, 361.35pt x 397.485pt>
 File: img/eps/bg_sub/Roth_Threshold_values_high_screenshot-eps-converted-to.pdf
  Graphic file (type pdf)
 
 <use img/eps/bg_sub/Roth_Threshold_values_high_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/bg_sub/Roth_Threshold_values_high_screenshot-e
 ps-converted-to.pdf used on input line 127.
-(pdftex.def)             Requested size: 80.17543pt x 113.81102pt.
+(pdftex.def)             Requested size: 77.595pt x 85.35826pt.
 Package epstopdf Info: Source file: <img/eps/bg_sub/Roth_Segmentation_Map_scree
 nshot.eps>
-(epstopdf)                    date: 2015-10-13 11:20:20
-(epstopdf)                    size: 52430 bytes
+(epstopdf)                    date: 2015-10-14 16:40:15
+(epstopdf)                    size: 41947 bytes
 (epstopdf)             Output file: <img/eps/bg_sub/Roth_Segmentation_Map_scree
 nshot-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:00
-(epstopdf)                    size: 3763 bytes
+(epstopdf)                    date: 2015-10-14 16:40:53
+(epstopdf)                    size: 3397 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/bg_sub/Roth_Segmen
 tation_Map_screenshot-eps-converted-to.pdf img/eps/bg_sub/Roth_Segmentation_Map
 _screenshot.eps>
@@ -880,16 +875,16 @@ _screenshot.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <img/eps/bg_sub/Roth_Segmentation_Map_screenshot-eps-converted-to.pdf, id=22, 3
-61.35pt x 512.91624pt>
+61.35pt x 397.485pt>
 File: img/eps/bg_sub/Roth_Segmentation_Map_screenshot-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use img/eps/bg_sub/Roth_Segmentation_Map_screenshot-eps-converted-to.pdf>
 Package pdftex.def Info: img/eps/bg_sub/Roth_Segmentation_Map_screenshot-eps-co
 nverted-to.pdf used on input line 128.
-(pdftex.def)             Requested size: 80.17543pt x 113.81102pt.
+(pdftex.def)             Requested size: 77.595pt x 85.35826pt.
 
-Underfull \vbox (badness 7397) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3 <./img/eps/sample_thermal-eps-converted-to.pdf>] [4 <./img/eps/bg_sub/CLA_I
 nfrared_Image_screenshot_03-08-2015-eps-converted-to.pdf> <./img/eps/bg_sub/CLA
@@ -1407,7 +1402,7 @@ amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 bx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on isvc_submission.pdf (13 pages, 2899067 bytes).
+Output written on isvc_submission.pdf (13 pages, 2884781 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  123 compressed objects within 2 object streams

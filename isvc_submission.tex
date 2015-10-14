@@ -99,7 +99,7 @@ Detecting humans from an altitude of 50-100 meters with a camera of limited reso
 Fig.~\ref{fig:thermal_sample} shows a human as seen in false-color rendering of the thermal camera image at an altitude of about 70 meters. At this scale, the humans occupy less than 50 pixels ($<$0.02\%) in an image of 640 x 512 resolution. An exhaustive search for such a tiny object of interest is very time consuming. We propose a Background Subtractor that returns regions of interest (ROI) and narrows down the search space considerably, thus enabling real-time detection. The foreground here is defined as a part of the image whose temperature differs quite significantly from it's surroundings. Since, humans are usually hotter (in winter) or colder (in summer) than the surroundings, we propose a technique that adaptively adjusts 2 threshold values ($t_{low}, t_{high}$) based on the surrounding pixel intensities. All the pixels with intensities less than $t_{low}$ or greater than $t_{high}$ are considered as foreground pixels.
 
 \begin{figure}
-\centerline{\includegraphics[scale=0.3]{img/eps/sample_thermal.eps}}
+\centerline{\includegraphics[scale=0.25]{img/eps/sample_thermal.eps}}
 \caption{A sample image recorded from the FLIR thermal camera at an approximate altitude of 70 meters. Two humans are pointed out.}
 \label{fig:thermal_sample}
 \end{figure}
@@ -112,9 +112,9 @@ Fig.~\ref{fig:bg_sub} shows two sample images collected at different altitudes, 
 \begin{figure}
   \centering
   \begin{tabular}{ccc}
-    \includegraphics[width=4cm]{img/eps/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.eps} &
-    \includegraphics[width=4cm]{img/eps/bg_sub/CLA_Threshold_values_high_screenshot_03-08-2015.eps} &
-    \includegraphics[width=4cm]{img/eps/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015.eps} \\
+    \includegraphics[width=3cm]{img/eps/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.eps} &
+    \includegraphics[width=3cm]{img/eps/bg_sub/CLA_Threshold_values_high_screenshot_03-08-2015.eps} &
+    \includegraphics[width=3cm]{img/eps/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015.eps} \\
     \small (1.a) IR image & 
     \small (1.b) 8-bit threshold image &
     \small (1.c) Segmentation map
@@ -123,15 +123,15 @@ Fig.~\ref{fig:bg_sub} shows two sample images collected at different altitudes, 
   \vspace{\floatsep}
 
   \begin{tabular}{ccc}
-    \includegraphics[height=4cm]{img/eps/bg_sub/Roth_Infrared_Image_screenshot.eps} &
-    \includegraphics[height=4cm]{img/eps/bg_sub/Roth_Threshold_values_high_screenshot.eps} &
-    \includegraphics[height=4cm]{img/eps/bg_sub/Roth_Segmentation_Map_screenshot.eps} \\
+    \includegraphics[height=3cm]{img/eps/bg_sub/Roth_Infrared_Image_screenshot.eps} &
+    \includegraphics[height=3cm]{img/eps/bg_sub/Roth_Threshold_values_high_screenshot.eps} &
+    \includegraphics[height=3cm]{img/eps/bg_sub/Roth_Segmentation_Map_screenshot.eps} \\
     \small (2.a) IR image & 
     \small (2.b) 8-bit threshold image &
     \small (2.c) Segmentation map
   \end{tabular}
 
-  \caption{Sequence 1 is captured in the night time at an altitude of 20 meters above the ground with some crowd. Sequence 2 was captured from a UAV on a cold winter morning at an altitude of 60 meters above the ground. (a) shows the infrared image, (b) is the 8-bit image of pixel-wise threshold $t_{high}(i, j)$  (grid of blocks is overlaid and a sample block is marked in white on the top-left) and (c) is the resulting segmentation map depicting foreground pixels.}\label{fig:bg_sub}
+  \caption{Sequence 1 is captured in the night time at an altitude of 20 meters above the ground with some crowd. Sequence 2 was captured from a UAV on a cold winter morning at an altitude of 60 meters above the ground. (a) infrared image, (b) 8-bit image of pixel-wise threshold $t_{high}(i, j)$  (grid of blocks is overlaid and a sample block is marked in white on the top-left) and (c) segmentation map depicting regions of interest.}\label{fig:bg_sub}
 \end{figure}
 
 
