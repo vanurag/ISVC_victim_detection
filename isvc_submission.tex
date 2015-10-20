@@ -16,6 +16,16 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{siunitx}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{eqparbox}
+\renewcommand\algorithmiccomment[1]{%
+  \hfill\textcolor{blue}{\#\ \eqparbox{COMMENT}{#1}}%
+}
+\algnewcommand{\LineComment}[1]{\State \textcolor{blue}{\(\#\) #1}}
+\def\NoNumber1#1{{\def\alglinenumber##1{}\State #1}}
+\def\NoNumber2#1{{\def\alglinenumber##1{}\State #1}\addtocounter{ALG@line}{-1}}
+\def\NoNumber3#1{{\def\alglinenumber##1{}\State #1}\addtocounter{ALG@line}{-2}}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -166,7 +176,7 @@ Fig.~\ref{fig:k-fold} shows Precision-Recall (PR) curves for the performance of 
 
 Objects in infrared images rarely have discerning features since the temperature tends to be uniform across the objects. Therefore, using a classifier on infrared patches would be unreliable, since it only has the shape information of the object in a very small patch. Since in all our flights using the UAV we collected both infrared and grayscale images, a fusion technique is proposed to get a one to one relationship between pixel locations of infrared and grayscale images. This will help us in extracting both infrared and grayscale image patches corresponding to the ROIs obtained from Background Subtraction which can help the classifier in producing more reliable results.
 
-We use Kalibr \cite{furgale2013unified} to calibrate the infrared and grayscale camera intrinsics and extrinsics for the sensorpod mounting. We use a radial-tangential model to estimate camera distortion parameters. An april tag pattern is used to estimate grayscale camera intrinsics. A thick matte paper with checkerboard pattern under illumination of a bright light is used to calibrate infrared camera intrinsics. Now the infrared and grayscale camera setup can be treated as a Stereo pair and standard image rectification techniques \cite{planar_rect} can be used to evaluate the necessary projection matrices. At this point, all the epipolar lines are parallel to image edge (horizontal if horizontal rectification was employed, vertical otherwise). For our particular setup, vertical stereo was chosen since the camera centers were aligned vertically on the UAV. Now that the disparities of the image are in one axis, it's fast and easy to find pixel correspondences using robust feature matching between the images. Pseudo-code of the image fusion algorithm is shown in List.~\ref{pseudo}.
+We use Kalibr \cite{furgale2013unified} to calibrate the infrared and grayscale camera intrinsics and extrinsics for the sensorpod mounting. We use a radial-tangential model to estimate camera distortion parameters. An april tag pattern is used to estimate grayscale camera intrinsics. A thick matte paper with checkerboard pattern under illumination of a bright light is used to calibrate infrared camera intrinsics. Now the infrared and grayscale camera setup can be treated as a Stereo pair and standard image rectification techniques \cite{planar_rect} can be used to evaluate the necessary projection matrices. At this point, all the epipolar lines are parallel to image edge (horizontal if horizontal rectification was employed, vertical otherwise). For our particular setup, vertical stereo was chosen since the camera centers were aligned vertically on the UAV. Now that the disparities of the image are in one axis, it's fast and easy to find pixel correspondences using robust feature matching between the images. Pseudo-code of the image fusion algorithm is shown in Algorithm.~\ref{pseudo}.
 
 Once a one-to-one correspondence is obtained between grayscale and infrared images, the patches corresponding to ROIs are passed on to individual human classifiers and pairs of patches resulting in a high cumulative classifier score are retained for probable presence of a human.
 
@@ -220,87 +230,52 @@ Fig.~\ref{fig:fusion-pr} shows improvement to the PR curves after image Fusion o
   \caption{Precision-Recall curves of the pipeline on a high-altitude (60 meters) data collected from a UAV, before and after image fusion.}\label{fig:fusion-pr}
 \end{figure}
 
-\begin{lstlisting}[caption=Pseudo-code for Image fusion, label=pseudo, frame=single]
 
-void (*@\textbf{\sffamily{main}}@*) (int num_arguments, char** arguments) {
-  struct Intrinsics {  // Camera Intrinsics.
-    cv::Mat_<double> infrared;
-    cv::Mat_<double> infrared_distortion;
-    cv::Mat_<double> grayscale;
-    cv::Mat_<double> grayscale_distortion;
-  } intrinsics;
-  struct Extrinsics {  // Camera Extrinsics.
-    cv::Mat_<double> grayscale_to_infrared;
-  } extrinsics;
-  struct Rectified {  // Rectified image data.
-    // Transformation matrices for rectification.
-    cv::Mat_<double> grayscale_transform;
-    cv::Mat_<double> infrared_transform;
-    // New optimal camera matrices.
-    cv::Mat_<double> new_grayscale_intrinsics; 
-    cv::Mat_<double> new_infrared_intrinsics;
-    cv::Mat_<double> intrinsics;
-  } rectified;
-  struct Mappings {  // Transformation mappings.
-    // Transformation maps for rectified images. transformed_image(x, y) = image(map(x, y)).
-    cv::Mat infrared;
-    cv::Mat grayscale;
-    bool evaluated = false;
-    cv::Mat offsets;  // Offsets to align rectified images.
-  } mappings;
+\begin{algorithm}
+\caption{Image Fusion Algorithm}\label{pseudo}
+\begin{algorithmic}[1]
+\Require{Given a stream of ROS images $I_{IR}$, $I_{G}$ obtained from calibrated Infrared and Grayscale camera sources with intrinsics $K_{IR}$, $K_{G}$ and radial-tangential distortion models $D_{IR}$, $D_{G}$, the following algorithm specifies steps performed to un-distort images and register pixels of one image with the other. The algorithm makes use of camera rotation and translation extrinsics $\lbrack R_{G}^{IR} \mid t_{G}^{IR} \rbrack$ between the cameras to evaluate rectification transforms $T_{IR}$ and $T_{G}$. Robust fast feature ($F_{IR}$, $F_{G}$) matching is further employed to evaluate post-rectification offsets $O$ and obtain one-to-one mappings $M_{IR}$ and $M_{G}$ between rectified images $I_{IR}^{new}$, $I_{G}^{new}$ that satisfy $I_{IR}^{new}(x, y) = I_{IR}(M_{IR}(x, y))$ and $I_{G}^{new}(x, y) = I_{G}(M_{G}(x, y))$}
+\Procedure{ImageFusion}{}
+\LineComment{Load pre-evaluated camera intrinsics and extrinsics.}
+\State $\lbrace K_{IR}, D_{IR}, K_{G}, D_{G}, \lbrack R_{G}^{IR} \mid t_{G}^{IR} \rbrack \rbrace\gets \texttt{loadCalibration}(\textbf{calibration.yml})$
+\LineComment{Generate new optimal camera intrinsics that will ensure maximum possible number of pixels of both images are retained after un-distortion, in destination image size same as the original image.}
+\State $K_{IR}^{new} \gets \texttt{getOptimalNewCameraMatrix}(K_{IR}, D_{IR}, \texttt{sizeof}(I_{IR}))$
+\State $K_{G}^{new} \gets \texttt{getOptimalNewCameraMatrix}(K_{G}, D_{G}, \texttt{sizeof}(I_{G}))$
+\LineComment{Obtain single optimal camera matrix $K^{new}$ that ensures all the pixels from both the images are retained post un-distortion.}
+\State $K^{new} \gets \texttt{getOptimalNewCameraMatrix}(K_{IR}^{new}, K_{G}^{new})$
+\LineComment{Compute rectification transforms for each camera in the calibrated stereo pair using OpenCV Stereo Rectification.}
+\State $\lbrace T_{IR}, T_{G} \rbrace \gets \texttt{stereoRectify}(K_{IR}, D_{IR}, K_{G}, D_{G}, \lbrack R_{G}^{IR} \mid t_{G}^{IR} \rbrack)$
 
-  (*@\textbf{\sffamily{loadCalibration}}@*)(intrinsics,extrinsics);  // Load camera intrinsics.
-  // Generate new optimal camera intrinsics that will ensure maximum possible number of pixels of both images are retained after un-distortion, in destination image size same as the original image.
-  rectified.new_infrared_intrinsics = cv::(*@\textbf{\sffamily{getOptimalNewCameraMatrix}}@*)(
-    intrinsics.infrared,intrinsics.infrared_distortion,infrared_image_size);
-  rectified.new_grayscale_intrinsics = cv::(*@\textbf{\sffamily{getOptimalNewCameraMatrix}}@*)(
-    intrinsics.grayscale,intrinsics.grayscale_distortion,grayscale_image_size);
-  // Obtain single optimal camera matrix that ensures all the pixels from both the images are retained post un-distortion.
-  rectified.intrinsics = (*@\textbf{\sffamily{getOptimalNewCameraMatrix}}@*)(
-    rectified.new_infrared_intrinsics,rectified.new_grayscale_intrinsics);
-  // Compute rectification transforms for each camera in the calibrated stereo pair using OpenCV Stereo Rectification.
-  cv::(*@\textbf{\sffamily{stereoRectify}}@*)(
-    intrinsics.infrared,intrinsics.infrared_distortion,
-    intrinsics.grayscale,intrinsics.grayscale_distortion,
-    extrinsics.grayscale_to_infrared,rectified.infrared_transform,
-    rectified.grayscale_transform);
-
-  while (incoming ROS messages) {
-    // Read ROS infrared image message.
-    if (message_view.getTopic() == infrared_topic) {
-      cv::Mat infrared = (*@\textbf{\sffamily{getImage}}@*)(message_view); // Read the image.
-    }
-    // Read ROS grayscale image message.
-    if (message_view.getTopic() == grayscale_topic) {
-      cv::Mat grayscale = (*@\textbf{\sffamily{getImage}}@*)(message_view); // Read the image.
-      // Evaluate transformation maps using computed destination camera matrix and the stereo rectification transforms.
-      if ( !mappings.evaluated ) {
-        cv::(*@\textbf{\sffamily{initUndistortRectifyMap}}@*)(
-          intrinsics.infrared,intrinsics.infrared_distortion, 
-          rectified.infrared_transform,rectified.infrared_intrinsics, 
-          rectified.destination_size,mappings.infrared);
-        cv::(*@\textbf{\sffamily{initUndistortRectifyMap}}@*)(
-          intrinsics.grayscale,intrinsics.grayscale_distortion,
-          rectified.grayscale_transform,rectified.infrared_intrinsics,
-          rectified.destination_size,mappings.grayscale);
-        mappings.evaluated = true;
-      }
-      // Apply offsets to transformation maps using robust feature matching.
-      cv::(*@\textbf{\sffamily{goodFeaturesToTrack}}@*)(infrared,infrared_features);
-      cv::(*@\textbf{\sffamily{goodFeaturesToTrack}}@*)(grayscale,grayscale_features);
-      (*@\textbf{\sffamily{findOffsets}}@*)(infrared_features,grayscale_features,mappings.offsets);
-      (*@\textbf{\sffamily{applyOffsets}}@*)(mappings.offsets,mappings.infrared,mappings.grayscale);    
-      // Rectify the images.
-      cv::(*@\textbf{\sffamily{remap}}@*)(infrared,rectified_infrared,mappings.infrared);
-      cv::(*@\textbf{\sffamily{remap}}@*)(grayscale,rectified_grayscale,mappings.grayscale);
-    }
-    // Remap the ROIs into rectified image and extract overlapping patches in both the images corresponding to the new ROIs.
-    new_ROI = (*@\textbf{\sffamily{remapRect}}@*)(ROI,mappings.infrared);
-    infrared_image_patch = rectified_infrared(new_ROI);
-    grayscale_image_patch = rectified_grayscale(new_ROI);
-  }
-}
-\end{lstlisting}
+\While{incoming ROS messages}
+\LineComment{Read ROS infrared image message.}
+\If{incoming message topic $==$ infrared image topic}
+\State $I_{IR} \gets \texttt{getImage}(message)$\Comment{Read the image.}
+\EndIf
+\LineComment{Read ROS grayscale image message.}
+\If{incoming message topic $==$ grayscale image topic}
+\State $I_{G} \gets \texttt{getImage}(message)$\Comment{Read the image.}
+\LineComment{Evaluate transformation maps using computed destination camera matrix and the stereo rectification transforms.}
+\If{mappings not evaluated}
+\State $M_{IR} \gets \texttt{initUndistortRectifyMap}(K_{IR}, D_{IR}, T_{IR}, K^{new})$
+\State $M_{G} \gets \texttt{initUndistortRectifyMap}(K_{G}, D_{G}, T_{G}, K^{new})$
+\EndIf
+\LineComment{Apply offsets to transformation maps using robust feature matching.}
+\State $F_{IR} \gets \texttt{goodFeaturesToTrack}(I_{IR})$
+\State $F_{G} \gets \texttt{goodFeaturesToTrack}(I_{G})$
+\State $\texttt{findOffsets}(F_{IR}, F_{G}, O)$
+\State $\texttt{applyOffsets}(O, M_{IR}, M_{G})$    
+\LineComment{Apply rectification transform on the images.}
+\State $\texttt{remap}(I_{IR}, I_{IR}^{new}, M_{IR})$
+\State $\texttt{remap}(I_{G}, I_{G}^{new}, M_{G})$
+\EndIf
+\LineComment{Remap the ROIs into rectified image and extract overlapping patches in both the images corresponding to the new ROIs.}
+\State $ROI^{new} \gets \texttt{remapRect}(ROI, M_{IR})$
+\State $I_{IR}^{patch} \gets I_{IR}^{new}(ROI^{new})$
+\State $I_{G}^{patch} \gets I_{G}^{new}(ROI^{new})$
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
 
 
 \section{Experimental Results}
