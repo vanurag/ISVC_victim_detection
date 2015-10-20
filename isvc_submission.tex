@@ -262,13 +262,13 @@ Fig.~\ref{fig:fusion-pr} shows improvement to the PR curves after image Fusion o
 \LineComment{Apply offsets to transformation maps using robust feature matching.}
 \State $F_{IR} \gets \texttt{goodFeaturesToTrack}(I_{IR})$
 \State $F_{G} \gets \texttt{goodFeaturesToTrack}(I_{G})$
-\State $\texttt{findOffsets}(F_{IR}, F_{G}, O)$
-\State $\texttt{applyOffsets}(O, M_{IR}, M_{G})$    
+\State $O \gets \texttt{findOffsets}(F_{IR}, F_{G})$
+\State $\lbrace M_{IR}, M_{G} \rbrace \gets \texttt{applyOffsets}(O, M_{IR}, M_{G})$    
 \LineComment{Apply rectification transform on the images.}
-\State $\texttt{remap}(I_{IR}, I_{IR}^{new}, M_{IR})$
-\State $\texttt{remap}(I_{G}, I_{G}^{new}, M_{G})$
+\State $I_{IR}^{new} \gets \texttt{remap}(I_{IR}, M_{IR})$
+\State $I_{G}^{new} \gets \texttt{remap}(I_{G}, M_{G})$
 \EndIf
-\LineComment{Remap the ROIs into rectified image and extract overlapping patches in both the images corresponding to the new ROIs.}
+\LineComment{Remap the ROIs into rectified image and extract overlapping patches ($I_{IR}^{patch}, I_{G}^{patch}$) in both the images corresponding to the new ROIs.}
 \State $ROI^{new} \gets \texttt{remapRect}(ROI, M_{IR})$
 \State $I_{IR}^{patch} \gets I_{IR}^{new}(ROI^{new})$
 \State $I_{G}^{patch} \gets I_{G}^{new}(ROI^{new})$

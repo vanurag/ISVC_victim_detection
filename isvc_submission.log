@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  20 OCT 2015 18:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  20 OCT 2015 18:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1381,12 +1381,12 @@ Overfull \hbox (45.67195pt too wide) in paragraph at lines 308--315
  []
 
 Package epstopdf Info: Source file: <img/eps/victim_gps/victim_utm_errors.eps>
-(epstopdf)                    date: 2015-10-13 11:30:44
+(epstopdf)                    date: 2015-10-20 18:17:05
 (epstopdf)                    size: 7338930 bytes
 (epstopdf)             Output file: <img/eps/victim_gps/victim_utm_errors-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2015-10-13 11:35:11
-(epstopdf)                    size: 220297 bytes
+(epstopdf)                    date: 2015-10-20 18:17:17
+(epstopdf)                    size: 222106 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/eps/victim_gps/victim_
 utm_errors-eps-converted-to.pdf img/eps/victim_gps/victim_utm_errors.eps>
 (epstopdf)             \includegraphics on input line 319.
@@ -1455,7 +1455,7 @@ r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on isvc_submission.pdf (12 pages, 2893276 bytes).
+Output written on isvc_submission.pdf (12 pages, 2895139 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  123 compressed objects within 2 object streams
