@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  20 OCT 2015 18:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.2)  20 OCT 2015 19:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1305,8 +1305,37 @@ Package pdftex.def Info: img/eps/fusion/Roth/PR-roth-all-detections-eps-convert
 ed-to.pdf used on input line 228.
 (pdftex.def)             Requested size: 227.62204pt x 157.77888pt.
 
+Overfull \hbox (14.59439pt too wide) in paragraph at lines 250--251
+[] [] 
+ []
 
-LaTeX Warning: Float too large for page by 54.08376pt on input line 278.
+
+Overfull \hbox (14.59439pt too wide) in paragraph at lines 254--255
+[] [] 
+ []
+
+
+Overfull \hbox (28.4693pt too wide) in paragraph at lines 257--258
+[] [] 
+ []
+
+
+Overfull \hbox (28.4693pt too wide) in paragraph at lines 262--263
+[] [] 
+ []
+
+
+Overfull \hbox (28.4693pt too wide) in paragraph at lines 267--268
+[] [] 
+ []
+
+
+Overfull \hbox (14.59439pt too wide) in paragraph at lines 271--272
+[] [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 46.357pt on input line 278.
 
 
 Overfull \hbox (8.32156pt too wide) in paragraph at lines 287--288
@@ -1434,10 +1463,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 13471 strings out of 494985
- 278232 string characters out of 6180357
- 324613 words of memory out of 5000000
- 16474 multiletter control sequences out of 15000+600000
+ 13466 strings out of 494985
+ 278150 string characters out of 6180357
+ 324625 words of memory out of 5000000
+ 16469 multiletter control sequences out of 15000+600000
  10561 words of font info for 39 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  44i,15n,49p,10433b,746s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1455,7 +1484,7 @@ r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on isvc_submission.pdf (12 pages, 2895139 bytes).
+Output written on isvc_submission.pdf (12 pages, 2895160 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  123 compressed objects within 2 object streams

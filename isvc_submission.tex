@@ -22,7 +22,7 @@
 \renewcommand\algorithmiccomment[1]{%
   \hfill\textcolor{blue}{\#\ \eqparbox{COMMENT}{#1}}%
 }
-\algnewcommand{\LineComment}[1]{\State \textcolor{blue}{\(\#\) #1}}
+\algnewcommand{\LineComment}[1]{\State \parbox[t]{\dimexpr\linewidth-\algorithmicindent}{\textcolor{blue}{\(\#\) #1}}}
 \def\NoNumber1#1{{\def\alglinenumber##1{}\State #1}}
 \def\NoNumber2#1{{\def\alglinenumber##1{}\State #1}\addtocounter{ALG@line}{-1}}
 \def\NoNumber3#1{{\def\alglinenumber##1{}\State #1}\addtocounter{ALG@line}{-2}}
@@ -249,11 +249,11 @@ Fig.~\ref{fig:fusion-pr} shows improvement to the PR curves after image Fusion o
 \While{incoming ROS messages}
 \LineComment{Read ROS infrared image message.}
 \If{incoming message topic $==$ infrared image topic}
-\State $I_{IR} \gets \texttt{getImage}(message)$\Comment{Read the image.}
+\State $I_{IR} \gets \texttt{getImage}(message)$
 \EndIf
 \LineComment{Read ROS grayscale image message.}
 \If{incoming message topic $==$ grayscale image topic}
-\State $I_{G} \gets \texttt{getImage}(message)$\Comment{Read the image.}
+\State $I_{G} \gets \texttt{getImage}(message)$
 \LineComment{Evaluate transformation maps using computed destination camera matrix and the stereo rectification transforms.}
 \If{mappings not evaluated}
 \State $M_{IR} \gets \texttt{initUndistortRectifyMap}(K_{IR}, D_{IR}, T_{IR}, K^{new})$
