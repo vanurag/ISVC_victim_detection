@@ -109,7 +109,7 @@ Detecting humans from an altitude of 50-100 meters with a camera of limited reso
 Fig.~\ref{fig:thermal_sample} shows a human as seen in false-color rendering of the thermal camera image at an altitude of about 70 meters. At this scale, the humans occupy less than 50 pixels ($<$0.02\%) in an image of 640 x 512 resolution. An exhaustive search for such a tiny object of interest is very time consuming. We propose a Background Subtractor that returns regions of interest (ROI) and narrows down the search space considerably, thus enabling real-time detection. The foreground here is defined as a part of the image whose temperature differs quite significantly from it's surroundings. Since, humans are usually hotter (in winter) or colder (in summer) than the surroundings, we propose a technique that adaptively adjusts 2 threshold values ($t_{low}, t_{high}$) based on the surrounding pixel intensities. All the pixels with intensities less than $t_{low}$ or greater than $t_{high}$ are considered as foreground pixels.
 
 \begin{figure}
-\centerline{\includegraphics[scale=0.2]{img/eps/sample_thermal.eps}}
+\centerline{\includegraphics[scale=0.25]{img/eps/sample_thermal.eps}}
 \caption{A sample image recorded from the FLIR thermal camera at an approximate altitude of 70 meters. Two humans are pointed out.}
 \label{fig:thermal_sample}
 \end{figure}
@@ -307,8 +307,8 @@ Fig.~\ref{fig:victim_gps}(b) shows the detected victim GPS positions, actual gro
   \centering
   \begin{tabular}{cc}
     \hspace{-0.5cm}
-    \includegraphics[width=5cm]{img/eps/victim_gps/SIP.eps} &
-    \includegraphics[width=5cm]{img/eps/victim_gps/SIP_detections_map.eps} \\
+    \includegraphics[width=7cm]{img/eps/victim_gps/SIP.eps} &
+    \includegraphics[width=7cm]{img/eps/victim_gps/SIP_detections_map.eps} \\
     \small (a) Inspection path & 
     \small (b) Victim GPS \tiny (Grouped detections in circle)
   \end{tabular}
@@ -316,7 +316,7 @@ Fig.~\ref{fig:victim_gps}(b) shows the detected victim GPS positions, actual gro
   \vspace{\floatsep}
   
   \begin{tabular}{c}
-    \includegraphics[width=8cm]{img/eps/victim_gps/victim_utm_errors.eps} \\
+    \includegraphics[width=11cm]{img/eps/victim_gps/victim_utm_errors.eps} \\
     \small (c) Victim UTM position errors
   \end{tabular}
 
