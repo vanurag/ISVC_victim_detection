@@ -13,8 +13,55 @@
 \usepackage{epstopdf}
 \usepackage{subfig}
 \usepackage{array}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{siunitx}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{eqparbox}
+\renewcommand\algorithmiccomment[1]{%
+  \hfill\textcolor{blue}{\#\ \eqparbox{COMMENT}{#1}}%
+}
+\algnewcommand{\LineComment}[1]{\State \parbox[t]{\dimexpr\linewidth-\algorithmicindent}{\textcolor{blue}{\(\#\) #1}}}
+\def\NoNumber1#1{{\def\alglinenumber##1{}\State #1}}
+\def\NoNumber2#1{{\def\alglinenumber##1{}\State #1}\addtocounter{ALG@line}{-1}}
+\def\NoNumber3#1{{\def\alglinenumber##1{}\State #1}\addtocounter{ALG@line}{-2}}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\scriptsize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\itshape\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={(*@}{@*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=C,                 % the language of the code
+  otherkeywords={cv,...},            % if you want to add more keywords to the set
+  numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
 
 \begin{document}
+
+\lstset{language=C++}  
 
 \pagestyle{headings}
 %In order to omit page numbers and running heads
@@ -24,134 +71,125 @@
 
 \mainmatter
 
-\title{Victim Detection from a low-altitude fixed-wing UAV: Experimental Results}
+\title{Victim Detection from a Fixed-wing UAV: Experimental Results}
 
-\author{Anurag Sai Vempati, Gabriel Agamennoni, Thomas Stastny, Roland Siegwart}
+\author{Anurag Sai Vempati \and Gabriel Agamennoni \and
+Thomas Stastny \and Roland Siegwart}
+
+\institute{Autonomous Systems Lab, ETH Zurich\\
+\texttt{http://www.asl.ethz.ch/}
+}
+
+\authorrunning{Anurag Sai Vempati et al.}
 
 \titlerunning{Lecture Notes in Computer Science}
 
 \maketitle
 
 \begin{abstract}
-This paper outlines a method to identify humans from a low-altitude fixed-wing plane relying on various Visual and Inertial sensors including an Infrared camera. The work draws inspiration from the need to detect victims trapped in a disaster situation in real-time and help the rescue units reach them. Such a work can also be easily employed for surveillance related applications. With recent advances in thermal imaging cameras, we now have the opportunity to explore more easier and reliable real-time applications. We start by pointing out various challenges that arise due to camera imperfections, viewpoint, altitude, synchronization etc. We provide a pipeline to efficiently fuse thermal and visual aerial imagery and get robust real-time detections. Confident detections are tracked across various frames and the real-time GPS locations of the victims is conveyed. Performance of our detection algorithm on various challenging datasets is provided.
+This paper outlines a method to identify humans from a low-altitude fixed-wing UAV relying on various visual and inertial sensors including an infrared camera. The work draws inspiration from the need to detect victims in disaster scenarios in real-time, providing needed aid to rescue efforts. Such work can also be easily employed for surveillance related applications. We start by pointing out various challenges from camera imperfections, viewpoint, altitude, and synchronization. We provide a pipeline to efficiently fuse thermal and visual aerial imagery for robust real-time detections. Confident detections are tracked across various frames and the real-time GPS locations of the victims are conveyed. Performance of our detection algorithm is evaluated in a real-world victim detection scenario from an autonomous fixed-wing aircaft.
 \end{abstract}
 
 
 \section{Introduction}
-Search and Rescue is a widely researched field owing to it's numerous advantages in disaster scenarios. In cases like avalanches, a few minutes could make considerable difference in having better probability of suppressing the casualties. With increasing autonomy of the Unmanned Aerial Vehicles (UAV) and camera imaging technologies, it is now possible to scan large areas in a very short time and perform perception algorithms on-board at high rates with close to zero human intervention. Such technology also enables surveying in-accessible regions and hostile terrains making the task of dispatching rescue efforts considerably easy. In this paper we describe an algorithm that can efficiently detect trapped victims while autonomously scanning large areas using a UAV equipped with various sensors including visual and thermal cameras and an on-board computer to perform real-time computations. We will briefly outline individual components involved and provide results on a field experimental test.
+Search and Rescue is a widely researched field owing to it's numerous applications in disaster scenarios. With increasing autonomy of Unmanned Aerial Vehicles (UAVs) and camera imaging technologies, it is now possible to scan large areas in a very short time and perform perception algorithms on-board at high rates with close to zero human intervention. Such technology also enables surveying in-accessible regions and hostile terrains, contributing significantly to the task of dispatching rescue efforts.
 
-Visual spectrum cameras have been used since a long time on UAVs but analyzing these images at high rates requires very robust algorithms to deal with various difficulties posed due to the size of objects of interest, motion blur, and viewpoint to name a few. Detecting humans from a UAV cruising at an altitude of 50-100 meters requires very high resolution cameras and the ability to quickly detect objects occupying few tens of pixels in area. On the other hand thermal cameras offer an advantage in such cases which makes it easier to narrow down the search space to hotter objects. But thermal cameras have their own limitations like low Signal-to-Noise Ratio (SNR), white-black/hot-cold polarity changes, and halos that appear around very hot or cold objects[IMPROVED HUMAN DETECTION AND CLASSIFICATION IN THERMAL IMAGES]. We propose a technique that best utilises the pros of either cameras using sensor fusion technique.
+Visual spectrum cameras have been extensively used on UAVs, however, analyzing these images at high rates requires very robust algorithms to deal with various difficulties posed due to the size of objects of interest, motion blur, and viewpoint, to name a few. Detecting humans from a UAV cruising at an altitude of 50-100 meters requires very high resolution cameras and the ability to quickly detect objects occupying few tens of pixels in area. On the other hand thermal cameras offer an advantage in such cases which makes it easier to narrow down the search space to hotter objects. But thermal cameras have their own limitations like low Signal-to-Noise Ratio (SNR), white-black/hot-cold polarity changes, and halos that appear around very hot or cold objects \cite{wang2010improved}. We propose a technique that best utilises the pros of either cameras using a sensor fusion technique.
 
-Various works like... leverage on hotspot techniques to quickly narrow down the potential areas to further process. [A two-stage template approach to person detection in thermal imagery] uses fast-screening technique by modelling the background as an average of previous frames. For the foreground regions template called Contour Saliency Maps (CSM) are generated that preserves the edges that are both strong and significantly different from the background. The potential regions are found by correlating this template across the image. Such averaging techniques perform poorly in case of fast moving cameras like on UAVs. Many techniques rely on some kind of classifier to detect presence of a human in each of these potential areas. [A two-stage template approach to person detection in thermal imagery], [ACtive People Recognition using thermal and gray images on a Mobile security robot], [Human Body Detection and Geolocalization for UAV Search and Rescue Missions Using Color and Thermal Imagery], [IMPROVED HUMAN DETECTION AND CLASSIFICATION IN THERMAL IMAGES] use some kind of variant of cascade of boosted classifiers introduced by [Viola and Jones] - which basically involves a series of weak classifiers each better than the previous one. [People Detection and Tracking from Aerial Thermal Views] show performance of various feature based classifiers trained on thermal data collected across wide variation in temperature, altitude and camera movement. HOG feature based classifier in conjunction with a particle filter tracker was found to perform the best.
+Various works leverage on hotspot techniques to quickly narrow down the potential areas to further process but they usually perform poorly in case of fast moving cameras like on UAVs. Many techniques rely on some kind of classifier to detect presence of a human in each of these potential areas. \cite{davis2005two}, \cite{1545530}, \cite{rudol2008human}, \cite{wang2010improved} use some kind of variant of cascade of boosted classifiers introduced by Viola and Jones \cite{viola2001rapid} - which basically involves a series of weak classifiers each better than the previous one. \cite{portmann2014people} shows performance of various feature based classifiers trained on thermal data collected across wide variation in temperature, altitude and camera movement. According to their work, Histogram of Gradients (HOG) feature based classifier in conjunction with a particle filter tracker was found to perform the best.
+
+Sensor fusion and multi-modal image registration is a well explored field. But most of the works involving registration of infrared and visual camera images like \cite{doi:10.1117/12.7977034}, \cite{1384918}, \cite{4381164}, \cite{3911} involves image processing techniques that rely on feature extraction, edge detection, segmentation etc. Though very robust, such techniques can be quite time-consuming for real-time applications. On the other hand, \cite{rudol2008human} uses camera intrinsics and ground planarity assumption to estimate relevant part of visual camera image for stationary victims. This method has it's own limitations due to additional criteria enforced on targets' positions and the environment being scanned. In our work we make use of camera extrinsics and use techniques from multi-view geometry to get one-to-one correspondence between infrared and visual images.
+
+In this paper we describe an algorithm that can efficiently detect stationary victims while autonomously scanning large areas using a fixed-wing UAV equipped with various sensors including visual and thermal cameras and an on-board computer to perform real-time computations. We will briefly outline individual components involved and provide results on a field experimental test.
 
 \section{Victim Detection Pipeline}
-Detecting humans from an altitude of 50-100 meters with a camera of limited resolution poses a very challenging problem. Basic blocks of our pipeline are mentioned below:-
-
-\subsection{Datasets}
+Detecting humans from an altitude of 50-100 meters with a camera of limited resolution poses a very challenging problem. Basic blocks of our pipeline are mentioned in the following sub-sections and in the next section we illustrate a real-case scenario.
 
 \subsection{Background Subtractor}
-Fig.~\ref{fig:thermal_sample} shows a human as seen in false-color rendering of the thermal camera image at an altitude of about 70 meters. At this scale, the humans occupy less than 50 pixels ($<$0.02\%) in an image of 640 x 512 resolution. An exhaustive search for such a tiny object of interest is very time consuming. So, we propose a Background Subtractor that returns regions of interest (ROI) and narrows down the search space considerably, thus enabling real-time detection. The foreground here is defined as a part of the image whose temperature differs quite significantly from it's surroundings. Since, humans are usually hotter (in winter) or colder (in summer) than the surroundings, we propose a technique that adaptively adjusts 2 threshold values ($t_{low}, t_{high}$) based on the surrounding pixel intensities. All the pixels with intensities less than $t_{low}$ or greater than $t_{high}$ are considered as foreground pixels.
+Fig.~\ref{fig:thermal_sample} shows a human as seen in false-color rendering of the thermal camera image at an altitude of about 70 meters. At this scale, the humans occupy less than 50 pixels ($<$0.02\%) in an image of 640 x 512 resolution. An exhaustive search for such a tiny object of interest is very time consuming. We propose a Background Subtractor that returns regions of interest (ROI) and narrows down the search space considerably, thus enabling real-time detection. The foreground here is defined as a part of the image whose temperature differs quite significantly from it's surroundings. Since, humans are usually hotter (in winter) or colder (in summer) than the surroundings, we propose a technique that adaptively adjusts 2 threshold values ($t_{low}, t_{high}$) based on the surrounding pixel intensities. All the pixels with intensities less than $t_{low}$ or greater than $t_{high}$ are considered as foreground pixels.
 
 \begin{figure}
-\centerline{\includegraphics[scale=0.3]{img/sample_thermal.png}}
+\centerline{\includegraphics[scale=0.25]{img/eps/sample_thermal.eps}}
 \caption{A sample image recorded from the FLIR thermal camera at an approximate altitude of 70 meters. Two humans are pointed out.}
 \label{fig:thermal_sample}
 \end{figure}
 
-We employ a very simple sliding window based approach to estimate adaptive thresholds. The image is divided into various overlapping blocks and the adaptive thresholds $t_{low}^b, t_{high}^b$ for each block $b$ is evaluated as the higher and lower quantiles of the Gaussian models fitted to the pixel intensities of the block. Now, the threshold values at each pixel location $(i, j)$ are chosen as weighted average of all the block thresholds $t_{low}^b, t_{high}^b$ if the pixel belongs to block $b$. The weights are chosen inversely proportional to the pixel's distance from the block's center. A segmentation map (segmap) is generated by thresholding the Infrared image at each pixel location.
+We employ a very simple sliding window based approach to estimate adaptive thresholds. The image is divided into various overlapping blocks and the adaptive thresholds $t_{low}^b, t_{high}^b$ for each block $b$ is evaluated as the higher and lower quantiles of the Gaussian models fitted to the pixel intensities of the block. Now, the threshold values at each pixel location $(i, j)$ are chosen as weighted average of all the block thresholds $t_{low}^b, t_{high}^b$ if the pixel belongs to block $b$. The weights are chosen inversely proportional to the pixel's distance from the block's center. A segmentation map (segmap) is then generated by thresholding the infrared image.
 
-Fig.?? shows 2 sample images collected at different altitudes, temperature and times of the day and the corresponding segmaps. A blob detection algorithm [??] is used to find blobs of desired size, thus providing ROIs to search for humans. For the UAV scenario, we further narrow down the search space by considering only the blobs whose area lies in certain range that is calculated at every time-step based on the camera specifications, mounting, UAV's IMU pose and GPS position. This approach is computationally much cheaper and is not affected by the fast moving camera. It provides much better results at real-time than our previous implementation using Vibe[??].
+Fig.~\ref{fig:bg_sub} shows two sample images collected at different altitudes, temperature and times of the day and the corresponding segmaps. A blob detection algorithm \cite{cvblob} is used to find blobs of desired size, thus providing ROIs to search for humans. For the UAV scenario, we further narrow down the search space by considering only the blobs whose area lies in certain range that is calculated at every time-step based on the camera specifications, mounting, UAV's IMU pose and GPS position. This approach is computationally much cheaper and is not affected by the fast moving camera. It provides much faster and better results at real-time than many conventional approaches.
 
 
-\begin{figure}
+\begin{figure}[!ht]
   \centering
   \begin{tabular}{ccc}
-    \includegraphics[width=4cm]{img/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.png} &
-    \includegraphics[width=4cm]{img/bg_sub/CLA_Threshold_values(high)_screenshot_03-08-2015.png} &
-    \includegraphics[width=4cm]{img/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015.png} \\
-    \small (a) IR image & 
-    \small (b) 8-bit threshold image &
-    \small (c) Segmentation map
+    \includegraphics[width=3cm]{img/eps/bg_sub/CLA_Infrared_Image_screenshot_03-08-2015.eps} &
+    \includegraphics[width=3cm]{img/eps/bg_sub/CLA_Threshold_values_high_screenshot_03-08-2015.eps} &
+    \includegraphics[width=3cm]{img/eps/bg_sub/CLA_Segmentation_Map_screenshot_03-08-2015.eps} \\
+    \small (1.a) IR image & 
+    \small (1.b) 8-bit threshold image &
+    \small (1.c) Segmentation map
   \end{tabular}
 
   \vspace{\floatsep}
 
   \begin{tabular}{ccc}
-    \includegraphics[height=4cm]{img/bg_sub/Roth_Infrared_Image_screenshot.png} &
-    \includegraphics[height=4cm]{img/bg_sub/Roth_Threshold_values(high)_screenshot.png} &
-    \includegraphics[height=4cm]{img/bg_sub/Roth_Segmentation_Map_screenshot.png} \\
-    \small (a) IR image & 
-    \small (b) 8-bit threshold image &
-    \small (c) Segmentation map
+    \includegraphics[height=3cm]{img/eps/bg_sub/Roth_Infrared_Image_screenshot.eps} &
+    \includegraphics[height=3cm]{img/eps/bg_sub/Roth_Threshold_values_high_screenshot.eps} &
+    \includegraphics[height=3cm]{img/eps/bg_sub/Roth_Segmentation_Map_screenshot.eps} \\
+    \small (2.a) IR image & 
+    \small (2.b) 8-bit threshold image &
+    \small (2.c) Segmentation map
   \end{tabular}
 
-  \caption{Sequence 1 is captured in the night time at an altitude of 20 meters above the ground with some crowd. Sequence 2 was captured from AS[??] on a cold winter morning at an altitude of 50 meters above the ground. (a) shows the Infrared image, (b) is the 8-bit image of pixel-wise threshold $t_{high}(i, j)$  (grid of blocks is overlaid and a sample block is marked in white on the top-left) and (c) is the resulting segmentation map depicting foreground pixels.}\label{fig:bg_sub}
+  \caption{Sequence 1 is captured in the night time at an altitude of 20 meters above the ground with some crowd. Sequence 2 was captured from a UAV on a cold winter morning at an altitude of 60 meters above the ground. (a) infrared image, (b) 8-bit image of pixel-wise threshold $t_{high}(i, j)$  (grid of blocks is overlaid and a sample block is marked in white on the top-left) and (c) segmentation map depicting foreground pixels.}\label{fig:bg_sub}
 \end{figure}
 
 
-\subsection{Human Classifier}
+\subsection{Human Classifiers}
 
-The ROIs obtained from Background Subtraction are exhaustively searched for presence of a human. For this, we use a HOG feature based learning classifier (which was found to be optimal [??]) to classify the extracted patch into human or non-human category. The training data is obtained by manually annotating sequences from different datasets using vBBToolbox[??]. The distribution of training data across the datasets is shown in Table??. An SVM classifier is trained using these image patches. Type of SVM optimization problem, kernel type and other parameters are optimized using K-fold cross validation. Fig.~\ref{fig:k-fold} shows performance of few chosen configurations. C\_SVC optimization problem with Linear kernel type and RBF kernel type are found to be 2 top performing classifier configurations. 
+The ROIs obtained from Background Subtraction are exhaustively searched for presence of a human. For this, we use a HOG feature based learning classifier (which was found to be optimal \cite{portmann2014people}) to classify the extracted patch into human or non-human category. The training data is obtained by manually annotating sequences from different datasets using vBBToolbox \cite{PMT}. HOG features are extracted on the image patches at multiple scales to generate a descriptor. A Support Vector Machine (SVM) classifier is trained using these image patch descriptors. Type of SVM optimization problem, kernel type and other parameters are optimized using K-fold cross validation. Fig.~\ref{fig:k-fold} shows performance of few chosen configurations.
 
-\begin{table}
-\begin{center}
-\label{table:headings}
-\begin{tabular}{lll}
-\hline\noalign{\smallskip}
-Heading level & Example & Font size and style\\
-\noalign{\smallskip}
-\hline
-\noalign{\smallskip}
-Title (centered)  & {\Large \bf Lecture Notes \dots} & 14 point, bold\\
-1st-level heading & {\large \bf 1 Introduction} & 12 point, bold\\
-2nd-level heading & {\bf 2.1 Printing Area} & 10 point, bold\\
-3rd-level heading & {\bf Headings.} Text follows \dots & 10 point, bold
-\\
-4th-level heading & {\it Remark.} Text follows \dots & 10 point,
-italic\\
-\hline
-\end{tabular}
-\end{center}
-\caption{Distribution of training image patches among different datasets}
-\end{table}
-
-HOG features are extracted on the image patches at multiple scales and the descriptor generated is passed on to the SVM classifier to detect the presence of humans. Fig.?? shows PR curves for the performance of classifier on CLA data.
+Fig.~\ref{fig:k-fold} shows Precision-Recall (PR) curves for the performance of the classifier on a validation dataset. The above method is then repeated to train a classifier for grayscale image patches. A C\_SVC \cite{svm} optimization problem with a Linear kernel type and Radial Basis Function (RBF) kernel type are found to be two top performing configurations for the infrared classifier. The C\_SVC optimization problem with a Linear kernel is found to be the optimal configuration for the grayscale classifier.
 
 \begin{figure}
   \centering
-  \begin{tabular}{m{4cm}m{4cm}m{4cm}}
-    \includegraphics[width=4cm]{img/classifier/SvmKernelTypevalue_vs_score_C_SVC.jpg} &
-    \includegraphics[width=4cm]{img/classifier/SvmTypevalue_vs_score_LINEAR.jpg} &
-    \includegraphics[width=4cm]{img/classifier/SvmTypevalue_vs_score_RBF.jpg} \\
+  \begin{tabular}{m{5cm}m{5cm}m{5cm}}
+  \hspace{-1.5cm}
+    \includegraphics[width=5cm]{img/eps/classifier/SvmKernelTypevalue_vs_score_C_SVC.eps} &
+    \hspace{-1.5cm}
+    \includegraphics[width=5cm]{img/eps/classifier/SvmTypevalue_vs_score_LINEAR.eps} &
+    \hspace{-1.5cm}
+    \includegraphics[width=5cm]{img/eps/classifier/SvmTypevalue_vs_score_RBF.eps} \\
+    \hspace{-1.5cm}
     \tiny (a) Choosing kernel type for C\_SVC problem & 
-    \tiny (b) Choosing optimization problem for linear SVM kernel &
-    \tiny (c) Choosing optimization problem for RBF SVM kernel
+    \hspace{-1.5cm}
+    \tiny (b) Choosing optimization for Linear kernel &
+    \hspace{-1.5cm}
+    \tiny (c) Choosing optimization for RBF kernel
   \end{tabular}
   
-  \caption{Performance of SVM classifier with different configurations of optimization problem and kernel type. It's found to be optimal to choose (a) RBF kernel type for C\_SVC problem, (b) C\_SVC problem for Linear kernel type and (c) C\_SVC problem for RBF kernel type.}\label{fig:k-fold}
+  \caption{Performance of infrared SVM classifier with different configurations of optimization problem and kernel type. It's found to be optimal to choose (a) RBF kernel type for C\_SVC problem, (b) C\_SVC problem for Linear kernel type and (c) C\_SVC problem for RBF kernel type.}\label{fig:k-fold}
 \end{figure}
-
-
-<one-class SVM>
 
 
 \subsection{Infrared-Grayscale Image Fusion} 
 
-Objects in Infrared image rarely have discerning features since the temperature tends to be uniform across the objects. So, a classifier would be not so reliable in classifying such patches since it only has the shape information of the object in a very small patch. Since in all our flights using the sensorpod we collected both Infrared and Grayscale images, a fusion technique is proposed to get a one to one relationship between pixel locations of Infrared and Grayscale images. This will help us in extracting both Infrared and Grayscale image patches corresponding to the ROIs obtained from Background Subtraction which can help the classifier in producing more reliable results.
+Objects in infrared images rarely have discerning features since the temperature tends to be uniform across the objects. Therefore, using a classifier on infrared patches would be unreliable, since it only has the shape information of the object in a very small patch. Since in all our flights using the UAV we collected both infrared and grayscale images, a fusion technique is proposed to get a one to one relationship between pixel locations of infrared and grayscale images. This will help us in extracting both infrared and grayscale image patches corresponding to the ROIs obtained from Background Subtraction which can help the classifier in producing more reliable results.
 
-<Technique>
-We use Kalibr[??] to calibrate the Infrared and Grayscale camera intrinsics and extrinsics for the sensorpod mounting. We use radial-tangential model to estimate camera distortion parameters. An april tag pattern is used to estimate Grayscale camera intrinsics. A thick matte paper with checkerboard pattern under illumination of a bright light is used to calibrate Infrared camera intrinsics. We then undistort the images and choose a new camera matrix for both the cameras with common focal parameters. An optimal camera matrix is evaluated that ensures all the original pixels are present in the final image after undistorting the images. Rotation and Transaltion matrices between the cameras is obtained using camera-camera extrinsics evaluated with Kalibr. Now the Infrared and Grayscale camera setup can be treated as a Stereo pair and standard image rectification techniques can be used to evaluate the necessary projection matrices. At this point, all the epipolar lines are parallel to image edge (horizontal if horizontal rectification was employed, vertical otherwise). For our particular setup, vertical stereo was chosen since the camera centers were aligned vertically on the sensorpod. Now that the disparities of the image are in one axis, it's fast and easy to find pixel correspondences. After a manual displacement that is set for all the columns, individual column displacements are evaluated using correspondences between fast features calculated for both the images.
+We use Kalibr \cite{furgale2013unified} to calibrate the infrared and grayscale camera intrinsics and extrinsics for the sensorpod mounting. We use a radial-tangential model to estimate camera distortion parameters. An april tag pattern is used to estimate grayscale camera intrinsics. A thick matte paper with checkerboard pattern under illumination of a bright light is used to calibrate infrared camera intrinsics. Now the infrared and grayscale camera setup can be treated as a Stereo pair and standard image rectification techniques \cite{planar_rect} can be used to evaluate the necessary projection matrices. At this point, all the epipolar lines are parallel to image edge (horizontal if horizontal rectification was employed, vertical otherwise). For our particular setup, vertical stereo was chosen since the camera centers were aligned vertically on the UAV. Now that the disparities of the image are in one axis, it's fast and easy to find pixel correspondences using robust feature matching between the images. Pseudo-code of the image fusion algorithm is shown in Algorithm.~\ref{pseudo}.
+
+Once a one-to-one correspondence is obtained between grayscale and infrared images, the patches corresponding to ROIs are passed on to individual human classifiers and pairs of patches resulting in a high cumulative classifier score are retained for probable presence of a human.
 
 
-Fig.~\ref{fig:fusion} shows results from the fusion technique. In Rothethurm-1 sequence IR and Grayscale cameras were both facing in the direction of flight and are $25^{\circ}$ nadir configuration with a translation of 3.5cm between the camera centers. In Sea-1 sequence, IR camera was in $25^{\circ}$ nadir configuration while Grayscale camera was in $50^{\circ}$ nadir configuration with a translation of 3.5cm between the camera centers. The results show reasonable overlap accuracy. Since, we only require a bounding box containing the same object in both Infrared and Grayscale image, this level of accuracy suffices.
+Fig.~\ref{fig:fusion} shows results from the fusion technique. In Sequence-1 infrared and grayscale cameras were both facing in the direction of flight and are in $25^{\circ}$ nadir configuration with a translation of 3.5cm between the camera centers. In Sequence-2, the infrared camera was in $25^{\circ}$ from nadir configuration while grayscale camera was in $50^{\circ}$ from nadir configuration with a translation of 3.5cm between the camera centers. The results show reasonable overlap accuracy.
 
 \begin{figure}
   \centering
   \begin{tabular}{cccc}
-    \includegraphics[width=3cm]{img/fusion/Roth/Infrared_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Roth/Grayscale_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Roth/Warped_Infrared_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Roth/Warped_Grayscale_Image_screenshot.png} \\
+    \includegraphics[width=3cm]{img/eps/fusion/Roth/Infrared_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Roth/Grayscale_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Roth/Warped_Infrared_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Roth/Warped_Grayscale_Image_screenshot.eps} \\
     \small (1.a) IR image & 
     \small (1.b) Grayscale Image &
     \small (1.c) Rectified IR &
@@ -161,10 +199,10 @@ Fig.~\ref{fig:fusion} shows results from the fusion technique. In Rothethurm-1 s
   \vspace{\floatsep}
   
   \begin{tabular}{cccc}
-    \includegraphics[width=3cm]{img/fusion/Sea/3/Infrared_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Sea/3/Grayscale_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Sea/3/Warped_Infrared_Image_screenshot.png} &
-    \includegraphics[width=3cm]{img/fusion/Sea/3/Warped_Grayscale_Image_screenshot.png} \\
+    \includegraphics[width=3cm]{img/eps/fusion/Sea/3/Infrared_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Sea/3/Grayscale_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Sea/3/Warped_Infrared_Image_screenshot.eps} &
+    \includegraphics[width=3cm]{img/eps/fusion/Sea/3/Warped_Grayscale_Image_screenshot.eps} \\
     \small (2.a) IR image & 
     \small (2.b) Grayscale Image &
     \small (2.c) Rectified IR &
@@ -174,78 +212,132 @@ Fig.~\ref{fig:fusion} shows results from the fusion technique. In Rothethurm-1 s
   \vspace{\floatsep}
   
   \begin{tabular}{cc}
-  	\includegraphics[width=6cm]{img/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.png} &
-  	\includegraphics[width=6cm]{img/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.png} \\
+  	\includegraphics[width=6cm]{img/eps/fusion/Roth/Grayscale_and_Infrared_overlaid_Image_screenshot.eps} &
+  	\includegraphics[width=6cm]{img/eps/fusion/Sea/3/Grayscale_and_Infrared_overlaid_Image_screenshot.eps} \\
   	\small (1.e) Fused IR and Grayscale Images &
   	\small (2.e) Fused IR and Grayscale Images
   \end{tabular}
 
-  \caption{The top 2 rows show 2 sequences (Rothenthurm-1, Sea-1) of original images obtained from IR and Grayscale cameras and the resulting images post rectification. Last row shows fusion of 2 images to visualize the quality of overlap. Red boxes in seq-1 highlights 2 humans and a boat in seq-2. As can be seen, the correspondence between IR and Grayscale images is reasonably good.}\label{fig:fusion}
+  \caption{The top 2 rows show 2 sequences of original images obtained from (a) infrared, (b) grayscale cameras and (c, d) the resulting images post rectification. The last row shows fusion of both images (e) to visualize the quality of overlap. Red boxes highlight 2 humans in Sequence-1 and a boat in Sequence-2. As can be seen, the correspondence between infrared and grayscale images is reasonably good.}\label{fig:fusion}
 \end{figure}
 
-Fig.?? shows improvement to the PR curves after Fusion on Roth-1 data.
+Fig.~\ref{fig:fusion-pr} shows improvement to the PR curves after image Fusion on a dataset collected from a UAV cruising at 60 meters above the ground. Close to 140\% improvement (10\% vs. 24\%) in the area under curve can be seen. Since, we have various methods to eliminate false positives, as mentioned in next section, we operate our classifier on the higher recall point. Also the fact that very few of the false positives are of a same object recurring across several frames plays a vital role in suppressing them.
 
 \begin{figure}
   \centering
-  \begin{tabular}{m{5cm}m{5cm}}
-  	\includegraphics[width=6cm]{img/fusion/Roth/PR-roth-all-detections.jpg} &
-  	\includegraphics[width=6cm]{img/fusion/Roth/PR-roth-top-detections.jpg} \\
-  	\small (a) PR curves when all the detections are retained &
-  	\small (b) PR curves when only 2 best detections per frame are retained
-  \end{tabular}
+  	\includegraphics[width=8cm]{img/eps/fusion/Roth/PR-roth-all-detections.eps} 
 
-  \caption{The top 2 rows show 2 sequences (Rothenthurm-1, Sea-1) of original images obtained from IR and Grayscale cameras and the resulting images post rectification. Last row shows fusion of 2 images to visualize the quality of overlap. Red boxes in seq-1 highlights 2 humans and a boat in seq-2. As can be seen, the correspondence between IR and Grayscale images is reasonably good.}\label{fig:fusion}
+  \caption{Precision-Recall curves of the pipeline on a high-altitude (60 meters) data collected from a UAV, before and after image fusion.}\label{fig:fusion-pr}
 \end{figure}
+
+
+\begin{algorithm}
+\caption{Image Fusion Algorithm}\label{pseudo}
+\begin{algorithmic}[1]
+\Require{Given a stream of ROS images $I_{IR}$, $I_{G}$ obtained from calibrated Infrared and Grayscale camera sources with intrinsics $K_{IR}$, $K_{G}$ and radial-tangential distortion models $D_{IR}$, $D_{G}$, the following algorithm specifies steps performed to un-distort images and register pixels of one image with the other. The algorithm makes use of camera rotation and translation extrinsics $\lbrack R_{G}^{IR} \mid t_{G}^{IR} \rbrack$ between the cameras to evaluate rectification transforms $T_{IR}$ and $T_{G}$. Robust fast feature ($F_{IR}$, $F_{G}$) matching is further employed to evaluate post-rectification offsets $O$ and obtain one-to-one mappings $M_{IR}$ and $M_{G}$ between rectified images $I_{IR}^{new}$, $I_{G}^{new}$ that satisfy $I_{IR}^{new}(x, y) = I_{IR}(M_{IR}(x, y))$ and $I_{G}^{new}(x, y) = I_{G}(M_{G}(x, y))$}
+\Procedure{ImageFusion}{}
+\LineComment{Load pre-evaluated camera intrinsics and extrinsics.}
+\State $\lbrace K_{IR}, D_{IR}, K_{G}, D_{G}, \lbrack R_{G}^{IR} \mid t_{G}^{IR} \rbrack \rbrace\gets \texttt{loadCalibration}(\textbf{calibration.yml})$
+\LineComment{Generate new optimal camera intrinsics that will ensure maximum possible number of pixels of both images are retained after un-distortion, in destination image size same as the original image.}
+\State $K_{IR}^{new} \gets \texttt{getOptimalNewCameraMatrix}(K_{IR}, D_{IR}, \texttt{sizeof}(I_{IR}))$
+\State $K_{G}^{new} \gets \texttt{getOptimalNewCameraMatrix}(K_{G}, D_{G}, \texttt{sizeof}(I_{G}))$
+\LineComment{Obtain single optimal camera matrix $K^{new}$ that ensures all the pixels from both the images are retained post un-distortion.}
+\State $K^{new} \gets \texttt{getOptimalNewCameraMatrix}(K_{IR}^{new}, K_{G}^{new})$
+\LineComment{Compute rectification transforms for each camera in the calibrated stereo pair using OpenCV Stereo Rectification.}
+\State $\lbrace T_{IR}, T_{G} \rbrace \gets \texttt{stereoRectify}(K_{IR}, D_{IR}, K_{G}, D_{G}, \lbrack R_{G}^{IR} \mid t_{G}^{IR} \rbrack)$
+
+\While{incoming ROS messages}
+\LineComment{Read ROS infrared image message.}
+\If{incoming message topic $==$ infrared image topic}
+\State $I_{IR} \gets \texttt{getImage}(message)$
+\EndIf
+\LineComment{Read ROS grayscale image message.}
+\If{incoming message topic $==$ grayscale image topic}
+\State $I_{G} \gets \texttt{getImage}(message)$
+\LineComment{Evaluate transformation maps using computed destination camera matrix and the stereo rectification transforms.}
+\If{mappings not evaluated}
+\State $M_{IR} \gets \texttt{initUndistortRectifyMap}(K_{IR}, D_{IR}, T_{IR}, K^{new})$
+\State $M_{G} \gets \texttt{initUndistortRectifyMap}(K_{G}, D_{G}, T_{G}, K^{new})$
+\EndIf
+\LineComment{Apply offsets to transformation maps using robust feature matching.}
+\State $F_{IR} \gets \texttt{goodFeaturesToTrack}(I_{IR})$
+\State $F_{G} \gets \texttt{goodFeaturesToTrack}(I_{G})$
+\State $O \gets \texttt{findOffsets}(F_{IR}, F_{G})$
+\State $\lbrace M_{IR}, M_{G} \rbrace \gets \texttt{applyOffsets}(O, M_{IR}, M_{G})$    
+\LineComment{Apply rectification transform on the images.}
+\State $I_{IR}^{new} \gets \texttt{remap}(I_{IR}, M_{IR})$
+\State $I_{G}^{new} \gets \texttt{remap}(I_{G}, M_{G})$
+\EndIf
+\LineComment{Remap the ROIs into rectified image and extract overlapping patches ($I_{IR}^{patch}, I_{G}^{patch}$) in both the images corresponding to the new ROIs.}
+\State $ROI^{new} \gets \texttt{remapRect}(ROI, M_{IR})$
+\State $I_{IR}^{patch} \gets I_{IR}^{new}(ROI^{new})$
+\State $I_{G}^{patch} \gets I_{G}^{new}(ROI^{new})$
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
 
 
 \section{Experimental Results}
 
-\subsection{Structural Inspection Planner}
+Inspired by real-world search and rescue initiatives, we designed a representative field trial utilising our full aerial deployment and victim detection pipeline. The experiment involves the placement of multiple ``victims" throughout a field over which our rapidly deployable, hand launched, fixed-wing test platform, equipped with multi-camera carrying sensorpod, must survey in a timely manner and record GPS coordinates of victims seen during the flight. In the following sections, we present the setup, enabling tools, and results.
+
+\subsection{Platform Description}
+
+All experiments are performed on a light-weight, low-altitude, and hand-launchable fixed-wing UAV, Techpod, with an integrated forward-facing sensor pod, see Fig.~\ref{fig:techpod}. Techpod weighs \SI{2.65}{\kilo\gram}, has a wingspan of \SI{2.6}{\meter}, and flies at a nominal airspeed of \SI{14}{\meter\per\second}. The UAV also consists of various telemetry, inertial modules and employs an open-source Pixhawk PX4 Autopilot \cite{meier2015px4} system. The sensorpod is equipped with rigidly connected infrared (FLIR Tau 2) and grayscale (Aptina MT9V034) cameras with oblique field-of-view, IMU (Analaog Devices ADIS16448), Skybotix VISensor \cite{Skybotix} and a computer with an Intel Atom processor.
+
+\begin{figure}
+\centerline{\includegraphics[width=12cm]{img/eps/techpod.eps}}
+\caption{Techpod UAV with integrated sensing pod.}
+\label{fig:techpod}
+\end{figure}
+
+\subsection{Full coverage aerial inspection}
+
+To ensure victims are seen by the cameras' fields of view at some point during the flight, we employ a fast inspection planning algorithm which guarantees full coverage of a mesh-model world (obtained from GIS data) to ensure all ground is scanned for victims. The algorithm, details in \cite{7140101}, employs an iterative viewpoint re-sampling technique, using randomized sampling, to provide viewpoint configurations that maintain full coverage while simultaneously searching for the best route that visits them all, using the Lin-Kernighan heuristic \cite{lin1973effective}. Nonholonomic vehicle constraints and obstacle avoidance are further considered in the path search using a boundary value solver in combination with the Rapidly-Exploring Random Tree (RRT*) motion planner \cite{RRTS1a}. The path generated (see Fig.~\ref{fig:victim_gps}(a)) for this experiment ensured coverage of $~$52,800 sq. meters with a flight time of just under two minutes.
 
 \subsection{Estimating victim GPS}
 
-Fig.~\ref{fig:victim_gps_small}(a) shows a schematic of all the involved sensors, the corresponding axes and the intrinsics/extrinsics involved. For estimating the GPS positions of detections, we assume the ground as a plane. Using the calibration data obtained earlier, it can be easily shown the latitude/longitude are:
+For estimating the GPS positions of detections, we assume the ground as a plane. Using camera intrinsics and detection's pixel location, we find the directional vector in which the object might be lying. The point where this vector hits the ground plane can be found using GPS, IMU and camera-IMU extrinsics data which finally gives victim's GPS location.
 
-Fig.~\ref{fig:victim_gps_small}(b) shows the detected victim GPS positions, actual groundtruth victim location and the path followed by the UAV. The rest of the detections include unregistered humans in the explored area and some False Positives. By enforcing a criterion - similar to [??] - that requires a particular GPS position to be detected consistently within the duration of the time that particluar spot is observed, most of the Flase Positives are eliminated and the set of true detections are registered to known groundtruths. False Positives are further eliminated by boosting the confidence of detections that are closer to the GPS location of the point where principal axis of camera hits the ground plane. Fig.~\ref{fig:victim_gps_small}(c) is a plot of GPS position estimate errors for all the 3 registered victims. The GPS estimates are converted to UTM coordinates to represent the error in meters.
+Fig.~\ref{fig:victim_gps}(b) shows the detected victim GPS positions, actual groundtruth victim location and the path followed by the UAV. The rest of the detections include unregistered humans in the explored area and some false positives. By enforcing a criterion - similar to \cite{rudol2008human} - that requires a particular GPS position to be detected consistently within the duration of the time that particular spot is observed, most of the false positives are eliminated and the set of true detections are grouped together and registered as victim locations. False positives are further eliminated by boosting the confidence of detections that are closer to the GPS location of the point where principal axis of camera hits the ground plane. The registered victims are marked in circles. As can be seen in the figure, we have all three successful detections and another detection whose status is not known. Fig.~\ref{fig:victim_gps}(c) is a plot of GPS position estimate errors for all the three registered victims. The GPS estimates are converted to Universal Transverse Mercator (UTM) coordinates using World Geodetic System (WGS84) standard \cite{WGS} to represent the error in meters. The errors obtained are a cumulative of errors in groundtruth GPS measuring device, calibration imperfections, GPS to/from UTM conversions, images' resolution, planarity assumptions, and sensor imperfections (GPS, IMU), making it quite uncertain how much of the error can be attributed to the imperfections in our algorithm. Nevertheless, the errors we obtained more than suffice to serve our goal.
 
 
-\begin{figure}
+\begin{figure}[!ht]
   \centering
   \begin{tabular}{cc}
-    \includegraphics[width=6cm]{img/victim_gps/victim_gps_on_map.jpg} &
-    \includegraphics[width=6cm]{img/victim_gps/victim_gps_on_map_3.jpg} \\
-    \small (a) Victim GPS for a small segment & 
-    \small (b) Victim GPS
+    \hspace{-0.5cm}
+    \includegraphics[width=7cm]{img/eps/victim_gps/SIP.eps} &
+    \includegraphics[width=7cm]{img/eps/victim_gps/SIP_detections_map.eps} \\
+    \small (a) Inspection path & 
+    \small (b) Victim GPS \tiny (Grouped detections in circle)
   \end{tabular}
 
   \vspace{\floatsep}
   
   \begin{tabular}{c}
-    \includegraphics[width=11cm]{img/victim_gps/victim_utm_errors.jpg} \\
+    \includegraphics[width=11cm]{img/eps/victim_gps/victim_utm_errors.eps} \\
     \small (c) Victim UTM position errors
   \end{tabular}
 
-  \caption{asdasdsadsada.}\label{fig:victim_gps}
+  \caption{Full coverage field test detection results.}\label{fig:victim_gps}
 \end{figure}
 
 
 
+\section{Conclusions and Future Work}
 
+In the future, we plan to have adaptive estimation of various parameters that we currently set manually. Computing HOG descriptors for each ROI is quite time consuming as well. Instead, using a weak classifier with high recall could reduce computation times, as our pipeline has the ability to deal with classifier false positives. We also plan to track the detections in UTM coordinates to have consistent detections of moving targets. Use of geographic elevation data would also be a way to remove the planar ground assumption currently implemented and improve detection location estimations. In all, we have shown, as a proof of concept, that human victim detection from upwards of 50-60 meters via a fast moving fixed-wing aircraft is possible. Further, we have demonstrated the algorithm's real-time capacity for victim detection and localisation in a real-world search scenario.
 
+%-----------------------------------------------------------------
+%	Acknowledgements  
+%-----------------------------------------------------------------
+\section*{Acknowledgements}
 
-
-
-
-
-
-
-
+This work was supported by the European Commission projects ICARUS (\#285417) and SHERPA (\#600958) under the 7th Framework Programme.
 
 \nocite{bal:cha:gra:pae}
 \bibliographystyle{splncs}
 \bibliography{isvc_submission}
-
-\section*{Appendix: Appendix Format}
-The appendix should appear directly after the references, and not on a new page
 
 \end{document}

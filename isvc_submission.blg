@@ -3,44 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: isvc_submission.aux
 The style file: splncs.bst
 Database file #1: isvc_submission.bib
-You've used 4 entries,
+Warning--I didn't find a database entry for "bal:cha:gra:pae"
+Warning--there's no year in cvblob
+You can't pop an empty literal stack for entry cvblob
+while executing---line 2139 of file splncs.bst
+Warning--there's no year in PMT
+You can't pop an empty literal stack for entry PMT
+while executing---line 2139 of file splncs.bst
+Warning--empty title in Skybotix
+Warning--there's no year in WGS
+You can't pop an empty literal stack for entry WGS
+while executing---line 2139 of file splncs.bst
+You've used 21 entries,
             2043 wiz_defined-function locations,
-            507 strings with 4226 characters,
-and the built_in function-call counts, 1242 in all, are:
-= -- 138
-> -- 42
-< -- 4
-+ -- 15
-- -- 11
-* -- 89
-:= -- 175
-add.period$ -- 9
-call.type$ -- 4
-change.case$ -- 3
+            610 strings with 7521 characters,
+and the built_in function-call counts, 6808 in all, are:
+= -- 716
+> -- 203
+< -- 16
++ -- 76
+- -- 55
+* -- 415
+:= -- 862
+add.period$ -- 28
+call.type$ -- 21
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 66
-empty$ -- 113
-format.name$ -- 11
-if$ -- 310
+cite$ -- 25
+duplicate$ -- 368
+empty$ -- 674
+format.name$ -- 55
+if$ -- 1716
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 5
-newline$ -- 23
-num.names$ -- 7
-pop$ -- 14
+int.to.str$ -- 21
+missing$ -- 17
+newline$ -- 107
+num.names$ -- 21
+pop$ -- 89
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 37
+skip$ -- 285
 stack$ -- 0
-substring$ -- 56
-swap$ -- 31
-text.length$ -- 4
+substring$ -- 481
+swap$ -- 197
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 9
-width$ -- 5
-write$ -- 52
+warning$ -- 4
+while$ -- 58
+width$ -- 23
+write$ -- 238
+(There were 3 error messages)

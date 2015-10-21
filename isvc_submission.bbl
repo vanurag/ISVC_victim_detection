@@ -1,26 +1,127 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{leeuw}
-{van Leeuwen}, J., ed.:
-\newblock Computer Science Today. Recent Trends and Developments. Volume 1000
-  of Lecture Notes in Computer Science.
-\newblock Springer-Verlag, Berlin Heidelberg New York (1995)
+\bibitem{wang2010improved}
+Wang, W., Zhang, J., Shen, C.:
+\newblock Improved human detection and classification in thermal images.
+\newblock In: Image Processing (ICIP), 2010 17th IEEE International Conference
+  on, IEEE (2010)  2313--2316
 
-\bibitem{bru:car:pier}
-Bruce, K., Cardelli, L., Pierce, B.:
-\newblock Comparing object encodings.
-\newblock In Abadi, M., Ito, T., eds.: Theoretical Aspects of Computer
-  Software. Volume 1281 of Lecture Notes in Computer Science., Berlin
-  Heidelberg New York, Springer-Verlag (1997)  415--438
+\bibitem{davis2005two}
+Davis, J.W., Keck, M.A.:
+\newblock A two-stage template approach to person detection in thermal imagery.
+\newblock In: null, IEEE (2005)  364--369
 
-\bibitem{mich}
-Michalewicz, Z.:
-\newblock Genetic Algorithms + Data Structures = Evolution Programs. 3rd edn.
-\newblock Springer-Verlag, Berlin Heidelberg New York (1996)
+\bibitem{1545530}
+Treptow, A., Cielniak, G., Duckett, T.:
+\newblock Active people recognition using thermal and grey images on a mobile
+  security robot.
+\newblock In: Intelligent Robots and Systems, 2005. (IROS 2005). 2005 IEEE/RSJ
+  International Conference on. (2005)  2103--2108
 
-\bibitem{bal:cha:gra:pae}
-Baldonado, M., Chang, C.C., Gravano, L., Paepcke, A.:
-\newblock The stanford digital library metadata architecture.
-\newblock Int. J. Digit. Libr. \textbf{1} (1997)  108--121
+\bibitem{rudol2008human}
+Rudol, P., Doherty, P.:
+\newblock Human body detection and geolocalization for uav search and rescue
+  missions using color and thermal imagery.
+\newblock In: Aerospace Conference, 2008 IEEE, IEEE (2008)  1--8
+
+\bibitem{viola2001rapid}
+Viola, P., Jones, M.:
+\newblock Rapid object detection using a boosted cascade of simple features.
+\newblock In: Computer Vision and Pattern Recognition, 2001. CVPR 2001.
+  Proceedings of the 2001 IEEE Computer Society Conference on. Volume~1., IEEE
+  (2001)  I--511
+
+\bibitem{portmann2014people}
+Portmann, J., Lynen, S., Chli, M., Siegwart, R.:
+\newblock People detection and tracking from aerial thermal views.
+\newblock In: Robotics and Automation (ICRA), 2014 IEEE International
+  Conference on, IEEE (2014)  1794--1800
+
+\bibitem{doi:10.1117/12.7977034}
+Toet, A., van Ruyven, L.J., Valeton, J.M.:
+\newblock Merging thermal and visual images by a contrast pyramid.
+\newblock Optical Engineering \textbf{28} (1989)  287789--287789--
+
+\bibitem{1384918}
+Heo, J., Kong, S., Abidi, B., Abidi, M.:
+\newblock Fusion of visual and thermal signatures with eyeglass removal for
+  robust face recognition.
+\newblock In: Computer Vision and Pattern Recognition Workshop, 2004. CVPRW
+  '04. Conference on. (2004)  122--122
+
+\bibitem{4381164}
+Istenic, R., Heric, D., Ribaric, S., Zazula, D.:
+\newblock Thermal and visual image registration in hough parameter space.
+\newblock In: Systems, Signals and Image Processing, 2007 and 6th EURASIP
+  Conference focused on Speech and Image Processing, Multimedia Communications
+  and Services. 14th International Workshop on. (2007)  106--109
+
+\bibitem{3911}
+Nandhakumar, N., Aggarwal, J.:
+\newblock Integrated analysis of thermal and visual images for scene
+  interpretation.
+\newblock Pattern Analysis and Machine Intelligence, IEEE Transactions on
+  \textbf{10} (1988)  469--481
+
+\bibitem{cvblob}
+n\'an, C.C.L.:
+\newblock {cvBlob}.
+\newblock (http://cvblob.googlecode.com)
+
+\bibitem{PMT}
+Doll\'ar, P.:
+\newblock {P}iotr's {C}omputer {V}ision {M}atlab {T}oolbox ({PMT}).
+\newblock (\url{http://vision.ucsd.edu/~pdollar/toolbox/doc/index.html})
+
+\bibitem{svm}
+Cortes, C., Vapnik, V.:
+\newblock Support-vector networks.
+\newblock Machine Learning \textbf{20} (1995)  273--297
+
+\bibitem{furgale2013unified}
+Furgale, P., Rehder, J., Siegwart, R.:
+\newblock Unified temporal and spatial calibration for multi-sensor systems.
+\newblock In: Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ
+  International Conference on, IEEE (2013)  1280--1286
+
+\bibitem{planar_rect}
+Fusiello, A., Trucco, E., Verri, A.:
+\newblock A compact algorithm for rectification of stereo pairs.
+\newblock Machine Vision and Applications \textbf{12} (2000)  16--22
+
+\bibitem{meier2015px4}
+Meier, L., Honegger, D., Pollefeys, M.:
+\newblock {{PX4}}: A node-based multithreaded open source robotics framework
+  for deeply embedded platforms.
+\newblock In: Robotics and Automation (ICRA), 2015 IEEE International
+  Conference on. (2015)
+
+\bibitem{Skybotix}
+{Skybotix AG}:
+\newblock (2015) \url{http://www.skybotix.com/}.
+
+\bibitem{7140101}
+Bircher, A., Alexis, K., Burri, M., Oettershagen, P., Omari, S., Mantel, T.,
+  Siegwart, R.:
+\newblock Structural inspection path planning via iterative viewpoint
+  resampling with application to aerial robotics.
+\newblock In: Robotics and Automation (ICRA), 2015 IEEE International
+  Conference on. (2015)  6423--6430
+
+\bibitem{lin1973effective}
+Lin, S., Kernighan, B.W.:
+\newblock An effective heuristic algorithm for the traveling-salesman problem.
+\newblock Operations research \textbf{21} (1973)  498--516
+
+\bibitem{RRTS1a}
+Karaman, S., Frazzoli, E.:
+\newblock Incremental sampling-based algorithms for optimal motion planning.
+\newblock CoRR \textbf{abs/1005.0416} (2010)
+
+\bibitem{WGS}
+Agency, N.G.I.:
+\newblock World geodetic system 1984.
+\newblock
+  (\url{http://web.archive.org/web/20120401083859/http://earth-info.nga.mil/GandG/wgs84/index.html})
 
 \end{thebibliography}
